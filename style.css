@@ -13,32 +13,111 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
+/* -- GLOBAL -- */
 
-.site-content {
-	float:left;
-}
+	h1, h2 {text-shadow:1px 1px 1px whitesmoke;}
 
-body {background:white;}
-body .site {
-	box-shadow: none;
-	background: none;
-}
+/* -- HTML/BODY/SITE -- */
 
-@media screen and (min-width: 600px) {
-.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
-	border:none;
+	html {background-color:#262466;}
+
+	body {background:white;}
+
+	body .site {
+		background: none;
+		box-shadow: none;
+		margin:0 auto;
+		padding:0;
+		max-width: 100%;
+		background-color:#D1D2D4;
 	}
-}
 
-.site-header {
-	padding:0;
-	border-bottom: 1px solid #ededed;
-}
+	.wrapper {max-width: 68.571428571rem;margin:auto;}
 
-hgroup {display:block;float:left;}
+/* -- HEADER -- */
 
-hgroup {width:100%;margin:20px 0;}
+	.site-header {
+		padding:0;
+		border-bottom: 1px solid #E8A826;
+		background-color:#B6B7BB;
+	}
 
-.site-header .site-title, 
-.site-header .site-description, 
-.site-header .site-phonenumber {text-align:right;}
+	hgroup {
+		display:block;
+		margin:20px 0;
+		width:100%;
+	}
+
+	hgroup .site-title,
+	hgroup .site-description
+	 {text-align: center;}
+
+
+
+/* -- NAVIGATION -- */
+
+	@media screen and (min-width: 600px) {
+		.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
+			border:none;
+		}
+	}
+
+	.main-navigation {margin-top:0;white-space: nowrap;}
+
+	.main-navigation li {
+			margin: 0;
+			position: relative;
+			width: 8.95rem;
+			text-align: center;
+			padding: 0 .5rem;
+			background-color:#262466;
+		}
+
+	.main-navigation li a {color:white;}
+
+	li#menu-item-12 {
+		background: lightblue;
+		height: 100px;
+		vertical-align: middle;
+		border-radius: 50px;
+		width: 85px;
+	}
+
+	.social-menu {
+		width:45%;
+		float:left;
+	}
+
+	.customer-menu {
+		width:45%;
+		float:right;
+		text-align:right;
+	}
+
+	.top-navigation .menu-item {
+		line-height: 3.692307692;
+		background:lightgrey;
+		display:inline-block;
+		text-align: center;
+		padding:0 .5rem;
+	}
+
+	.social-menu .menu-item {width:40px;}
+	.customer-menu .menu-item {width: 8.95rem;}
+
+/* -- CONTENT -- */
+
+	.auto-brands {
+		background:lightblue;
+		height:10px;
+		width:100%;
+	}
+
+/* -- FOOTER -- */
+
+	#colophon {
+		max-width:100%;
+		background:#262466;
+		margin-top:0;
+		border-top-color:#E8A826;
+	}
