@@ -1,0 +1,44 @@
+/*
+ Theme Name:   European Motors Service Center - LowerMedia Custom Theme
+ Theme URI:    http://LowerMedia.Net/twenty-twelve-child/
+ Description:  Twenty Twelve Child Theme
+ Author:       Pete Lower
+ Author URI:   http://petelower.com
+ Template:     twentytwelve
+ Version:      1.0.0
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  twenty-twelve-child
+*/
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+
+.site-content {
+	float:left;
+}
+
+body {background:white;}
+body .site {
+	box-shadow: none;
+	background: none;
+}
+
+@media screen and (min-width: 600px) {
+.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
+	border:none;
+	}
+}
+
+.site-header {
+	padding:0;
+	border-bottom: 1px solid #ededed;
+}
+
+hgroup {display:block;float:left;}
+
+hgroup {width:100%;margin:20px 0;}
+
+.site-header .site-title, 
+.site-header .site-description, 
+.site-header .site-phonenumber {text-align:right;}
