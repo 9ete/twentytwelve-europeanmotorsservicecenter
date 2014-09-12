@@ -64,6 +64,12 @@ function lowermedia_scripts() {
     //     get_stylesheet_directory_uri() . '/mapdata.js',
     //     array( 'jquery' )
     // );
+
+    wp_enqueue_script(
+        'custom-js',
+        get_stylesheet_directory_uri() . '/custom.js',
+        array( 'jquery' )
+    );
 }
 
 add_action( 'wp_enqueue_scripts', 'lowermedia_scripts' );
@@ -244,5 +250,6 @@ class lowermedia_phonenumber_settings
 
 }
 
-if( is_admin() )
-    $lowermedia_phonenumber_settings = new lowermedia_phonenumber_settings();
+if( is_admin() ) {$lowermedia_phonenumber_settings = new lowermedia_phonenumber_settings();}
+
+

@@ -32,14 +32,50 @@
 		background-color:#D1D2D4;
 	}
 
-	.wrapper {max-width: 68.571428571rem;margin:auto;}
+	.wrapper {
+		max-width: 68.571428571rem;
+		margin:auto;
+	}
+
+	.main, .auto-brands {
+		position:relative;
+		z-index:199;
+		background-color:#D1D2D4;
+	}
 
 /* -- HEADER -- */
 
+	.sticky-holder {
+		width:100%;
+		height: 140px;
+		/*background: #D1D2D4;*/
+	}
+
+	.sticky-holder-two {
+		top:140px !important;
+		z-index: 190 !important;
+	}
+
+	.sticky-back {
+		height:140px;
+		background:pink;
+		position:fixed;
+		z-index: 199;
+	}
+
 	.site-header {
-		padding:0;
-		border-bottom: 1px solid #E8A826;
-		background-color:#B6B7BB;
+		padding: 0;
+		background-color: #B6B7BB;
+	}
+
+	.home .site-header {
+		height: 650px;
+		background-image: url('http://midamericacartell.com/wp-content/blog.dir/sites/37/2014/07/Rally-to-Starved-Rock.jpg');
+		background-image: url('http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg');	
+		background-size: auto 930px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
 	}
 
 	hgroup {
@@ -95,14 +131,14 @@
 	}
 
 	.top-navigation .menu-item {
-		line-height: 3.692307692;
+		line-height: 2.692307692;
 		background:lightgrey;
 		display:inline-block;
 		text-align: center;
 		padding:0 .5rem;
 	}
 
-	.social-menu .menu-item {width:40px;}
+	.social-menu .menu-item {width:20px;}
 	.customer-menu .menu-item {width: 8.95rem;}
 
 /* -- CONTENT -- */
@@ -111,6 +147,7 @@
 		background:lightblue;
 		height:10px;
 		width:100%;
+		border-top: 1px solid #E8A826;
 	}
 
 /* -- FOOTER -- */
