@@ -1,0 +1,9 @@
+@font-face {
+    font-family: '911PorschaBoldBold';
+    src: url('911v2b.eot');
+    src: url('911v2b.eot') format('embedded-opentype'),
+         url('911v2b.woff2') format('woff2'),
+         url('911v2b.woff') format('woff'),
+         url('911v2b.ttf') format('truetype'),
+         url('911v2b.svg#911PorschaBoldBold') format('svg');
+}

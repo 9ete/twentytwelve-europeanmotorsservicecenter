@@ -1,0 +1,9 @@
+@font-face {
+    font-family: '911PorschaItalicItalic';
+    src: url('911v2i.eot');
+    src: url('911v2i.eot') format('embedded-opentype'),
+         url('911v2i.woff2') format('woff2'),
+         url('911v2i.woff') format('woff'),
+         url('911v2i.ttf') format('truetype'),
+         url('911v2i.svg#911PorschaItalicItalic') format('svg');
+}

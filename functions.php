@@ -1,5 +1,35 @@
 <?php
 
+
+
+
+
+/*
+#
+#   CONTACT FORM  FUNCTION
+#
+*/
+
+//$actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+//$tokens = explode('/', 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
+$page_slug = $tokens[sizeof(explode('/', 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']))-2];
+
+if ($page_slug=='') {
+    
+    }
+
+/** changing default wordpres email settings */
+ 
+add_filter('wp_mail_from', 'new_mail_from');
+add_filter('wp_mail_from_name', 'new_mail_from_name');
+ 
+function new_mail_from($old) {
+ return 'pete@petelower.com';
+}
+function new_mail_from_name($old) {
+ return 'Pete Lower';
+}
+
 /*
 #
 #   ADD PRODUCTS CONTENT TYPE (CUSTOM POST TYPE)

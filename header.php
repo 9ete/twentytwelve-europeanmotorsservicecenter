@@ -37,20 +37,21 @@
 		<div class='sticky-back'>
 		</div>
 		<div class='sticky-holder sticky-holder-one'>
-			<nav id="top-navigation" class="top-navigation wrapper" role="navigation">
-				<ul id='social-menu' class='social-menu menu'>
-					<li class='menu-item'><a href='http://facebook.com'>FB</a></li>
-					<li class='menu-item'><a href='http://twitter.com'>TW</a></li>
-					<li class='menu-item'><a href='http://pintrist.com'>Pi</a></li>
-					<li class='menu-item'><a href='http://instagram.com'>In</a></li>
-				</ul>
-				<ul id='customer-menu' class='customer-menu'>
-					<li class='menu-item'><a href='/wp-admin'>Customer Login</a></li>
-					<li class='menu-item'><a href='/contact'>Schedule Today</a></li>
-				</ul>
-			</nav><!-- #top-navigation -->
+			
 
 			<nav id="site-navigation" class="main-navigation wrapper" role="navigation">
+				<nav id="top-navigation" class="top-navigation wrapper" role="navigation">
+					<ul id='social-menu' class='social-menu menu'>
+						<li class='menu-item'><a href='http://facebook.com'>FB</a></li>
+						<li class='menu-item'><a href='http://twitter.com'>TW</a></li>
+						<li class='menu-item'><a href='http://pintrist.com'>Pi</a></li>
+						<li class='menu-item'><a href='http://instagram.com'>In</a></li>
+					</ul>
+					<ul id='customer-menu' class='customer-menu'>
+						<li class='menu-item'><a href='/wp-admin'>Customer Login</a></li>
+						<li class='menu-item'><a href='/contact'>Schedule Today</a></li>
+					</ul>
+				</nav><!-- #top-navigation -->
 				<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
 				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>

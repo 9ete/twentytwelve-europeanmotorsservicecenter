@@ -1,0 +1,9 @@
+@font-face {
+    font-family: '911PorschaCondensedCondensed';
+    src: url('911v2c.eot');
+    src: url('911v2c.eot') format('embedded-opentype'),
+         url('911v2c.woff2') format('woff2'),
+         url('911v2c.woff') format('woff'),
+         url('911v2c.ttf') format('truetype'),
+         url('911v2c.svg#911PorschaCondensedCondensed') format('svg');
+}

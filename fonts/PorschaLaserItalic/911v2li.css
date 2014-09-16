@@ -1,0 +1,9 @@
+@font-face {
+    font-family: '911PorschaLaserItalicLaserItalic';
+    src: url('911v2li.eot');
+    src: url('911v2li.eot') format('embedded-opentype'),
+         url('911v2li.woff2') format('woff2'),
+         url('911v2li.woff') format('woff'),
+         url('911v2li.ttf') format('truetype'),
+         url('911v2li.svg#911PorschaLaserItalicLaserItalic') format('svg');
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'LunasolSequenceRegular';
+    src: url('lunasolsequence.eot');
+    src: url('lunasolsequence.eot') format('embedded-opentype'),
+         url('lunasolsequence.woff2') format('woff2'),
+         url('lunasolsequence.woff') format('woff'),
+         url('lunasolsequence.ttf') format('truetype'),
+         url('lunasolsequence.svg#LunasolSequenceRegular') format('svg');
+}

@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'KubusThin';
+    src: url('kubus-thin.eot');
+    src: url('kubus-thin.eot') format('embedded-opentype'),
+         url('kubus-thin.woff2') format('woff2'),
+         url('kubus-thin.woff') format('woff'),
+         url('kubus-thin.ttf') format('truetype'),
+         url('kubus-thin.svg#KubusThin') format('svg');
+}
