@@ -128,7 +128,7 @@
 
 	html {background-color:#262466;}
 
-	body {background:white;}
+	body {min-width:1024px;background:white;}
 
 	body.custom-font-enabled {font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
 
@@ -189,6 +189,11 @@
 		background-position: center center;
 		background-attachment: fixed;
 		background-color:transparent;
+	}
+	@media screen and (max-width: 1024px) {
+		.home .site-header {
+			background-position: top;
+		}
 	}
 
 	hgroup {
