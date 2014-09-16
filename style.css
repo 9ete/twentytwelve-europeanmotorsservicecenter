@@ -232,7 +232,7 @@
 			padding: 0;
 		}
 
-	.main-navigation .menu-item .sub-menu {z-index: 201;background-color: #262466;width:100%;}
+	.main-navigation .menu-item .sub-menu {z-index: 201;background-color: #262466;width:100%;margin-left:-7px;}
 	.main-navigation .menu-item .sub-menu a {width:95%;}
 
 	.main-navigation li a {color:#e8a825;}
