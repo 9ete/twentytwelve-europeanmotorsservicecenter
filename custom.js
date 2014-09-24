@@ -53,3 +53,20 @@ jQuery(window).scroll(function(){
          jQuery('.auto-brands').css("top","0px");
    }
 });
+
+jQuery(window).load(function() {
+  var i =0;
+  var images = ['http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg','image3.png','image1.png'];
+  var image = jQuery('.home .site-header');
+                //Initial Background image setup
+  image.css('background-image', 'url(http://midamericacartell.com/wp-content/blog.dir/sites/37/2014/07/Rally-to-Starved-Rock.jpg)');
+                //Change image at regular intervals
+  setInterval(function(){
+   image.animate('slow', function () {
+   image.css('background-image', 'url(' + images [i++] +')');
+   image.animate('slow');
+   });
+   if(i == images.length)
+    i = 0;
+  }, 5000);
+});

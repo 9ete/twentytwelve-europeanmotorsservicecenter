@@ -121,14 +121,16 @@
 		text-shadow:1px 1px 1px #e8a825;
 		font-family: 'PorschaRegular', sans-serif;
 		font-size: 32px;
-		color:#6a6a6a;
 	}
+
+	.site-header .site-title a, 
+	.site-header .site-description {color:#262466;}
 
 /* -- HTML/BODY/SITE -- */
 
 	html {background-color:#262466;}
 
-	body {min-width:1024px;background:white;}
+	body {min-width:1024px;background-color:#262466;}
 
 	body.custom-font-enabled {font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
 
@@ -186,14 +188,24 @@
 		background-image: url('http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg');	
 		background-size: auto 930px;
 		background-repeat: no-repeat;
-		background-position: center center;
+		background-position: center -170px;
 		background-attachment: fixed;
-		background-color:transparent;
 	}
-	@media screen and (max-width: 1024px) {
+	/*@media screen and (max-width: 1024px) {
 		.home .site-header {
 			background-position: top;
 		}
+	}*/
+
+	.background-image-slider {
+		/*height: 650px;
+		background-image: url('http://midamericacartell.com/wp-content/blog.dir/sites/37/2014/07/Rally-to-Starved-Rock.jpg');
+		background-image: url('http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg');	
+		background-size: auto 930px;
+		background-repeat: no-repeat;
+		background-position: center -170px;
+		background-attachment: fixed;
+		position:absolute;*/
 	}
 
 	hgroup {
@@ -206,6 +218,9 @@
 	hgroup .site-description
 	 {text-align: center;}
 
+	.automotive-certifications {text-align: center;}
+	.automotive-certifications .auto-cert-item {display:inline-block;}
+	.automotive-certifications .auto-cert-item img {height:50px;}
 
 
 /* -- NAVIGATION -- */
@@ -291,23 +306,45 @@
 		border-radius: 5px;
 	}
 
-
 	.social-menu .menu-item {width: 35px;}
+
+	.main-navigation .menu-item .sub-menu .sub-menu {
+		margin-left: 16px;
+		top: -1px;
+		width: 131px;
+	}
 
 /* -- CONTENT -- */
 
 	.auto-brands {
 		background:lightblue;
-		height:10px;
 		width:100%;
 		border-top: 1px solid #E8A826;
+	}
+
+	.brands-serviced-nav {width:960px;margin:auto;}
+
+	.brands-serviced-brand {
+		display:inline-block;
+		margin:5px 2.5px;
+		width: 15%;
+		text-align: center;
+	}
+
+	.brands-serviced-brand img {height:15px;}
+
+	.site-content, .widget-area {width:100%;}
+
+	.widget-area .widget {
+		width: 33%;
+		display: inline-block;
+		text-align: center;
 	}
 
 /* -- FOOTER -- */
 
 	#colophon {
 		max-width:100%;
-		background:#262466;
 		margin-top:0;
 		border-top-color:#E8A826;
 	}

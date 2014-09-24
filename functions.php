@@ -1,7 +1,35 @@
 <?php
 
 
+/*
+#
+#   SPEED OPTIMIZATIONS
+#
+*/
 
+function load_fonts() {
+    wp_dequeue_style( 'twentytwelve-fonts' );
+    wp_deregister_style( 'twentytwelve-fonts' );
+
+    wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Signika:400,700|Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext');
+    wp_enqueue_style( 'googleFonts');
+}
+
+add_action('wp_print_styles', 'load_fonts');
+
+//Remove contact form 7 stylesheet as it is unnecessary
+function lowermedia_deregister_cf7style (){
+    wp_dequeue_style( 'contact-form-7' );
+    wp_deregister_style( 'contact-form-7' );
+}
+add_action( 'wp_enqueue_scripts', 'lowermedia_deregister_cf7style' );
+//http://cci-media.petelower.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.9.3
+
+add_action( 'wp_print_scripts', 'lowermedia_deregister_javascript', 100 );
+
+function lowermedia_deregister_javascript() {
+    wp_deregister_script( 'contact-form-7' );
+}
 
 
 /*
@@ -12,11 +40,11 @@
 
 //$actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 //$tokens = explode('/', 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-$page_slug = $tokens[sizeof(explode('/', 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']))-2];
+// $page_slug = $tokens[sizeof(explode('/', 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']))-2];
 
-if ($page_slug=='') {
+// if ($page_slug=='') {
     
-    }
+//     }
 
 /** changing default wordpres email settings */
  
@@ -24,10 +52,10 @@ add_filter('wp_mail_from', 'new_mail_from');
 add_filter('wp_mail_from_name', 'new_mail_from_name');
  
 function new_mail_from($old) {
- return 'pete@petelower.com';
+ return 'pete@europeanmotorsservicecenter.petelower.com';
 }
 function new_mail_from_name($old) {
- return 'Pete Lower';
+ return 'European Motors Service Center';
 }
 
 /*

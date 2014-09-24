@@ -34,6 +34,8 @@
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
+		<div class='background-image-slider'>
+		</div>
 		<div class='sticky-back'>
 		</div>
 		<div class='sticky-holder sticky-holder-one'>
@@ -49,7 +51,7 @@
 					</ul>
 					<ul id='customer-menu' class='customer-menu'>
 						<li class='menu-item'><a href='/wp-admin'>Customer Login</a></li>
-						<li class='menu-item'><a href='/contact'>Schedule Today</a></li>
+						<li class='menu-item'><a href='make-an-appointment/'>Schedule Today</a></li>
 					</ul>
 				</nav><!-- #top-navigation -->
 				<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
@@ -65,11 +67,43 @@
 		<hgroup class='hgroup'>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			<ul class='automotive-certifications'>
+				<li class='auto-cert-item'><a href='/'><img src='/wp-content/uploads/2014/09/iatn-international-automotive-technicians-network-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
+				<li class='auto-cert-item'><a href='/'><img src='/wp-content/uploads/2014/09/ase-automotive-service-excellence-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
+				<li class='auto-cert-item'><a href='/'><img src='/wp-content/uploads/2014/09/asa-automotive-service-association-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
+			</ul>
 		</hgroup>
 	</div>
 
 	</header><!-- #masthead -->
 	<section id='auto-brands' class='auto-brands'>
+		<nav class='brands-serviced-nav'>
+			<ul class='brands-serviced-menu'>
+				<!-- make function to return random set of 6
 
+					input: li one, li two, date in seconds
+					check if date is even or odd (changes every second), if even return a if odd return b
+				 -->
+				<li class='brands-serviced-brand brands-serviced-brand-astonmartin'><a href='/'><img src='/wp-content/uploads/2014/09/Aston-Martin-fullcrop.png' /></a></li>
+				
+				<li class='brands-serviced-brand brands-serviced-brand-bmw'><a href='/'><img src='/wp-content/uploads/2014/09/Bmw-fullcrop.png' /></a></li>
+				
+				<li class='brands-serviced-brand brands-serviced-brand-mercedes'><a href='/fix-my-mercedes-benz-automobile-services-tacoma-seattle-washington/'><img src='/wp-content/uploads/2014/09/mercedes-benz-fullcrop.png' /></a></li>
+				
+				<li class='brands-serviced-brand brands-serviced-brand-ferrari'><a href='/'><img src='/wp-content/uploads/2014/09/Ferrari-totalcrop.png' /></a></li>
+				
+				<li class='brands-serviced-brand brands-serviced-brand-alfaromeo'><a href='/'><img src='/wp-content/uploads/2014/09/Alfa-Romeo-totalcrop.png' /></a></li>
+				
+				<li class='brands-serviced-brand brands-serviced-brand-astonmartin'><a href='/'><img src='/wp-content/uploads/2014/09/Porsche_wordmark.png' /></a></li>
+				
+				<!-- volkswagon -->
+				<!-- land rover -->
+				<!-- peugeot -->
+				<!-- jaguar -->
+				<!-- tesla -->
+				<!-- fiat -->
+				
+			</ul>
+		</nav>
 	</section>
 	<div id="main" class="main wrapper">
