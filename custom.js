@@ -56,17 +56,20 @@ jQuery(window).scroll(function(){
 
 jQuery(window).load(function() {
   var i =0;
-  var images = ['http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg','image3.png','image1.png'];
+  var images = ['http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg','http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg','http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0127-3.jpg','http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0137-2.jpg'];
   var image = jQuery('.home .site-header');
-                //Initial Background image setup
+  
+  //Initial Background image setup
   image.css('background-image', 'url(http://midamericacartell.com/wp-content/blog.dir/sites/37/2014/07/Rally-to-Starved-Rock.jpg)');
-                //Change image at regular intervals
+  
+  //Change image at regular intervals
   setInterval(function(){
    image.animate('slow', function () {
-   image.css('background-image', 'url(' + images [i++] +')');
-   image.animate('slow');
+    image.css('background-image', 'url(' + images [i++] +')');
+    image.animate('fast','swing');
    });
    if(i == images.length)
     i = 0;
   }, 5000);
+
 });
