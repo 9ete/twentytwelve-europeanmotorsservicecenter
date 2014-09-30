@@ -267,6 +267,31 @@ function phonenumber_shortcode( $atts ){
 add_shortcode( 'phonenumber', 'phonenumber_shortcode' );
 
 
+    
+
+
+// Add [facebookreviews] shortcode
+function facebookreviews_shortcode( $atts ){
+
+    $url=$_POST['https://www.facebook.com/europeanmotors.wa?sk=reviews'];
+    if($url!=""){
+        echo file_get_contents($url);
+    }
+
+    // //retrieve phone number from database
+    // $lm_array = get_option('lowermedia_phone_number');
+
+    // //check if user is on mobile if so make the number a link
+    // if (wp_is_mobile())
+    // {
+    //     return '<a href="tel:+'.$lm_array["id_number"].'">'.format_phonenumber($lm_array["id_number"]).'</a>';
+    // } else {
+    //     return format_phonenumber($lm_array["id_number"]);
+    // }
+}
+add_shortcode( 'facebookreviews', 'facebookreviews_shortcode' );
+
+
 class lowermedia_phonenumber_settings
 {
     /**

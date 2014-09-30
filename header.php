@@ -44,10 +44,10 @@
 			<nav id="site-navigation" class="main-navigation wrapper" role="navigation">
 				<nav id="top-navigation" class="top-navigation wrapper" role="navigation">
 					<ul id='social-menu' class='social-menu menu'>
-						<li class='menu-item'><a href='http://facebook.com'>FB</a></li>
-						<li class='menu-item'><a href='http://twitter.com'>TW</a></li>
-						<li class='menu-item'><a href='http://pintrist.com'>Pi</a></li>
-						<li class='menu-item'><a href='http://instagram.com'>In</a></li>
+						<li class='menu-item facebook-li'><a href='https://www.facebook.com/europeanmotors.wa'>FB</a></li>
+						<li class='menu-item twitter-li'><a href='https://twitter.com/euromotoservcen'>TW</a></li>
+						<li class='menu-item linkedin-li'><a href='https://www.linkedin.com/company/european-motors-service-center'>Pi</a></li>
+						<li class='menu-item google-plus-li'><a href='https://plus.google.com/100002154887378139579/about'>In</a></li>
 					</ul>
 					<ul id='customer-menu' class='customer-menu'>
 						<li class='menu-item'><a href='/wp-admin'>Customer Login</a></li>

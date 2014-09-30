@@ -30,14 +30,14 @@ jQuery(window).scroll(function(){
       changePoint = changePoint+32;
     }
 
-   console.log(
-      "Px from top: "+amountScrolled,
-      "Header Height: "+headerHeight,
-      "Sticky Holder Height: "+stickyHolderHeight,
-      "Background Showing: "+(headerHeight-amountScrolled),
-      "Change Point: "+changePoint,
-      "New Margin Top: "+martop+"px !important"
-      );
+   // console.log(
+   //    "Px from top: "+amountScrolled,
+   //    "Header Height: "+headerHeight,
+   //    "Sticky Holder Height: "+stickyHolderHeight,
+   //    "Background Showing: "+(headerHeight-amountScrolled),
+   //    "Change Point: "+changePoint,
+   //    "New Margin Top: "+martop+"px !important"
+   //    );
 
    if(jQuery(window).scrollTop()<changePoint){
          jQuery('.sticky-holder-one').css("background","transparent");
@@ -54,22 +54,37 @@ jQuery(window).scroll(function(){
    }
 });
 
-jQuery(window).load(function() {
-  var i =0;
-  var images = ['http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg','http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg','http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0127-3.jpg','http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0137-2.jpg'];
-  var image = jQuery('.home .site-header');
+// jQuery(window).load(function() {
+//   var i =0;
+//   var images = ['http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg','http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg','http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0127-3.jpg','http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/fix-my-bmw-tacoma-seattle-washington-audi.jpg'];
+//   var image = jQuery('.home .site-header');
   
-  //Initial Background image setup
-  image.css('background-image', 'url(http://midamericacartell.com/wp-content/blog.dir/sites/37/2014/07/Rally-to-Starved-Rock.jpg)');
+//   //Initial Background image setup
+//   image.css('background-image', 'url(http://midamericacartell.com/wp-content/blog.dir/sites/37/2014/07/Rally-to-Starved-Rock.jpg)');
   
-  //Change image at regular intervals
-  setInterval(function(){
-   image.animate('slow', function () {
-    image.css('background-image', 'url(' + images [i++] +')');
-    image.animate('fast','swing');
-   });
-   if(i == images.length)
-    i = 0;
-  }, 5000);
+//   //Change image at regular intervals
+//   setInterval(function(){
+//    image.animate('slow', function () {
+//     image.css('background-image', 'url(' + images [i++] +')');
+//     image.animate('fast','swing');
+//    });
+//    if(i == images.length)
+//     i = 0;
+//   }, 5000);
+// });
 
-});
+
+// jQuery.get('https://www.facebook.com/europeanmotors.wa?sk=reviews').then(function(responseData) {
+//   jQuery('#page_reviews_tab_list').append(responseData);
+//   console.log(jQuery('#page_reviews_tab_list').append(responseData));
+// });
+
+setInterval(function(){
+   // toggle the class every five second
+   jQuery('.home .site-header').toggleClass('wiggle');
+   setTimeout(function(){
+     // toggle back after 1 second
+     jQuery('.home .site-header').toggleClass('wiggle');
+   },1000);
+
+},5000);
