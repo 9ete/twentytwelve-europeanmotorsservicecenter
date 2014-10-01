@@ -121,22 +121,24 @@
 		text-shadow: 1px 1px 1px #e8a825;
 		font-family: 'PorschaRegular', sans-serif;
 		font-size: 32px;
-		background-color: rgba(91,91,94,0.8);
-		width: 40%;
-		margin: 5px auto;
+		
+		width: 90%;
+		margin: 0 auto;
 		line-height: 30px;
-		border-top: 1px inset black;
-		box-shadow: 1px 1px 21px black;
+		
 	}
 
+	.site-header .site-title {border-radius:50px 50px 0px 0px;} 
+	.site-header .site-description {border-radius:0px 0px 50px 50px;}
+
 	.site-header .site-title a, 
-	.site-header .site-description {color:#262466;}
+	.site-header .site-description {color:#043789;}
 
 /* -- HTML/BODY/SITE -- */
 
-	html {background-color:#262466;}
+	html {background-color:#043789;}
 
-	body {min-width:1024px;background-color:#262466;}
+	body {min-width:1024px;background-color:#043789;}
 
 	body.custom-font-enabled {font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
 
@@ -160,11 +162,66 @@
 		background-color:#D1D2D4;
 	}
 
+	.auto-brands {
+		width:100%;
+		border-top: 1px solid #f9be19;
+	}
+
+	.brands-serviced-nav {width:960px;margin:auto;}
+
+	.brands-serviced-brand {
+		display:inline-block;
+		margin:5px 2.5px;
+		width: 15%;
+		text-align: center;
+	}
+
+	.brands-serviced-brand img {height:15px;}
+
+	.auto-brands {
+	background: #ffffff;
+	/* Old browsers */
+		background: -moz-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);
+	/* FF3.6+ */
+		background: -webkit-gradient(linear,left top,left bottom,color-stop(50%,#ffffff),color-stop(100%,#e8e8e8));
+	/* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);
+	/* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);
+	/* Opera 11.10+ */
+		background: -ms-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);
+	/* IE10+ */
+		background: linear-gradient(to bottom,#ffffff 50%,#e8e8e8 100%);
+	/* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#e8e8e8',GradientType=0);
+	/* IE6-9 */
+	}
+
+	/*adding similar gradient to body with less noticable change*/
+	body .site, body .main {
+		background: #ffffff;
+	/* Old browsers */
+		background: -moz-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);
+	/* FF3.6+ */
+		background: -webkit-gradient(linear,left top,left bottom,color-stop(50%,#ffffff),color-stop(100%,#e8e8e8));
+	/* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);
+	/* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);
+	/* Opera 11.10+ */
+		background: -ms-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);
+	/* IE10+ */
+		background: linear-gradient(to bottom,#ffffff 50%,#e8e8e8 100%);
+	/* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#e8e8e8',GradientType=0);
+	/* IE6-9 */
+	}
+
 /* -- HEADER -- */
 
 	.sticky-holder {
 		width:100%;
-		height: 160px;
+		height: 180px;
 		/*background: #D1D2D4;*/
 	}
 
@@ -175,7 +232,7 @@
 	}
 
 	.sticky-back {
-		height:140px;
+		height:170px;
 		background:pink;
 		position:fixed;
 		z-index: 199;
@@ -183,14 +240,14 @@
 
 	.site-header {
 		padding: 0;
-		background-color: #262466;
-		height: 150px;
+		background-color: #043789;
+		height: 170px;
 	}
 
 	.sticky-wrapper {margin:0 !important;/*height:auto !important;*/}
 
 	.home .site-header {
-		height: 650px;
+		height: 660px;
 		background-image: url('http://midamericacartell.com/wp-content/blog.dir/sites/37/2014/07/Rally-to-Starved-Rock.jpg');
 		background-image: url('http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg');
 		background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg');
@@ -209,7 +266,7 @@
 	}*/
 
 	.background-image-slider {
-		/*height: 650px;
+		/*height: 660px;
 		background-image: url('http://midamericacartell.com/wp-content/blog.dir/sites/37/2014/07/Rally-to-Starved-Rock.jpg');
 		background-image: url('http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg');	
 		background-size: auto 930px;
@@ -221,8 +278,10 @@
 
 	hgroup {
 		display:block;
-		margin:20px 0;
+		margin:350px 0;
 		width:100%;
+		background-color: rgba(91,91,94,0.455);
+		box-shadow: 1px 0px 76px rgba(91,91,94,0.955);
 	}
 
 	hgroup .site-title,
@@ -232,7 +291,6 @@
 	.automotive-certifications {text-align: center;}
 	.automotive-certifications .auto-cert-item {display:inline-block;}
 	.automotive-certifications .auto-cert-item img {height:50px;}
-
 
 /* -- NAVIGATION -- */
 
@@ -254,6 +312,8 @@
 			font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 		}
 
+
+
 	/*sub nav style*/
 	.main-navigation li ul li {
 			display: block;
@@ -261,12 +321,19 @@
 			z-index: 202;
 			position: relative;
 			padding: 0;
+			width: 100%;
+			
 		}
 
-	.main-navigation .menu-item .sub-menu {z-index: 201;background-color: #262466;width:100%;margin-left:-7px;}
-	.main-navigation .menu-item .sub-menu a {width:95%;}
+		.main-navigation li ul li a {
+			background: transparent;
+			border:none;
+		}
 
-	.main-navigation li a {color:#e8a825;}
+	.main-navigation .menu-item .sub-menu {z-index: 201;width:100%;margin-left:-7px;margin-top:1px;}
+	.main-navigation .menu-item .sub-menu a {width:auto;border-radius:5px;}
+
+	.main-navigation li a {color:#043789;}
 	.main-navigation li a:hover {color:#5B5B5E;}
 
 	.main-navigation .current-menu-item > a, 
@@ -278,13 +345,14 @@
 
 	#menu-item-12 {
 		background: transparent;
-		height: 150px;
 		vertical-align: middle;
 		border-radius: 50px;
-		width: 135px;
-		background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/lion-logo-finaledit-v1.png');
 		background-position: center center;
-		background-size: 197px;
+		background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/EM_Logo_Colors-9-27-02.png');
+		background-size: 184px;
+		border: none;
+		height: 164px;
+		width: 154px;
 	}
 
 	#menu-item-12 a,
@@ -306,11 +374,13 @@
 		float:right;
 	}
 
+	.main-navigation .social-menu,
+	.main-navigation .customer-menu {margin-top:5px;}
+
 	.top-navigation {position: absolute;width: 960px;}
 
 	.top-navigation .menu-item {
 		line-height: 2.692307692;
-		background:lightgrey;
 		display:inline-block;
 		text-align: center;
 		padding:0 .5rem;
@@ -318,7 +388,7 @@
 	}
 
 	.social-menu .menu-item {
-		background:#e8a825;
+		background:#f9be19;
 		width: 30px;
 		background-size:45px 45px;
 	}
@@ -326,16 +396,66 @@
 	.social-menu .menu-item a,
 	.social-menu .menu-item a:hover {color:transparent;}
 
-	.social-menu .facebook-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/square-facebook-128.png');}
-	.social-menu .twitter-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/square-twitter-128.png');}
-	.social-menu .linkedin-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/square-linkedin-128.png');}
-	.social-menu .google-plus-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/square-google-plus-128.png');}
+	.social-menu .facebook-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/facebook-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
+	.social-menu .twitter-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/twitter-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
+	.social-menu .linkedin-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/google-plus-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
+	.social-menu .google-plus-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/linkedin-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
 
 	.main-navigation .menu-item .sub-menu .sub-menu {
 		margin-left: 16px;
 		top: -1px;
 		width: 131px;
 	}
+
+	.main-navigation li {
+	/*making nav widths maller*/
+		width: 8rem;
+		border-radius: 5px;
+		background: #f9f9f9;
+	/* Old browsers */
+		background: -moz-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
+	/* FF3.6+ */
+		background: -webkit-gradient(linear,left top,left bottom,color-stop(37%,#f9f9f9),color-stop(100%,#c9c9c9));
+	/* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
+	/* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
+	/* Opera 11.10+ */
+		background: -ms-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
+	/* IE10+ */
+		background: linear-gradient(to bottom,#f9f9f9 37%,#c9c9c9 100%);
+	/* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#c9c9c9',GradientType=0);
+	/* IE6-9 */
+		border: 1px solid #f9be19;
+	}
+
+	.main-navigation li:hover {
+	/*Reverse background color on hover for main nav */
+		background: #c9c9c9;
+	/* Old browsers */
+		background: -moz-linear-gradient(top,#c9c9c9 0%,#f9f9f9 63%);
+	/* FF3.6+ */
+		background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#c9c9c9),color-stop(63%,#f9f9f9));
+	/* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,#c9c9c9 0%,#f9f9f9 63%);
+	/* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,#c9c9c9 0%,#f9f9f9 63%);
+	/* Opera 11.10+ */
+		background: -ms-linear-gradient(top,#c9c9c9 0%,#f9f9f9 63%);
+	/* IE10+ */
+		background: linear-gradient(to bottom,#c9c9c9 0%,#f9f9f9 63%);
+	/* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9c9c9',endColorstr='#f9f9f9',GradientType=0);
+	/* IE6-9 */
+	}
+
+	.customer-menu .menu-item a {
+		line-height: 2;
+		color:#043789;
+	}
+
+	.menu-primary-menu-container .nav-menu {margin-top:10px;}
 
 /* -- SIDEBAR -- */
 
@@ -347,25 +467,6 @@
 		width:30%;
 	}*/
 
-/* -- CONTENT -- */
-
-	.auto-brands {
-		background:lightblue;
-		width:100%;
-		border-top: 1px solid #E8A826;
-	}
-
-	.brands-serviced-nav {width:960px;margin:auto;}
-
-	.brands-serviced-brand {
-		display:inline-block;
-		margin:5px 2.5px;
-		width: 15%;
-		text-align: center;
-	}
-
-	.brands-serviced-brand img {height:15px;}
-
 	/*.site-content, .widget-area {width:100%;}
 
 	.widget-area .widget {
@@ -374,6 +475,8 @@
 		text-align: center;
 	}*/
 	.widget-area .widget {text-align: center;}
+
+/* -- CONTENT -- */
 
 /* -- FOOTER -- */
 

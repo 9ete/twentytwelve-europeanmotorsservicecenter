@@ -67,11 +67,6 @@
 		<hgroup class='hgroup'>
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-			<ul class='automotive-certifications'>
-				<li class='auto-cert-item'><a href='/'><img src='/wp-content/uploads/2014/09/iatn-international-automotive-technicians-network-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
-				<li class='auto-cert-item'><a href='/'><img src='/wp-content/uploads/2014/09/ase-automotive-service-excellence-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
-				<li class='auto-cert-item'><a href='/'><img src='/wp-content/uploads/2014/09/asa-automotive-service-association-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
-			</ul>
 		</hgroup>
 	</div>
 
@@ -106,4 +101,5 @@
 			</ul>
 		</nav>
 	</section>
-	<div id="main" class="main wrapper">
+	<div id="main" class="main">
+		<div id="main-inner" class="main-inner wrapper">

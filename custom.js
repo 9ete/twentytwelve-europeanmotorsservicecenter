@@ -24,10 +24,10 @@ jQuery(window).scroll(function(){
        headerHeight = jQuery(".site-header").height(),
        stickyHolderHeight = jQuery(".sticky-holder").height(),
        changePoint = headerHeight-stickyHolderHeight,
-       martop = 32 + amountScrolled;
+       martop = 42 + amountScrolled;
     
     if (jQuery('body').hasClass('admin-bar')) {
-      changePoint = changePoint+32;
+      changePoint = changePoint+42;
     }
 
    // console.log(
@@ -42,7 +42,7 @@ jQuery(window).scroll(function(){
    if(jQuery(window).scrollTop()<changePoint){
          jQuery('.sticky-holder-one').css("background","transparent");
    } else {
-         jQuery('.sticky-holder-one').css("background","#262466");
+         jQuery('.sticky-holder-one').css("background","#043789");
    }
 
    if(jQuery(window).scrollTop()>changePoint){

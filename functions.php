@@ -1,5 +1,22 @@
 <?php
 
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function lowermedia_widgets_init() {
+
+    register_sidebar( array(
+        'name' => 'Footer right sidebar',
+        'id' => 'footer_right_1',
+        'before_widget' => '<div class="footer-right-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="rounded">',
+        'after_title' => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'lowermedia_widgets_init' );
+
 
 /*
 #
