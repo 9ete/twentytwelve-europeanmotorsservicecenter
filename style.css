@@ -247,17 +247,20 @@
 
 	.home .site-header {
 		height: 660px;
-		background-image: url('http://midamericacartell.com/wp-content/blog.dir/sites/37/2014/07/Rally-to-Starved-Rock.jpg');
+		/*background-image: url('http://midamericacartell.com/wp-content/blog.dir/sites/37/2014/07/Rally-to-Starved-Rock.jpg');
 		background-image: url('http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg');
 		background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg');
 		background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0127-3.jpg');
-		background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0137-2.jpg');
+		background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0137-2.jpg');*/
 		background-image: url('http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg');
 		background-size: auto 930px;
 		background-repeat: no-repeat;
 		background-position: center -170px;
 		background-attachment: fixed;
 	}
+
+
+
 	/*@media screen and (max-width: 1024px) {
 		.home .site-header {
 			background-position: top;
@@ -274,6 +277,8 @@
 		background-attachment: fixed;
 		position:absolute;*/
 	}
+
+
 
 	hgroup {
 		display:block;

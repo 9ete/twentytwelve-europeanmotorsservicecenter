@@ -71,6 +71,8 @@
 	</div>
 
 	</header><!-- #masthead -->
+	<div id="backgroundimage"></div>
+	<div id="nextimg"></div>
 	<section id='auto-brands' class='auto-brands'>
 		<nav class='brands-serviced-nav'>
 			<ul class='brands-serviced-menu'>
