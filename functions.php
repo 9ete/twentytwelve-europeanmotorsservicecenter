@@ -17,6 +17,14 @@ function lowermedia_widgets_init() {
 }
 add_action( 'widgets_init', 'lowermedia_widgets_init' );
 
+function lowermedia_menus_init() {
+  register_nav_menus(
+    array(
+      'auto-brands-menu' => __( 'Auto Brands Menu' )
+    )
+  );
+}
+add_action( 'init', 'lowermedia_menus_init' );
 
 /*
 #

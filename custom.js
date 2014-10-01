@@ -58,14 +58,16 @@
       //jQuery('.sticky-holder-one').effect("highlight", {}, 3000)
     }
 
-    //if we hit the breakpoint add top margin and z-index to the autobrands div
-    if(jQuery(window).scrollTop()>changePoint){
-      jQuery('.auto-brands').css("top",amountScrolled-changePoint);
-      jQuery('.auto-brands').css("z-index","200");
-    }
-    else if(jQuery(window).scrollTop()<changePoint) {
-      jQuery('.auto-brands').css("top","0px");
-    }
+    // if (jQuery('body').hasClass('home')) {
+      //if we hit the breakpoint add top margin and z-index to the autobrands div
+      if(jQuery(window).scrollTop()>changePoint){
+        jQuery('.auto-brands').css("top",amountScrolled-changePoint);
+        jQuery('.auto-brands').css("z-index","200");
+      }
+      else if(jQuery(window).scrollTop()<changePoint) {
+        jQuery('.auto-brands').css("top","0px");
+      }
+    // }
   });
 
 /*
