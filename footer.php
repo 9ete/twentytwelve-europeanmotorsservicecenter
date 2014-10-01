@@ -13,7 +13,7 @@
 	</div><!-- #main .wrapper -->
 </div><!-- #page -->
 
-<footer id="colophon" role="contentinfo">
+<footer id="colophon" role="contentinfo" class='colophon-footer'>
 	<div class="site-info">
 		<ul class='automotive-certifications'>
 				<li class='auto-cert-item'><a href='/'><img src='/wp-content/uploads/2014/09/iatn-international-automotive-technicians-network-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>

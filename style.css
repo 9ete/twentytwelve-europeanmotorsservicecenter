@@ -474,14 +474,18 @@
 		display: inline-block;
 		text-align: center;
 	}*/
+	
 	.widget-area .widget {text-align: center;}
 
 /* -- CONTENT -- */
 
 /* -- FOOTER -- */
 
-	#colophon {
+	body .colophon-footer {
 		max-width:100%;
 		margin-top:0;
 		border-top-color:#E8A826;
+		z-index: 200;
+		position: relative;
+		background-color: #043789;
 	}
