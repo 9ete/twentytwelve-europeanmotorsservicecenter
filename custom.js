@@ -16,42 +16,56 @@
 // });
 
 // var divs = jQuery('.sticky-nav');
+
+/*
+#
+#
+#   Sticky Header Function
+#   - Add background color to overide image after certain scroll point
+#
+#
+*/
+
 jQuery(window).scroll(function(){
+  //create Variables
+  var amountScrolled = jQuery(window).scrollTop(),
+    headerHeight = jQuery(".site-header").height(),
+    stickyHolderHeight = jQuery(".sticky-holder").height(),
+    changePoint = headerHeight-stickyHolderHeight;//the change point is the point where we add the background color
 
+  //if the user is logged in and can see the admin bar we need to account for that, we add the height of the admin bar to the change point
+  if (jQuery('body').hasClass('admin-bar')) {
+    adminBarHeight = jQuery("#wpadminbar").height();
+    changePoint = changePoint + adminBarHeight;
+  }
 
+  //debug output
+  // console.log(
+  //    "Px from top: "+amountScrolled,
+  //    "Header Height: "+headerHeight,
+  //    "Sticky Holder Height: "+stickyHolderHeight,
+  //    "Background Showing: "+(headerHeight-amountScrolled),
+  //    "Change Point: "+changePoint,
+  //    adminBarHeight = jQuery(".admin-bar").height()
+  //    );
 
-   var amountScrolled = jQuery(window).scrollTop(),
-       headerHeight = jQuery(".site-header").height(),
-       stickyHolderHeight = jQuery(".sticky-holder").height(),
-       changePoint = headerHeight-stickyHolderHeight,
-       martop = 42 + amountScrolled;
-    
-    if (jQuery('body').hasClass('admin-bar')) {
-      changePoint = changePoint+42;
-    }
+  //toggle background image and color
+  if(jQuery(window).scrollTop()<changePoint){
+    jQuery('.sticky-holder-one').css("background","transparent");
+  } else {
+    //jQuery('.sticky-holder-one').toggle("#043789");
+    jQuery('.sticky-holder-one').css("background","#043789");
+    //jQuery('.sticky-holder-one').effect("highlight", {}, 3000)
+  }
 
-   // console.log(
-   //    "Px from top: "+amountScrolled,
-   //    "Header Height: "+headerHeight,
-   //    "Sticky Holder Height: "+stickyHolderHeight,
-   //    "Background Showing: "+(headerHeight-amountScrolled),
-   //    "Change Point: "+changePoint,
-   //    "New Margin Top: "+martop+"px !important"
-   //    );
-
-   if(jQuery(window).scrollTop()<changePoint){
-         jQuery('.sticky-holder-one').css("background","transparent");
-   } else {
-         jQuery('.sticky-holder-one').css("background","#043789");
-   }
-
-   if(jQuery(window).scrollTop()>changePoint){
-         jQuery('.auto-brands').css("top",amountScrolled-changePoint);
-         jQuery('.auto-brands').css("z-index","200");
-   }
-   else if(jQuery(window).scrollTop()<changePoint) {
-         jQuery('.auto-brands').css("top","0px");
-   }
+  //if we hit the breakpoint add top margin and z-index to the autobrands div
+  if(jQuery(window).scrollTop()>changePoint){
+    jQuery('.auto-brands').css("top",amountScrolled-changePoint);
+    jQuery('.auto-brands').css("z-index","200");
+  }
+  else if(jQuery(window).scrollTop()<changePoint) {
+    jQuery('.auto-brands').css("top","0px");
+  }
 });
 
 // jQuery(window).load(function() {
