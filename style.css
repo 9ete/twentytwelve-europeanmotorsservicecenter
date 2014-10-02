@@ -257,13 +257,15 @@
 	.home .site-header {
 		height: 660px;
 		/*background-image: url('http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg');*/
-		background-size: auto 930px;
+		/*background-size: auto 930px;*/
+		background-size:auto;
 		background-repeat: no-repeat;
 		background-position: center -170px;
 		background-attachment: fixed;
 	}
 
-	#backgroundimage, #nextimg {
+	.bkimage-div, 
+	.nxt-bkimage-div {
 		position: absolute;
 		left: 0;
 		top: 0;
@@ -275,11 +277,11 @@
 		background-attachment: fixed;
 	}
 
-	#backgroundimage {
+	.bkimage-div {
 	    z-index: 2;
 	}
-	
-	#nextimg {
+
+	.nxt-bkimage-div {
 	    z-index: 1;
 	}
 

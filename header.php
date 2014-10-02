@@ -73,14 +73,16 @@
 	</div>
 
 	</header><!-- #masthead -->
-	<div id="backgroundimage"></div>
-	<div id="nextimg"></div>
+	<div id="backgroundimage" class='bkimage-div'></div>
+	<div id="nextimg" class='nxt-bkimage-div'></div>
 	<?php 
 		if (is_front_page()){
-			?><section id='auto-brands' class='auto-brands'>
+			?>
+				<section id='auto-brands' class='auto-brands'>
 			<?php
-			 wp_nav_menu( array( 'theme_location' => 'auto-brands-menu' ) ); 
-			?></section>
+					wp_nav_menu( array( 'theme_location' => 'auto-brands-menu' ) ); 
+			?>
+				</section>
 			<?php
 		} 
 	?>
