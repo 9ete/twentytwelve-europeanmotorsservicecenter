@@ -56,34 +56,7 @@
 				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
-			<?php 
-				if (!is_front_page()){
-					 
-						//randomize and output 5 menu items
-
-						//ADD MENU TO VAR, DISABLE ECHO AS TO NOT ECHO THE MENU IMMEDIATLY
-						$autoBrandsMenu = wp_nav_menu( 
-							array( 
-								'theme_location' => 'auto-brands-menu', 
-								'echo' => false,
-								'before' => '--'
-								) 
-							);
-						//put each menu li into an array
-						$menuArray = explode ("--", $autoBrandsMenu);
-						$newMenuArray = array();
-						foreach($menuArray as $key => $value) {
-					      $newMenuArray[$key] = $value;
-						}
-						echo $menuArray[0];
-						$rand_keys = array_rand($newMenuArray, 7);
-						for($i=1; $i<7; $i++){
-							echo $newMenuArray[$rand_keys[$i]];
-						}
-						echo "<ul></div>";
-					 
-				} 
-			?>
+			<?php if (!is_front_page()){randMenu('auto-brands-menu', 7);}?>
 			<?php if ( get_header_image() ) : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
 			<?php endif; ?>
@@ -101,58 +74,10 @@
 	</header><!-- #masthead -->
 	<div id="backgroundimage" class='bkimage-div'></div>
 	<div id="nextimg" class='nxt-bkimage-div'></div>
-	<?php 
-		if (is_front_page()) :
-			
-			?>
-				<section id='auto-brands' class='auto-brands'>
-					<?php
-					//wp_nav_menu( array( 'theme_location' => 'auto-brands-menu'));
-						//randomize and output 5 menu items
-						//ADD MENU TO VAR, DISABLE ECHO AS TO NOT ECHO THE MENU IMMEDIATLY
-						$autoBrandsMenu = wp_nav_menu( 
-							array( 
-								'theme_location' => 'auto-brands-menu', 
-								'echo' => false,
-								'before' => '--'
-								) 
-							);
-						//put each menu li into an array
-						$menuArray = explode ("--", $autoBrandsMenu);
-						$newMenuArray = array();
-						foreach($menuArray as $key => $value) {
-					      $newMenuArray[$key] = $value;
-						}
-						echo $menuArray[0];
-						$rand_keys = array_rand($newMenuArray, 7);
-						for($i=1; $i<7; $i++){
-							echo $newMenuArray[$rand_keys[$i]];
-						}
-					?>
-				</section>
-			<?php endif; ?>
-	<?php /*<section id='auto-brands' class='auto-brands'>
-		<nav class='brands-serviced-nav'>
-			<ul class='brands-serviced-menu'>
-				<!-- make function to return random set of 6
-					input: li one, li two, date in seconds
-					check if date is even or odd (changes every second), if even return a if odd return b
-				 -->
-				<li class='brands-serviced-brand brands-serviced-brand-astonmartin'><a href='/'><img src='/wp-content/uploads/2014/09/Aston-Martin-fullcrop.png' /></a></li>
-				<li class='brands-serviced-brand brands-serviced-brand-bmw'><a href='/'><img src='/wp-content/uploads/2014/09/Bmw-fullcrop.png' /></a></li>
-				<li class='brands-serviced-brand brands-serviced-brand-mercedes'><a href='/fix-my-mercedes-benz-automobile-services-tacoma-seattle-washington/'><img src='/wp-content/uploads/2014/09/mercedes-benz-fullcrop.png' /></a></li>
-				<li class='brands-serviced-brand brands-serviced-brand-ferrari'><a href='/'><img src='/wp-content/uploads/2014/09/Ferrari-totalcrop.png' /></a></li>
-				<li class='brands-serviced-brand brands-serviced-brand-alfaromeo'><a href='/'><img src='/wp-content/uploads/2014/09/Alfa-Romeo-totalcrop.png' /></a></li>
-				<li class='brands-serviced-brand brands-serviced-brand-astonmartin'><a href='/'><img src='/wp-content/uploads/2014/09/Porsche_wordmark.png' /></a></li>
-				<!-- volkswagon -->
-				<!-- land rover -->
-				<!-- peugeot -->
-				<!-- jaguar -->
-				<!-- tesla -->
-				<!-- fiat -->
-				
-			</ul>
-		</nav>
-	</section> */?>
+	<?php if (is_front_page()) : ?>
+		<section id='auto-brands' class='auto-brands'>
+			<?php randMenu('auto-brands-menu', 7)?>
+		</section>
+	<?php endif; ?>
 	<div id="main" class="main">
 		<div id="main-inner" class="main-inner wrapper">
