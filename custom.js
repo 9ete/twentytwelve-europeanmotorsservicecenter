@@ -89,22 +89,6 @@ jQuery(window).load(function () {
   }
 });
 
-
-/*
-#
-#   Randomize auto brands menu children and only show 6
-#
-*/
-
-jQuery(window).load(function () {
-  //var ul = jQuery("#menu-auto-brands-menu");
-  var autoBrands = document.getElementById("menu-auto-brands-menu");
-
-  autoBrands.removeChild(this.firstChild);
-
-  console.log(autoBrands);
-});
-
 /*
 #
 #    LAND OF DEAD CODE
