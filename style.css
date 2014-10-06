@@ -159,9 +159,10 @@
 	.auto-brands,
 	.menu-auto-brands-menu-container {
 		position:relative;
-		z-index:199;
 		background-color:#D1D2D4;
 	}
+
+	.main {z-index: 197;}
 
 	.auto-brands, .menu-auto-brands-menu-container {
 		width:100%;
@@ -172,6 +173,7 @@
 	.menu-auto-brands-menu-container .menu {
 		width:960px;
 		margin:auto;
+		max-height: 26px;
 	}
 
 	/*.brands-serviced-brand, */

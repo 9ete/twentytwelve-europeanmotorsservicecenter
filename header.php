@@ -58,34 +58,79 @@
 			</nav><!-- #site-navigation -->
 			<?php 
 				if (!is_front_page()){
-					 wp_nav_menu( array( 'theme_location' => 'auto-brands-menu' ) ); 
+					 
+						//randomize and output 5 menu items
+
+						//ADD MENU TO VAR, DISABLE ECHO AS TO NOT ECHO THE MENU IMMEDIATLY
+						$autoBrandsMenu = wp_nav_menu( 
+							array( 
+								'theme_location' => 'auto-brands-menu', 
+								'echo' => false,
+								'before' => '--'
+								) 
+							);
+						//put each menu li into an array
+						$menuArray = explode ("--", $autoBrandsMenu);
+						$newMenuArray = array();
+						foreach($menuArray as $key => $value) {
+					      $newMenuArray[$key] = $value;
+						}
+						echo $menuArray[0];
+						$rand_keys = array_rand($newMenuArray, 7);
+						for($i=1; $i<7; $i++){
+							echo $newMenuArray[$rand_keys[$i]];
+						}
+						echo "<ul></div>";
+					 
 				} 
 			?>
 			<?php if ( get_header_image() ) : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
 			<?php endif; ?>
 		</div>
+		<?php 
+		if (is_front_page()) : ?>
 		<div class='sticky-holder sticky-holder-two'>
-		<hgroup class='hgroup'>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
-	</div>
+			<hgroup class='hgroup'>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			</hgroup>
+		</div>
+		<?php endif;?>
 
 	</header><!-- #masthead -->
 	<div id="backgroundimage" class='bkimage-div'></div>
 	<div id="nextimg" class='nxt-bkimage-div'></div>
 	<?php 
-		if (is_front_page()){
+		if (is_front_page()) :
+			
 			?>
 				<section id='auto-brands' class='auto-brands'>
-			<?php
-					wp_nav_menu( array( 'theme_location' => 'auto-brands-menu' ) ); 
-			?>
+					<?php
+					//wp_nav_menu( array( 'theme_location' => 'auto-brands-menu'));
+						//randomize and output 5 menu items
+						//ADD MENU TO VAR, DISABLE ECHO AS TO NOT ECHO THE MENU IMMEDIATLY
+						$autoBrandsMenu = wp_nav_menu( 
+							array( 
+								'theme_location' => 'auto-brands-menu', 
+								'echo' => false,
+								'before' => '--'
+								) 
+							);
+						//put each menu li into an array
+						$menuArray = explode ("--", $autoBrandsMenu);
+						$newMenuArray = array();
+						foreach($menuArray as $key => $value) {
+					      $newMenuArray[$key] = $value;
+						}
+						echo $menuArray[0];
+						$rand_keys = array_rand($newMenuArray, 7);
+						for($i=1; $i<7; $i++){
+							echo $newMenuArray[$rand_keys[$i]];
+						}
+					?>
 				</section>
-			<?php
-		} 
-	?>
+			<?php endif; ?>
 	<?php /*<section id='auto-brands' class='auto-brands'>
 		<nav class='brands-serviced-nav'>
 			<ul class='brands-serviced-menu'>
