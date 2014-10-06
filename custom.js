@@ -44,7 +44,7 @@
       //if we hit the breakpoint add top margin and z-index to the autobrands div
       if(jQuery(window).scrollTop()>changePoint){
         jQuery('.auto-brands').css("top",amountScrolled-changePoint);
-        jQuery('.auto-brands').css("z-index","200");
+        jQuery('.auto-brands').css("z-index","198");
       }
       else if(jQuery(window).scrollTop()<changePoint) {
         jQuery('.auto-brands').css("top","0px");
@@ -64,9 +64,11 @@ jQuery(window).load(function () {
   if (jQuery('body').hasClass('home')) {
     var i = 0;
     var images = [
-        'http://dummyimage.com/300x200/FC0/000&text=Slide+1',
-        'http://dummyimage.com/300x200/CF0/000&text=Slide+2',
-        'http://dummyimage.com/300x200/0FC/000&text=Slide+3'];
+        // 'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/fix-my-bmw-seattle-tacoma-lakewood-washington-jaquar-audi-mercedes.png',
+        // 'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/fix-my-audi-seattle-tacoma-lakewood-washington-jaquar-audi-mercedes.png',
+        'http://dummyimage.com/1400x660/FC0/000&text=Slide+1',
+        'http://dummyimage.com/1400x660/CF0/000&text=Slide+2',
+        'http://dummyimage.com/1400x660/0FC/000&text=Slide+3'];
     // var  images = ['http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg',
     //             'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg',
     //             'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0127-3.jpg',
@@ -87,6 +89,21 @@ jQuery(window).load(function () {
   }
 });
 
+
+/*
+#
+#   Randomize auto brands menu children and only show 6
+#
+*/
+
+jQuery(window).load(function () {
+  //var ul = jQuery("#menu-auto-brands-menu");
+  var autoBrands = document.getElementById("menu-auto-brands-menu");
+
+  autoBrands.removeChild(this.firstChild);
+
+  console.log(autoBrands);
+});
 
 /*
 #
