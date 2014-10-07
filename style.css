@@ -330,7 +330,8 @@
 
 	.main-navigation li a {width:100%;}
 
-	.site-header .main-navigation .current-menu-item > a {color:#f9be19;}
+	.site-header .main-navigation .current-menu-item > a,
+	.site-header .main-navigation .current-page-ancestor > a {color:#f9be19;}
 
 	/*sub nav style*/
 	.main-navigation li ul li {
@@ -496,6 +497,44 @@
 	.widget-area .widget {text-align: center;}
 
 /* -- CONTENT -- */
+	
+	.entry-title {text-align: center;font-family: futura;}
+
+	.em-button {
+			/*making nav widths maller*/
+			height: 300px;
+			width: 300px;
+			border-radius: 5px;
+			background: #f9f9f9;
+			/* Old browsers */
+			background: -moz-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
+			/* FF3.6+ */
+			background: -webkit-gradient(linear,left top,left bottom,color-stop(37%,#f9f9f9),color-stop(100%,#c9c9c9));
+			/* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
+			/* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
+			/* Opera 11.10+ */
+			background: -ms-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
+			/* IE10+ */
+			background: linear-gradient(to bottom,#f9f9f9 37%,#c9c9c9 100%);
+			/* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#c9c9c9',GradientType=0);
+			/* IE6-9 */
+			border: 1px solid #f9be19;
+			text-align: center;
+		}
+
+	.cert-button {
+		height: 300px;
+		width: 300px;
+		display:inline-block;
+		margin:0 9%;
+		line-height: 300px;
+		font-family: futura;
+	}
+
+	.cert-button a { text-decoration:none; }
 
 /* -- FOOTER -- */
 
