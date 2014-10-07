@@ -114,51 +114,6 @@ function new_mail_from_name($old) {
 
 /*
 #
-#   ADD PRODUCTS CONTENT TYPE (CUSTOM POST TYPE)
-#
-*/
-
-// function products_custom_init() {
-//   $labels = array(
-//     'name' => 'products',
-//     'singular_name' => 'product',
-//     'add_new' => 'Add product',
-//     'add_new_item' => 'Add New product',
-//     'edit_item' => 'Edit product',
-//     'new_item' => 'New product',
-//     'all_items' => 'All products',
-//     'view_item' => 'View product',
-//     'search_items' => 'Search products',
-//     'not_found' =>  'No products found',
-//     'not_found_in_trash' => 'No products found in Trash', 
-//     'parent_item_colon' => '',
-//     'menu_name' => 'products'
-//   );
-
-//   $args = array(
-//     'labels' => $labels,
-//     'description'   => 'Canna Delivery product',
-//     'menu_position' => 1,
-//     'public' => true,
-//     'publicly_queryable' => true,
-//     'show_ui' => true, 
-//     'show_in_menu' => true, 
-//     'query_var' => true,
-//     'rewrite' => array( 'slug' => 'canna-delivery-products' ),
-//     'capability_type' => 'post',
-//     'has_archive' => true, 
-//     'hierarchical' => false,
-//     'menu_position' => null,
-//     'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
-//     'taxonomies' => array('category', 'post_tag')
-//   ); 
-
-//   register_post_type( 'products', $args );
-// }
-// add_action( 'init', 'products_custom_init' );
-
-/*
-#
 #   WHITE LABEL
 #
 */
@@ -242,17 +197,6 @@ add_filter('widget_text', 'do_shortcode');
 */
 
 function lowermedia_scripts() {
-    // wp_enqueue_script(
-    //     'continent-map',
-    //     get_stylesheet_directory_uri() . '/continentmap.js',
-    //     array( 'jquery' )
-    // );
-    //     wp_enqueue_script(
-    //     'map-data',
-    //     get_stylesheet_directory_uri() . '/mapdata.js',
-    //     array( 'jquery' )
-    // );
-
     wp_enqueue_script(
         'custom-js',
         get_stylesheet_directory_uri() . '/custom.js',
@@ -387,7 +331,7 @@ class lowermedia_phonenumber_settings
         ?>
         <div class="wrap">
             <?php screen_icon(); ?>
-            <h2>Canna Delivery Hotline</h2>           
+            <h2>Phone Number</h2>           
             <form method="post" action="options.php">
             <?php
                 // This prints out all hidden setting fields
@@ -464,5 +408,3 @@ class lowermedia_phonenumber_settings
 }
 
 if( is_admin() ) {$lowermedia_phonenumber_settings = new lowermedia_phonenumber_settings();}
-
-
