@@ -29,6 +29,22 @@ function randMenu ($menuName, $numItemsReturnedPlusOne) {
     }
 }
 
+
+function getMainMenu($menulocation){
+  $locations = get_nav_menu_locations();
+  $menuItems = wp_get_nav_menu_items( $locations[ $menulocation ] );
+    if(empty($menuItems)) {
+        return false;
+    } else {
+        if(is_archive())
+        {
+            wp_nav_menu(array('theme_location' => $menulocation,'echo' => false));
+        } else {
+            wp_nav_menu(array('theme_location' => $menulocation));
+        }
+        return true;
+    }
+}
 /**
  * Register our sidebars and widgetized areas.
  *
