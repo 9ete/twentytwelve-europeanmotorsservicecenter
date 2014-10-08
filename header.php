@@ -49,20 +49,39 @@
 					</ul>
 					<ul id='customer-menu' class='customer-menu'>
 						<li class='menu-item'><a href='/wp-admin'>Customer Login</a></li>
-						<li class='menu-item'><a href='make-an-appointment/'>Schedule Today</a></li>
+						<li class='menu-item'><a href='/schedule-automotive-appointment-lakewood-tacoma-seattle-washington/'>Schedule Today</a></li>
 					</ul>
 				</nav><!-- #top-navigation -->
 				<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
 				<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
-				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
+				<?php 
+					if(!getMainMenu('primary')){
+					  $backup = $wp_query;
+					  $wp_query = NULL;
+					  $wp_query = new WP_Query(array('post_type' => 'post'));
+					  getMainMenu('primary');
+					  $wp_query = $backup;
+					} //else {wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); }
+				?>
 			</nav><!-- #site-navigation -->
-			<?php if (!is_front_page()){randMenu('auto-brands-menu', 7);}?>
+			<?php if(!is_archive()){
+					if (!is_front_page()){randMenu('auto-brands-menu', 7);}
+				} else {
+					if(!getMainMenu('auto-brands-menu')){
+					  $backup = $wp_query;
+					  $wp_query = NULL;
+					  $wp_query = new WP_Query(array('post_type' => 'post'));
+					  getMainMenu('auto-brands-menu');
+					  $wp_query = $backup;
+					} 
+					//randMenu('auto-brands-menu', 7);
+				}
+			?>
 			<?php if ( get_header_image() ) : ?>
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
 			<?php endif; ?>
 		</div>
-		<?php 
-		if (is_front_page()) : ?>
+		<?php if (is_front_page()) : ?>
 		<div class='sticky-holder sticky-holder-two'>
 			<hgroup class='hgroup'>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -72,9 +91,13 @@
 		<?php endif;?>
 
 	</header><!-- #masthead -->
-	<div id="backgroundimage" class='bkimage-div'></div>
-	<div id="nextimg" class='nxt-bkimage-div'></div>
 	<?php if (is_front_page()) : ?>
+		<div id="backgroundimage" class='bkimage-div'></div>
+		<div id="nextimg" class='nxt-bkimage-div'></div>
+		<div id='bkimg-nav-button-container' class='bkimg-nav-button-container'>
+			<div id="bkimg-next" class='bkimg-next bkimg-nav-button'><a class="next" title="Next" href="javascript:void(0);" id="next">Next</a></div>
+			<div id="bkimg-prev" class='bkimg-prev bkimg-nav-button'><a class="prev" title="Previous" href="javascript:void(0);" id="prev">Previous</a></div>
+		</div>
 		<section id='auto-brands' class='auto-brands'>
 			<?php randMenu('auto-brands-menu', 7)?>
 		</section>
