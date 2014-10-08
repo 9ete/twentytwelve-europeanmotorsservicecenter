@@ -163,6 +163,7 @@
 	}
 
 	.main {z-index: 197;}
+	.auto-brands {z-index: 198;}
 
 	.auto-brands, .menu-auto-brands-menu-container {
 		width:100%;
@@ -174,6 +175,7 @@
 		width:960px;
 		margin:auto;
 		max-height: 26px;
+		overflow:hidden;
 	}
 
 	/*.brands-serviced-brand, */
@@ -292,6 +294,20 @@
 	    z-index: 1;
 	}
 
+	.bkimg-nav-button-container {
+		z-index: 198;
+		position:absolute;
+		left: 48%;
+	}
+
+	.bkimg-nav-button {
+		height: 25px;
+		width: 25px;
+		display:inline-block;
+		margin-left:10px;
+		margin-right:10px;
+	}
+
 	hgroup {
 		display:block;
 		margin:350px 0;
@@ -317,6 +333,8 @@
 	}
 
 	.main-navigation {margin-top:0;white-space: nowrap;}
+	.page .main-navigation,
+	.archive .main-navigation {height:190px;}
 
 	.main-navigation li {
 			margin: 0;
