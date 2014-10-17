@@ -257,6 +257,15 @@ function getMainMenu($menulocation, $echo = true, $container = 'div'){
 function lowermedia_widgets_init() {
 
     register_sidebar( array(
+        'name' => 'Pre Content Widget Area',
+        'id' => 'pre-content-widget',
+        'before_widget' => '<div id="pre-content-widget" class="pre-content-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="rounded">',
+        'after_title' => '</h2>',
+    ) );
+
+    register_sidebar( array(
         'name' => 'Footer right sidebar',
         'id' => 'footer_right_1',
         'before_widget' => '<div class="footer-right-widget">',

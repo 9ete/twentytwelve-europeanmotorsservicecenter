@@ -15,7 +15,11 @@
 			<?php endif; ?>
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 		</header>
-
+		<?php if ( is_active_sidebar( 'pre-content-widget' ) ) : ?>
+			<div id="pre-content-widget-holder" class="pre-content-widget-holder" role="complementary">
+				<?php dynamic_sidebar( 'pre-content-widget' ); ?>
+			</div><!-- #primary-sidebar -->
+		<?php endif; ?>
 		<div class="entry-content">
 			<?php the_content(); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
