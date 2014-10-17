@@ -12,7 +12,36 @@
 		</div><!-- #main-inner .wrapper-inner -->
 	</div><!-- #main .wrapper -->
 </div><!-- #page -->
+<?php
 
+function return_post_by_tag($post_type, $tag) {
+	wp_reset_query();
+	$query_images_args = array(
+	    'tag' => $tag,
+	    'post_type' => $post_type, 
+	    'post_mime_type' =>'image', 
+	    'post_status' => 'inherit',
+	    'posts_per_page' => -1,
+	    'suppress_filters'=>true,
+	);
+
+	$query_images = new WP_Query( $query_images_args );
+	$images = array();
+	foreach ( $query_images->posts as $image) {
+	    $images[]= wp_get_attachment_url( $image->ID );
+	    ?>
+	    <a href='<?php echo wp_get_attachment_url( $image->ID ); ?>'>
+	    	<img src='<?php echo wp_get_attachment_url( $image->ID ); ?>' />
+	    </a>
+	    <?php
+	}
+
+	var_dump($images);
+}
+
+//return_post_by_tag('attachment', 'bmw')
+
+?>
 <footer id="colophon" role="contentinfo" class='colophon-footer'>
 	<div class="site-info">
 		<ul class='automotive-certifications'>

@@ -1,9 +1,206 @@
 <?php
 
 /**
- * Randomize menu function
+ * Custom Post Types
  *
+ **/
+
+function lm_custom_post_type_creator($post_type_name, $description, $public, $menu_position, $supports, $has_archive, $irreg_plural) {
+  if ($irreg_plural) {$plural = 's';} else {$plural = '';}
+  $labels = array(
+    'name'               => _x( $post_type_name, 'post type general name' ),
+    'singular_name'      => _x( strtolower($post_type_name), 'post type singular name' ),
+    'add_new'            => _x( 'Add New', 'book' ),
+    'add_new_item'       => __( 'Add New '.$post_type_name),
+    'edit_item'          => __( 'Edit '.$post_type_name ),
+    'new_item'           => __( 'New '.$post_type_name ),
+    'all_items'          => __( 'All '.$post_type_name.$plural ),
+    'view_item'          => __( 'View '.$post_type_name ),
+    'search_items'       => __( 'Search'.$post_type_name.$plural ),
+    'not_found'          => __( 'No '.$post_type_name.$plural.' found' ),
+    'not_found_in_trash' => __( 'No '.$post_type_name.$plural.' found in the Trash' ), 
+    'parent_item_colon'  => '',
+    'menu_name'          => $post_type_name
+  );
+  $args = array(
+    'labels'        => $labels,
+    'description'   => $description,
+    'public'        => $public,
+    'menu_position' => $menu_position,
+    'supports'      => $supports,
+    'has_archive'   => $has_archive,
+  );
+  register_post_type( $post_type_name, $args ); 
+}
+
+add_action( 'init', lm_custom_post_type_creator('Staff', 'Holds our staff specific data', true, 5, array( 'title', 'editor', 'thumbnail' ), true, false));
+add_action( 'init', lm_custom_post_type_creator('Testimonial', 'Holds our testimonials', true, 4, array( 'title', 'editor', 'thumbnail' ), true, true));
+//add_action( 'init', lm_custom_post_type_creator('Testimonial', 'Holds our testimonials', true, 4, array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ), true, true));
+
+
+// add_action( 'add_meta_boxes', 'staff_position_box' );
+// function staff_position_box() {
+//     add_meta_box( 
+//         'staff_position_box',
+//         __( 'Staff Position', 'myplugin_textdomain' ),
+//         'staff_position_box_content',
+//         'staff',
+//         'side',
+//         'high'
+//     );
+// }
+
+// function staff_position_box_content( $post ) {
+//   wp_nonce_field( plugin_basename( __FILE__ ), 'staff_position_box_content_nonce' );
+//   echo '<label for="staff_position"></label>';
+//   echo '<input type="text" id="staff_position" name="staff_position" placeholder="enter a position" />';
+// }
+
+// add_action( 'save_post', 'staff_position_box_save' );
+// function staff_position_box_save( $post_id ) {
+
+//   if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
+//   return;
+
+//   if ( !wp_verify_nonce( $_POST['staff_position_box_content_nonce'], plugin_basename( __FILE__ ) ) )
+//   return;
+
+//   if ( 'page' == $_POST['post_type'] ) {
+//     if ( !current_user_can( 'edit_page', $post_id ) )
+//     return;
+//   } else {
+//     if ( !current_user_can( 'edit_post', $post_id ) )
+//     return;
+//   }
+//   $staff_position = $_POST['staff_position'];
+//   update_post_meta( $post_id, 'staff_position', $staff_position );
+// }
+
+/**
+ * Adds a box to the main column on the Post and Page edit screens.
  */
+function lm_add_meta_box() {
+
+    //possible vars to pass in
+    
+    //$metabox_id
+    //$metabox_title
+    //$metabox_callback_func??
+    //$content_type
+
+    //$screens = array( 'post', 'page' );
+
+    //foreach ( $screens as $screen ) {
+
+        add_meta_box(
+            'myplugin_sectionid',
+            __( 'Staff Position', 'myplugin_textdomain' ),
+            'myplugin_meta_box_callback',
+            'staff',//$screen
+            'side',
+            'high'
+        );
+    //}
+}
+add_action( 'add_meta_boxes', 'lm_add_meta_box' );
+
+/**
+ * Prints the box content.
+ * 
+ * @param WP_Post $post The object for the current post/page.
+ */
+function myplugin_meta_box_callback( $post ) {
+
+    // Add an nonce field so we can check for it later.
+    wp_nonce_field( 'myplugin_meta_box', 'myplugin_meta_box_nonce' );
+
+    /*
+     * Use get_post_meta() to retrieve an existing value
+     * from the database and use the value for the form.
+     */
+    $value = get_post_meta( $post->ID, '_my_meta_value_key', true );
+
+    echo '<label for="myplugin_new_field">';
+    _e( '', 'myplugin_textdomain' );
+    echo '</label> ';
+    echo '<input type="text" id="myplugin_new_field" name="myplugin_new_field" value="' . esc_attr( $value ) . '" size="25" />';
+}
+
+/**
+ * When the post is saved, saves our custom data.
+ *
+ * @param int $post_id The ID of the post being saved.
+ */
+function myplugin_save_meta_box_data( $post_id ) {
+
+    /*
+     * We need to verify this came from our screen and with proper authorization,
+     * because the save_post action can be triggered at other times.
+     */
+
+    // Check if our nonce is set.
+    if ( ! isset( $_POST['myplugin_meta_box_nonce'] ) ) {
+        return;
+    }
+
+    // Verify that the nonce is valid.
+    if ( ! wp_verify_nonce( $_POST['myplugin_meta_box_nonce'], 'myplugin_meta_box' ) ) {
+        return;
+    }
+
+    // If this is an autosave, our form has not been submitted, so we don't want to do anything.
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+        return;
+    }
+
+    // Check the user's permissions.
+    if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
+
+        if ( ! current_user_can( 'edit_page', $post_id ) ) {
+            return;
+        }
+
+    } else {
+
+        if ( ! current_user_can( 'edit_post', $post_id ) ) {
+            return;
+        }
+    }
+
+    /* OK, it's safe for us to save the data now. */
+    
+    // Make sure that it is set.
+    if ( ! isset( $_POST['myplugin_new_field'] ) ) {
+        return;
+    }
+
+    // Sanitize user input.
+    $my_data = sanitize_text_field( $_POST['myplugin_new_field'] );
+
+    // Update the meta field in the database.
+    update_post_meta( $post_id, '_my_meta_value_key', $my_data );
+}
+add_action( 'save_post', 'myplugin_save_meta_box_data' );
+
+
+/**
+ * Add categories and tags to media
+ * - 
+ *
+ **/
+
+// apply categories to attachments
+function lm_add_cat_tag_to_attachments() {
+    register_taxonomy_for_object_type( 'category', 'attachment' );
+    register_taxonomy_for_object_type( 'post_tag', 'attachment' );
+}
+add_action( 'init' , 'lm_add_cat_tag_to_attachments' );
+
+/**
+ * Randomize menu items function
+ * - used for AutoBrands menu
+ *
+ **/
 
 function randMenu ($menuName, $numItemsReturnedPlusOne) {
     //randomize and output 5 menu items
@@ -29,26 +226,34 @@ function randMenu ($menuName, $numItemsReturnedPlusOne) {
     }
 }
 
+/**
+ * Get menu and reset post query
+ * - used primarily for archive menus
+ *
+ **/
 
-function getMainMenu($menulocation){
-  $locations = get_nav_menu_locations();
-  $menuItems = wp_get_nav_menu_items( $locations[ $menulocation ] );
+function getMainMenu($menulocation, $echo = true, $container = 'div'){
+    $locations = get_nav_menu_locations();
+    $menuItems = wp_get_nav_menu_items( $locations[ $menulocation ] );
+
     if(empty($menuItems)) {
         return false;
     } else {
-        if(is_archive())
-        {
-            wp_nav_menu(array('theme_location' => $menulocation,'echo' => false));
-        } else {
-            wp_nav_menu(array('theme_location' => $menulocation));
-        }
+        // if(is_archive())
+        // {
+        //     wp_nav_menu(array('theme_location' => $menulocation,'echo' => false));
+        // } else {
+        //     wp_nav_menu(array('theme_location' => $menulocation));
+        // }
+        wp_nav_menu(array('theme_location' => $menulocation,'echo' => $echo, 'container' => $container));
         return true;
     }
 }
 /**
- * Register our sidebars and widgetized areas.
+ * Register Sidebars/Widget Areas.
  *
- */
+ **/
+
 function lowermedia_widgets_init() {
 
     register_sidebar( array(
@@ -62,10 +267,18 @@ function lowermedia_widgets_init() {
 }
 add_action( 'widgets_init', 'lowermedia_widgets_init' );
 
+/**
+ * Register Menus
+ *
+ **/
+
 function lowermedia_menus_init() {
   register_nav_menus(
     array(
-      'auto-brands-menu' => __( 'Auto Brands Menu' )
+      'auto-brands-menu' => __( 'Auto Brands Menu' ),
+      'mobile-menu-left' => __( 'Mobile Menu Left' ),
+      'mobile-menu-right' => __( 'Mobile Menu Right' ),
+      'mini-mobile-menu' => __( 'Mini Mobile Menu' )
     )
   );
 }
@@ -74,6 +287,8 @@ add_action( 'init', 'lowermedia_menus_init' );
 /*
 #
 #   SPEED OPTIMIZATIONS
+#   -Load all fonts from google
+#   -remove contact form 7 styles and scripts
 #
 */
 
@@ -140,14 +355,15 @@ function lm_custom_login_logo() {
     echo '<style type="text/css">
     h1 a 
     { 
-        background-image:url('.get_stylesheet_directory_uri().'/images/login.png) !important; 
-        background-size: 311px 100px !important;
-        height: 100px !important; 
+        background-image:url('.get_stylesheet_directory_uri().'/img/login.png) !important; 
+        background-size: 211px auto !important;
+        height: 200px !important;
         width: 311px !important; 
         margin-bottom: 0 !important; 
         padding-bottom: 0 !important; 
     }
-    .login form { margin-top: 10px !important; }
+    .login form { margin-top: 10px !important; border: 1px solid #f9be19; }
+    .login {background:#043789;}
     </style>';
 }
 

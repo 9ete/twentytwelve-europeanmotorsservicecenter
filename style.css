@@ -12,7 +12,20 @@
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
-
+body.admin-bar {
+        margin-top: -28px;
+        padding-bottom: 28px;
+    }
+    #wpadminbar {
+        top: auto !important;
+        bottom: 0;
+    }
+    #wpadminbar .quicklinks>ul>li {
+        position:relative;
+    }
+    #wpadminbar .ab-top-menu>.menupop>.ab-sub-wrapper {
+        bottom:28px;
+    }
 /* -- FONT IMPORTS -- */
 
 	/*KubusBold*/
@@ -137,7 +150,11 @@
 
 	html {background-color:#043789;}
 
-	body {min-width:1024px;background-color:#043789;}
+	body {
+		min-width:1024px;
+		min-width: 100vw;
+		background-color:#043789;
+	}
 
 	.custom-font-enabled {font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
 
@@ -234,12 +251,15 @@
 
 /* -- HEADER -- */
 
+	#sticky-wrapper-undefined-2 {
+		margin-top: 40vh;
+	}
+
 	.sticky-holder {
 		width:100%;
-		height: 190px;
 		background: #043789;
 		z-index: 200;
-		position: relative;
+		position: fixed;
 	}
 
 	.home .sticky-holder {background:transparent;}
@@ -253,10 +273,10 @@
 	.site-header {
 		padding: 0;
 		background-color: #043789;
-		height: 211px;
+		margin-bottom:25px;
 	}
 
-	.home .site-header { height: 180px; }
+	.home .site-header { height: 180px; margin-bottom:0;}
 
 	.home .site-header {
 		/*height: 660px;*/
@@ -286,6 +306,136 @@
 		background-attachment: fixed;
 	}
 
+	.mobile-bkimage-div {
+		background-image: url(http://dummyimage.com/1400x660/CF0/000&text=Slide+2);
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		/*height: 660px;*/
+		height:90vh;
+		max-height: 660px;
+		background-size: auto 930px;
+		background-repeat: no-repeat;
+		background-position: center -170px;
+		background-attachment: fixed;
+	}
+
+	.mobile-column {
+		display:inline-block;
+		width:30%;
+		height:100%;
+		vertical-align:top;
+	}
+
+	.mobile-column .menu {
+		width:100%;
+		float:left;
+	}
+
+	#menu-mobile-menu-left .menu-item ,
+	#menu-mobile-menu-right .menu-item {
+		width: 80%;
+		margin: 5px auto;
+		padding: 0;
+		display:block;
+	}
+
+	.mini-mobile-menu-column {display:none;}
+
+	.main-navigation,
+	.sticky-wrapper,
+	.sticky-holder,
+	.site-header,
+	.page .main-navigation,
+	.archive .main-navigation {height:170px;}
+
+	.show-1024 {display:none;}
+	.hide-1024 {display:block;}
+
+	@media only screen and (max-width : 1024px) {
+
+		.show-1024 {display:block;}
+		.hide-1024 {display:none;}
+
+		.top-navigation,
+		.menu-primary-menu-container {display:none;}
+
+		.main-navigation,
+		.sticky-wrapper,
+		.sticky-holder,
+		.site-header,
+		.page .main-navigation,
+		.archive .main-navigation {
+			height: 211px;
+		}
+
+		body.template-front-page .site-content, 
+		body.attachment .site-content, 
+		body.full-width .site-content {
+			width: 80%;
+			margin: 1.714285714rem 10%;
+		}
+	}
+
+	@media only screen and (max-width : 600px) {
+
+		body {max-width:600px;}
+		
+		.mobile-column-left,
+		.mobile-column-right {display:none;}
+
+		.mobile-logo-wrap {width:100%;height:211px;}
+
+		.mini-mobile-menu-column {
+			display:block;
+			width:100%;
+		}
+
+		.mini-mobile-menu-column .menu .menu-item {
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			border-radius: 0;
+			float:left;
+		}
+
+		.site-header {
+			height: 522px;
+		}
+
+		.home .site-header {
+			height: 542px;
+		}
+
+		.auto-brands, .menu-auto-brands-menu-container {display:none;}
+
+		.sticky-holder {position:relative;}
+
+		.main {z-index: 200;border-top:5px solid #f9be19;}
+
+	}
+	/*
+
+	on mobile background image div
+	set height to inner page height of header
+	still use bk image but position in a good light
+	do this to prevent scroll effect as it is very choppy on mobile
+
+	*/
+
+	/*
+	
+	use media queries to set height of background images according to mobile device height.
+
+	mq for ipad @ 1024 width
+	mq for ipad @ 768 width
+	iphones
+	android
+	windows etc
+
+	*/
+
 	.bkimage-div {
 	    z-index: 2;
 	}
@@ -310,7 +460,7 @@
 
 	hgroup {
 		display:block;
-		margin:350px 0;
+		/*margin:350px 0;*/
 		width:100%;
 		background-color: rgba(91,91,94,0.455);
 		box-shadow: 1px 0px 76px rgba(91,91,94,0.955);
@@ -332,9 +482,10 @@
 		}
 	}
 
-	.main-navigation {margin-top:0;white-space: nowrap;}
-	.page .main-navigation,
-	.archive .main-navigation {height:190px;}
+	.main-navigation {
+		margin-top:0;
+		white-space: nowrap;
+	}
 
 	.main-navigation li {
 			margin: 0;
@@ -398,23 +549,42 @@
 		height: 150px;
 		width: 140px;
 	}
+
+	@media only screen 
+	and (max-width : 1024px) {
+		/* Styles */
+		/* can we hide this will only php, do we do it anyway? */
+		#menu-item-12 {display: none;}
+	}
+
 	.customer-menu li a,
 	.social-menu li a{
 		color:white;
 	}
 
-	.social-menu {
+	.top-navigation .social-menu {
 		float:left;
 	}
 
-	.customer-menu {
+	.top-navigation .customer-menu {
 		float:right;
+	}
+
+	.mobile-column .customer-menu .menu-item {padding:0;}
+	.mobile-logo-wrap img {
+		height: 100%;
+		width: auto;
+		max-width: 100%;
 	}
 
 	.main-navigation .social-menu,
 	.main-navigation .customer-menu {margin-top:5px;}
 
-	.top-navigation {position: absolute;width: 960px;}
+	.top-navigation {
+		position: absolute;
+		/*width: 960px;*/
+		width:100%;
+	}
 
 	.top-navigation .menu-item {
 		line-height: 2.692307692;
@@ -490,6 +660,10 @@
 	.customer-menu .menu-item a {
 		line-height: 2;
 		color:#043789;
+	}
+
+	.mobile-column .customer-menu .menu-item a {
+		line-height: 3.5;
 	}
 
 	.menu-primary-menu-container .nav-menu {margin:10px 0;}

@@ -68,13 +68,13 @@ var bkimgFunction = jQuery(document).ready(function(){//jQuery(window).load(func
     var images = [
         // 'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/fix-my-bmw-seattle-tacoma-lakewood-washington-jaquar-audi-mercedes.png',
         // 'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/fix-my-audi-seattle-tacoma-lakewood-washington-jaquar-audi-mercedes.png',
-        'http://dummyimage.com/1400x660/FC0/000&text=Slide+1',
-        'http://dummyimage.com/1400x660/CF0/000&text=Slide+2',
-        'http://dummyimage.com/1400x660/0FC/000&text=Slide+3'];
+        // 'http://dummyimage.com/1400x660/FC0/000&text=Slide+1',
+        // 'http://dummyimage.com/1400x660/CF0/000&text=Slide+2',
+        // 'http://dummyimage.com/1400x660/0FC/000&text=Slide+3'];
         // var  images = ['http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg',
-        //             'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg',
-        //             'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0127-3.jpg',
-        //             'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/fix-my-bmw-tacoma-seattle-washington-audi.jpg'];
+                    'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg',
+                    'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0127-3.jpg',
+                    'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/fix-my-bmw-tacoma-seattle-washington-audi.jpg'];
     jQuery('#backgroundimage').css('background-image', 'url(' + images[i] + ')');
     setInterval(function () {
         if (++i === images.length) {
