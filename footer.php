@@ -36,21 +36,27 @@ function return_post_by_tag($post_type, $tag) {
 	    <?php
 	}
 
-	var_dump($images);
+	//var_dump($images);
 }
 
 //return_post_by_tag('attachment', 'bmw')
 
 ?>
 <footer id="colophon" role="contentinfo" class='colophon-footer'>
-	<div class="site-info">
-		<ul class='automotive-certifications'>
-				<li class='auto-cert-item'><a href='/'><img src='/wp-content/uploads/2014/09/iatn-international-automotive-technicians-network-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
-				<li class='auto-cert-item'><a href='/'><img src='/wp-content/uploads/2014/09/ase-automotive-service-excellence-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
-				<li class='auto-cert-item'><a href='/'><img src='/wp-content/uploads/2014/09/asa-automotive-service-association-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
-			</ul>
-	</div><!-- .site-info -->
-	<?php dynamic_sidebar( 'footer_right_1' ); ?>
+	<div class='wrapper'>
+		<div class="site-info footer-column footer-column-one">
+			<?php dynamic_sidebar( 'footer_column_one' ); ?>
+		</div><!-- .site-info -->
+		<div class="footer-column footer-column-two">
+			<?php dynamic_sidebar( 'footer_column_two' ); ?>
+		</div><!--  -->
+		<div class="footer-column footer-column-three">
+			<?php dynamic_sidebar( 'footer_column_three' ); ?>
+		</div><!--  -->
+		<div class="footer-column footer-column-four">
+			<?php dynamic_sidebar( 'footer_column_four' ); ?>
+		</div><!--  -->
+	</div><!--  -->
 </footer><!-- #colophon -->
 
 <?php wp_footer(); 

@@ -12,20 +12,25 @@
 
 /* =Theme customization starts here
 -------------------------------------------------------------- */
-body.admin-bar {
+
+	.admin-bar {
         margin-top: -28px;
         padding-bottom: 28px;
     }
-    #wpadminbar {
+
+    .no-grav {
         top: auto !important;
         bottom: 0;
     }
-    #wpadminbar .quicklinks>ul>li {
+
+    .no-grav .quicklinks>ul>li {
         position:relative;
     }
-    #wpadminbar .ab-top-menu>.menupop>.ab-sub-wrapper {
+
+    .no-grav .ab-top-menu>.menupop>.ab-sub-wrapper {
         bottom:28px;
     }
+
 /* -- FONT IMPORTS -- */
 
 	/*KubusBold*/
@@ -129,6 +134,9 @@ body.admin-bar {
 
 /* -- GLOBAL -- */
 
+	a {color:#043789;}
+	a:hover {color:#5B5B5E;}
+
 	.site-header .site-title, 
 	.site-header .site-description {
 		text-shadow: 1px 1px 1px #e8a825;
@@ -154,6 +162,7 @@ body.admin-bar {
 		min-width:1024px;
 		min-width: 100vw;
 		background-color:#043789;
+		font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 	}
 
 	.custom-font-enabled {font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
@@ -173,22 +182,29 @@ body.admin-bar {
 	}
 
 	.main,
-	.auto-brands,
-	.menu-auto-brands-menu-container {
+	.site-header .auto-brands,
+	.home .auto-brands,
+	.site-header .menu-auto-brands-menu-container,
+	.home .menu-auto-brands-menu-container {
 		position:relative;
 		background-color:#D1D2D4;
 	}
 
 	.main {z-index: 197;}
-	.auto-brands {z-index: 198;}
+	.site-header .auto-brands,
+	.home .auto-brands {z-index: 198;}
 
-	.auto-brands, .menu-auto-brands-menu-container {
+	.site-header .auto-brands,
+	.home .auto-brands, 
+	.site-header .menu-auto-brands-menu-container,
+	.home .menu-auto-brands-menu-container {
 		width:100%;
 		border-top: 1px solid #f9be19;
 	}
 
 	/*.brands-serviced-nav, */
-	.menu-auto-brands-menu-container .menu {
+	.site-header .menu-auto-brands-menu-container .menu,
+	.home .menu-auto-brands-menu-container .menu {
 		width:960px;
 		margin:auto;
 		max-height: 26px;
@@ -196,21 +212,26 @@ body.admin-bar {
 	}
 
 	/*.brands-serviced-brand, */
-	.menu-auto-brands-menu-container .menu .menu-item {
+	.site-header .menu-auto-brands-menu-container .menu .menu-item,
+	.home .menu-auto-brands-menu-container .menu .menu-item {
 		display:inline-block;
 		margin:5px 2.5px;
 		width: 15%;
 		text-align: center;
 	}
 
-	.menu-auto-brands-menu-container .menu .menu-item a {
+	.site-header .menu-auto-brands-menu-container .menu .menu-item a ,
+	.home .menu-auto-brands-menu-container .menu .menu-item a {
 		font-family: KubusBold, "Trebuchet MS", Arial, sans-serif;
 		text-decoration: none;
 	}
 
 	/*.brands-serviced-brand img {height:15px;}*/
 
-	.auto-brands, .menu-auto-brands-menu-container {
+	.site-header .auto-brands,
+	.site-header .menu-auto-brands-menu-container,
+	.home .auto-brands,
+	.home .menu-auto-brands-menu-container {
 		background: #ffffff;
 		/* Old browsers */
 		background: -moz-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);
@@ -297,22 +318,20 @@ body.admin-bar {
 		left: 0;
 		top: 0;
 		width: 100%;
-		/*height: 660px;*/
 		height:90vh;
 		max-height: 660px;
-		background-size: auto 930px;
+		background-size: auto 1250px;
 		background-repeat: no-repeat;
 		background-position: center -170px;
 		background-attachment: fixed;
 	}
 
 	.mobile-bkimage-div {
-		background-image: url(http://dummyimage.com/1400x660/CF0/000&text=Slide+2);
+		background-image: url(http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg);
 		position: fixed;
 		left: 0;
 		top: 0;
 		width: 100%;
-		/*height: 660px;*/
 		height:90vh;
 		max-height: 660px;
 		background-size: auto 930px;
@@ -372,10 +391,12 @@ body.admin-bar {
 
 		body.template-front-page .site-content, 
 		body.attachment .site-content, 
-		body.full-width .site-content {
+		body.full-width .site-content,
+		footer .wrapper {
 			width: 80%;
 			margin: 1.714285714rem 10%;
 		}
+
 	}
 
 	@media only screen and (max-width : 600px) {
@@ -408,7 +429,7 @@ body.admin-bar {
 			height: 542px;
 		}
 
-		.auto-brands, .menu-auto-brands-menu-container {display:none;}
+		.site-header .auto-brands, .menu-auto-brands-menu-container {display:none;}
 
 		.sticky-holder {position:relative;}
 
@@ -471,7 +492,7 @@ body.admin-bar {
 	 {text-align: center;}
 
 	.automotive-certifications {text-align: center;}
-	.automotive-certifications .auto-cert-item {display:inline-block;}
+	.automotive-certifications .auto-cert-item {display:block;}
 	.automotive-certifications .auto-cert-item img {height:50px;}
 
 /* -- NAVIGATION -- */
@@ -480,6 +501,12 @@ body.admin-bar {
 		.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
 			border:none;
 		}
+	}
+
+	@media screen and (max-width: 600px) {
+		.mobile-hide {display:none;}
+
+		.pre-content-widget li a, .post-content-widget li a {font-size:9px;line-height:9px;}
 	}
 
 	.main-navigation {
@@ -521,10 +548,8 @@ body.admin-bar {
 	.main-navigation .menu-item .sub-menu {z-index: 201;width:100%;margin-left:-7px;margin-top:1px;}
 	.main-navigation .menu-item .sub-menu a {width:auto;border-radius:5px;}
 
-	.main-navigation li a,
-	.pre-content-widget li a {color:#043789;}
-	.main-navigation li a:hover,
-	.pre-content-widget li a:hover {color:#5B5B5E;}
+	.main-navigation li a {color:#043789;}
+	.main-navigation li a:hover{color:#5B5B5E;}
 
 	.main-navigation .current-menu-item > a, 
 	.main-navigation .current-menu-ancestor > a, 
@@ -576,7 +601,8 @@ body.admin-bar {
 	.mobile-logo-wrap img {
 		height: 100%;
 		width: auto;
-		max-width: 100%;
+		max-width: 211px;
+		max-height: 211px;
 	}
 
 	.main-navigation .social-menu,
@@ -588,7 +614,7 @@ body.admin-bar {
 		width:100%;
 	}
 
-	.top-navigation .menu-item {
+	.customer-menu .menu-item {
 		line-height: 2.692307692;
 		display:inline-block;
 		text-align: center;
@@ -606,9 +632,16 @@ body.admin-bar {
 	.social-menu .menu-item a:hover {color:transparent;}
 
 	.social-menu .facebook-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/facebook-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
+	.social-menu .facebook-li:hover {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/square-facebook-128-gradient.png');}
+
 	.social-menu .twitter-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/twitter-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
-	.social-menu .linkedin-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/google-plus-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
-	.social-menu .google-plus-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/linkedin-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
+	.social-menu .twitter-li:hover {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/square-twitter-128-gradient.png');}
+
+	.social-menu .google-plus-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/google-plus-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
+	.social-menu .google-plus-li:hover {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/square-google-plus-128-gradient.png');}
+
+	.social-menu .linkedin-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/linkedin-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
+	.social-menu .linkedin-li:hover {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/square-linkedin-128-gradient.png');}
 
 	.main-navigation .menu-item .sub-menu .sub-menu {
 		margin-left: 2px;
@@ -623,7 +656,14 @@ body.admin-bar {
 	}
 
 	.main-navigation li,
-	.pre-content-widget li {
+	.customer-menu .menu-item,
+	.pre-content-widget li,
+	.post-content-widget .menu-auto-services-menu-container li,
+	.menu-toggle,
+	button,
+	input[type="submit"],
+	input[type="button"],
+	input[type="reset"] {
 		border-radius: 5px;
 		background: #f9f9f9;
 		/* Old browsers */
@@ -644,8 +684,9 @@ body.admin-bar {
 		border: 1px solid #f9be19;
 	}
 
-	.main-navigation li:hover,
-	.pre-content-widget li {
+	.pre-content-widget li,
+	.customer-menu .menu-item,
+	.post-content-widget .menu-auto-services-menu-container li {
 		/*Reverse background color on hover for main nav */
 		background: #c9c9c9;
 		/* Old browsers */
@@ -668,6 +709,7 @@ body.admin-bar {
 	.customer-menu .menu-item a {
 		line-height: 2;
 		color:#043789;
+		text-decoration: none;
 	}
 
 	.mobile-column .customer-menu .menu-item a {
@@ -698,12 +740,71 @@ body.admin-bar {
 
 /* -- CONTENT -- */
 
-	.pre-content-widget-holder {width:100%;white-space: nowrap;margin-bottom: 30px;}
-	.pre-content-widget li {text-align: center;display:inline-block;width:33%;line-height: 2;text-transform: uppercase}
-	.pre-content-widget .current-menu-item {display: none;}
-	.pre-content-widget li a {text-decoration:none;font-family:Futura, 'Trebuchet MS', Arial, sans-serif;;}
 	
-	.entry-title {text-align: center;font-family:Futura, 'Trebuchet MS', Arial, sans-serif;color:#043789;text-transform: uppercase;}
+	.pre-content-widget-holder {white-space:nowrap;}
+
+	.pre-content-widget-holder,
+	.post-content-widget-holder {
+		width:100%;
+		margin-bottom: 30px;
+	}
+
+	.pre-content-widget h2,
+	.post-content-widget h2 {display: none;}
+
+	.pre-content-widget li,
+	.post-content-widget li {
+		text-align: center;
+		display:inline-block;
+		width:33%;
+		line-height: 2;
+		text-transform: uppercase;
+	}
+
+	.menu-auto-services-menu-container li {
+		width: 150px;
+		height: 150px;
+		vertical-align: top;
+		margin: 20px;display:inline-block;
+		line-height: 150px;
+	}
+
+	.pre-content-widget .menu-auto-services-menu-container li {
+		height:50px;
+		line-height:50px;
+	}
+
+	.menu-auto-services-menu-container .menu {
+		width: 81.5%;
+		margin: auto;
+	}
+
+	.menu-auto-services-menu-container {white-space: normal;}
+
+	.pre-content-widget .current-menu-item,
+	.post-content-widget .current-menu-item {display: none;}
+
+	.pre-content-widget .menu-item-334 {display:inline-block;}
+
+	.pre-content-widget li a,
+	.post-content-widget li a {
+		text-decoration:none;
+		font-family:Futura, 'Trebuchet MS', Arial, sans-serif;
+	}
+	
+	.entry-title {
+		text-align: center;
+		font-family:Futura, 'Trebuchet MS', Arial, sans-serif;
+		color:#043789;
+		text-transform: uppercase;
+	}
+
+	.home .entry-header {margin: 30px 0px 5px 0px;}
+
+	.page-id-32.entry-content {
+		width: 78%;
+		margin: auto;
+	}
 
 	.em-button {
 			/*making nav widths maller*/
@@ -741,13 +842,68 @@ body.admin-bar {
 
 	.cert-button a { text-decoration:none; }
 
+	.content-left,
+	.content-right {
+		display:inline-block;
+		width:45%;
+		vertical-align: top;
+	}
+
+	.wpcf7-submit {width:350px;}
+
+	@media only screen and (max-width : 1024px) {
+		.content-left, .content-right {
+			margin:auto;
+			display:block;
+		}
+	}
+
 /* -- FOOTER -- */
 
 	body .colophon-footer {
-		max-width:100%;
+		background-color: #043789;
 		margin-top:0;
 		border-top-color:#E8A826;
+		max-width:100%;
+		z-index: 200;
+		position: relative;
+		width: 100%;
+	}
+
+	body .colophon-footer .wrapper {
 		z-index: 200;
 		position: relative;
 		background-color: #043789;
+		white-space: nowrap;
+	}
+
+	.footer-column {
+		width: 24.5%;
+		min-height: 100px;
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.footer-column .customer-menu .menu-item {
+		max-width: 100%;
+		display: block;
+		margin: 10px 0;
+	}
+
+	.footer-column .customer-menu .menu-item a {font-size: 12px;}
+	.footer-column .customer-menu .menu-item a:hover {color:#6a6a6a;}
+
+/* -- Media Queries -- */
+
+	@media only screen and (max-width : 600px) {
+
+		.bkimage-div,
+		.nxt-bkimage-div,
+		.mobile-bkimage-div,
+		hgroup {
+			/*background-size:auto 300px;
+			background-position:center -70px;*/
+			display:none;
+		}
+
 	}

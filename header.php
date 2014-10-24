@@ -21,6 +21,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="initial-scale=1.0">
+<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -36,6 +37,24 @@
 	</script>
 <?php endif; ?>
 <body <?php body_class(); ?>>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '660437980741195',
+      xfbml      : true,
+      version    : 'v2.1'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<!-- <div class='background-image-slider'>
@@ -157,9 +176,6 @@
 		<?php endif;?>
 
 	</header><!-- #masthead -->
-	<?php
-
-	?>
 	<?php if (wp_is_mobile()) : ?>
 		<?php if (is_front_page()) : ?>
 			<div id="mobile-backgroundimage" class='mobile-bkimage-div'></div>
@@ -182,3 +198,11 @@
 	<?php endif; ?>
 	<div id="main" class="main">
 		<div id="main-inner" class="main-inner wrapper">
+		<?php if (is_front_page()) : ?>
+			<header class="entry-header">
+				<?php if ( ! is_page_template( 'page-templates/front-page.php' ) ) : ?>
+				<?php the_post_thumbnail(); ?>
+				<?php endif; ?>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
+			</header>
+		<?php endif; ?>

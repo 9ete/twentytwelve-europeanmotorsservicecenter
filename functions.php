@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Custom Post Types
+ * Custom Post Types, on the fly creation
  *
  **/
 
@@ -81,17 +81,6 @@ add_action( 'init', lm_custom_post_type_creator('Testimonial', 'Holds our testim
  */
 function lm_add_meta_box() {
 
-    //possible vars to pass in
-    
-    //$metabox_id
-    //$metabox_title
-    //$metabox_callback_func??
-    //$content_type
-
-    //$screens = array( 'post', 'page' );
-
-    //foreach ( $screens as $screen ) {
-
         add_meta_box(
             'myplugin_sectionid',
             __( 'Staff Position', 'myplugin_textdomain' ),
@@ -100,7 +89,6 @@ function lm_add_meta_box() {
             'side',
             'high'
         );
-    //}
 }
 add_action( 'add_meta_boxes', 'lm_add_meta_box' );
 
@@ -185,11 +173,10 @@ add_action( 'save_post', 'myplugin_save_meta_box_data' );
 
 /**
  * Add categories and tags to media
- * - 
+ * - apply categories to attachments
  *
  **/
 
-// apply categories to attachments
 function lm_add_cat_tag_to_attachments() {
     register_taxonomy_for_object_type( 'category', 'attachment' );
     register_taxonomy_for_object_type( 'post_tag', 'attachment' );
@@ -239,12 +226,6 @@ function getMainMenu($menulocation, $echo = true, $container = 'div'){
     if(empty($menuItems)) {
         return false;
     } else {
-        // if(is_archive())
-        // {
-        //     wp_nav_menu(array('theme_location' => $menulocation,'echo' => false));
-        // } else {
-        //     wp_nav_menu(array('theme_location' => $menulocation));
-        // }
         wp_nav_menu(array('theme_location' => $menulocation,'echo' => $echo, 'container' => $container));
         return true;
     }
@@ -266,9 +247,42 @@ function lowermedia_widgets_init() {
     ) );
 
     register_sidebar( array(
-        'name' => 'Footer right sidebar',
-        'id' => 'footer_right_1',
-        'before_widget' => '<div class="footer-right-widget">',
+        'name' => 'Post Content Widget Area',
+        'id' => 'post-content-widget',
+        'before_widget' => '<div id="post-content-widget" class="post-content-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="rounded">',
+        'after_title' => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name' => 'Footer Column One',
+        'id' => 'footer_column_one',
+        'before_widget' => '<div class="footer-column-one-widget footer-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="rounded">',
+        'after_title' => '</h2>',
+    ) );
+    register_sidebar( array(
+        'name' => 'Footer Column Two',
+        'id' => 'footer_column_two',
+        'before_widget' => '<div class="footer-column-two-widget footer-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="rounded">',
+        'after_title' => '</h2>',
+    ) );
+    register_sidebar( array(
+        'name' => 'Footer Column Three',
+        'id' => 'footer_column_three',
+        'before_widget' => '<div class="footer-column-three-widget footer-widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="rounded">',
+        'after_title' => '</h2>',
+    ) );
+    register_sidebar( array(
+        'name' => 'Footer Column Four',
+        'id' => 'footer_column_four',
+        'before_widget' => '<div class="footer-column-four-widget footer-widget">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="rounded">',
         'after_title' => '</h2>',
@@ -308,7 +322,6 @@ function load_fonts() {
     wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Signika:400,700|Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext');
     wp_enqueue_style( 'googleFonts');
 }
-
 add_action('wp_print_styles', 'load_fonts');
 
 //Remove contact form 7 stylesheet as it is unnecessary
@@ -317,40 +330,28 @@ function lowermedia_deregister_cf7style (){
     wp_deregister_style( 'contact-form-7' );
 }
 add_action( 'wp_enqueue_scripts', 'lowermedia_deregister_cf7style' );
-//http://cci-media.petelower.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=3.9.3
 
-add_action( 'wp_print_scripts', 'lowermedia_deregister_javascript', 100 );
-
+//Remove contact form 7 javascript as it is unnecessary
 function lowermedia_deregister_javascript() {
     wp_deregister_script( 'contact-form-7' );
 }
-
+add_action( 'wp_print_scripts', 'lowermedia_deregister_javascript', 100 );
 
 /*
 #
 #   CONTACT FORM  FUNCTION
-#
+#   - changing default wordpress email settings
 */
 
-//$actual_link = 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
-//$tokens = explode('/', 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']);
-// $page_slug = $tokens[sizeof(explode('/', 'http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']))-2];
-
-// if ($page_slug=='') {
-    
-//     }
-
-/** changing default wordpres email settings */
- 
-add_filter('wp_mail_from', 'new_mail_from');
-add_filter('wp_mail_from_name', 'new_mail_from_name');
- 
 function new_mail_from($old) {
  return 'pete@europeanmotorsservicecenter.petelower.com';
 }
+add_filter('wp_mail_from', 'new_mail_from');
+
 function new_mail_from_name($old) {
  return 'European Motors Service Center';
 }
+add_filter('wp_mail_from_name', 'new_mail_from_name');
 
 /*
 #
@@ -359,7 +360,6 @@ function new_mail_from_name($old) {
 */
 
 //* Replace WordPress login logo with your own
-add_action('login_head', 'lm_custom_login_logo');
 function lm_custom_login_logo() {
     echo '<style type="text/css">
     h1 a 
@@ -375,6 +375,7 @@ function lm_custom_login_logo() {
     .login {background:#043789;}
     </style>';
 }
+add_action('login_head', 'lm_custom_login_logo');
 
 //* Change the URL of the WordPress login logo
 function lm_url_login_logo(){
@@ -423,20 +424,18 @@ function custom_admin_logo() {
 }
 add_action('admin_head', 'custom_admin_logo');
 
-
 /*
 #
 #   ENABLE SHORTCODE IN WIDGETS
 #
 */
-
 add_filter('widget_text', 'do_shortcode');
+
 /*
 #
 #   REGISTER JS
 #
 */
-
 function lowermedia_scripts() {
     wp_enqueue_script(
         'custom-js',
@@ -444,7 +443,6 @@ function lowermedia_scripts() {
         array( 'jquery' )
     );
 }
-
 add_action( 'wp_enqueue_scripts', 'lowermedia_scripts' );
 
 function lowermedia_enqueue_parent_style() {
@@ -458,7 +456,6 @@ add_action( 'wp_enqueue_scripts', 'lowermedia_enqueue_parent_style' );
 #   http://css-tricks.com/snippets/wordpress/make-archives-php-include-custom-post-types/
 #
 */
-
 function namespace_add_custom_types( $query ) {
   if( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
     $query->set( 'post_type', array(
@@ -476,9 +473,9 @@ function searchAll( $query ) {
     }
     return $query;
 }
-
-// The hook needed to search ALL content
 add_filter( 'the_search_query', 'searchAll' );
+// The hook needed to search ALL content
+
 
 function format_phonenumber( $arg ) {
     $data = '+'.$arg;
@@ -487,7 +484,6 @@ function format_phonenumber( $arg ) {
         $result = $matches[1] . '-' .$matches[2] . '-' . $matches[3];
         return $result;
     }
-
 }
 
 // Add [phonenumber] shortcode
@@ -504,32 +500,6 @@ function phonenumber_shortcode( $atts ){
     }
 }
 add_shortcode( 'phonenumber', 'phonenumber_shortcode' );
-
-
-    
-
-
-// Add [facebookreviews] shortcode
-function facebookreviews_shortcode( $atts ){
-
-    $url=$_POST['https://www.facebook.com/europeanmotors.wa?sk=reviews'];
-    if($url!=""){
-        echo file_get_contents($url);
-    }
-
-    // //retrieve phone number from database
-    // $lm_array = get_option('lowermedia_phone_number');
-
-    // //check if user is on mobile if so make the number a link
-    // if (wp_is_mobile())
-    // {
-    //     return '<a href="tel:+'.$lm_array["id_number"].'">'.format_phonenumber($lm_array["id_number"]).'</a>';
-    // } else {
-    //     return format_phonenumber($lm_array["id_number"]);
-    // }
-}
-add_shortcode( 'facebookreviews', 'facebookreviews_shortcode' );
-
 
 class lowermedia_phonenumber_settings
 {
