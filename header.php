@@ -37,24 +37,6 @@
 	</script>
 <?php endif; ?>
 <body <?php body_class(); ?>>
-
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '660437980741195',
-      xfbml      : true,
-      version    : 'v2.1'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<!-- <div class='background-image-slider'>
