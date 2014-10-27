@@ -157,22 +157,24 @@
 		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 	</hgroup>
-	<?php if (wp_is_mobile()) : ?>
-		<?php if (is_front_page()) : ?>
-			<div id="mobile-backgroundimage" class='mobile-bkimage-div'></div>
-			<section id='auto-brands' class='auto-brands'>
-				<?php randMenu('auto-brands-menu', 7)?>
-			</section>
+	<div id='background-slider-holder' class='background-slider-holder'>
+		<?php if (wp_is_mobile()) : ?>
+			<?php if (is_front_page()) : ?>
+				<div id="mobile-backgroundimage" class='mobile-bkimage-div'></div>
+				<section id='auto-brands' class='auto-brands'>
+					<?php randMenu('auto-brands-menu', 7)?>
+				</section>
+			<?php endif; ?>
+		<?php else : ?>
+			<?php if (is_front_page()) : ?>
+				<div id="backgroundimage" class='bkimage-div'></div>
+				<div id="nextimg" class='nxt-bkimage-div'></div>
+				<section id='auto-brands' class='auto-brands'>
+					<?php randMenu('auto-brands-menu', 7)?>
+				</section>
+			<?php endif; ?>
 		<?php endif; ?>
-	<?php else : ?>
-		<?php if (is_front_page()) : ?>
-			<div id="backgroundimage" class='bkimage-div'></div>
-			<div id="nextimg" class='nxt-bkimage-div'></div>
-			<section id='auto-brands' class='auto-brands'>
-				<?php randMenu('auto-brands-menu', 7)?>
-			</section>
-		<?php endif; ?>
-	<?php endif; ?>
+	</div><!-- #background-slider-holder -->
 	<div id="main" class="main">
 		<div id="main-inner" class="main-inner wrapper">
 			
