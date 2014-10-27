@@ -171,27 +171,31 @@
 			?>
 		</div>
 	</header><!-- #masthead -->
-	
-	<hgroup class='hgroup'>
-		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-	</hgroup>
-	<div id='background-slider-holder' class='background-slider-holder'>
-		<?php if (wp_is_mobile()) : ?>
-			<?php if (is_front_page()) : ?>
+	<?php if (is_front_page()) : ?>
+		<hgroup class='hgroup'>
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+		</hgroup>
+	<?php endif; ?>
+	<?php if (wp_is_mobile()) : ?>
+		<?php if (is_front_page()) : ?>
+			<div id='background-slider-holder' class='background-slider-holder'>
 				<div id="mobile-backgroundimage" class='mobile-bkimage-div'></div>
-			<?php endif; ?>
-		<?php else : ?>
-			<?php if (is_front_page()) : ?>
+			</div>
+		<?php endif; ?>
+	<?php else : ?>
+		<?php if (is_front_page()) : ?>
+			<div id='background-slider-holder' class='background-slider-holder'>
 				<div id="backgroundimage" class='bkimage-div'></div>
 				<div id="nextimg" class='nxt-bkimage-div'></div>
-			<?php endif; ?>
+			</div>
 		<?php endif; ?>
+	<?php endif; ?>
 	</div><!-- #background-slider-holder -->
 	<div id="main" class="main">
 		<div id="main-inner" class="main-inner wrapper">
 			
-			<nav id="content-navigation" class="content-navigation wrapper" role="navigation">
+			<nav id="content-navigation" class="content-navigation wrapper main-navigation" role="navigation">
 				<?php 
 					if(!getMainMenu('content-nav-left')){
 					  $backup = $wp_query;
@@ -209,16 +213,24 @@
 					  $wp_query = $backup;
 					}
 				?>
-				<ul id='social-menu' class='social-menu menu'>
-					<li class='menu-item facebook-li'><a href='https://www.facebook.com/europeanmotors.wa'>FB</a></li>
-					<li class='menu-item twitter-li'><a href='https://twitter.com/euromotoservcen'>TW</a></li>
-					<li class='menu-item linkedin-li'><a href='https://www.linkedin.com/company/european-motors-service-center'>Pi</a></li>
-					<li class='menu-item google-plus-li'><a href='https://plus.google.com/100002154887378139579/about'>In</a></li>
-				</ul>
-				<ul id='customer-menu' class='customer-menu'>
-					<li class='menu-item'><a href='/wp-admin'>Customer Login</a></li>
-					<li class='menu-item'><a href='/schedule-automotive-appointment-lakewood-tacoma-seattle-washington/'>Schedule Today</a></li>
-				</ul>
+				<div class='column-left content-column'>
+					<ul id='social-menu' class='social-menu menu'>
+						<li class='menu-item facebook-li'><a href='https://www.facebook.com/europeanmotors.wa'>FB</a></li>
+						<li class='menu-item twitter-li'><a href='https://twitter.com/euromotoservcen'>TW</a></li>
+						<li class='menu-item linkedin-li'><a href='https://www.linkedin.com/company/european-motors-service-center'>Pi</a></li>
+						<li class='menu-item google-plus-li'><a href='https://plus.google.com/100002154887378139579/about'>In</a></li>
+						<li class='menu-item facebook-li'><a href='https://www.facebook.com/europeanmotors.wa'>FB</a></li>
+						<li class='menu-item twitter-li'><a href='https://twitter.com/euromotoservcen'>TW</a></li>
+					</ul>
+				</div>
+				<div class='column-right content-column'>
+					<ul id='customer-menu' class='customer-menu'>
+						<li class='menu-item'><a href='/testimonials/'>Testimonials</a></li>
+						<li class='menu-item'><a href='/wp-admin'>Customer Login</a></li>
+						<li class='menu-item'><a href='/schedule-automotive-appointment-lakewood-tacoma-seattle-washington/'>Schedule Today</a></li>
+					</ul>
+				</div>
+
 			</nav><!-- #content-navigation -->
 
 			<!-- Move header above page content on front page -->
