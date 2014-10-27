@@ -135,24 +135,43 @@
 				</div>
 			</nav><!-- #site-navigation -->
 
-			<?php if(!is_archive()){
-					if (!is_front_page()){
-						randMenu('auto-brands-menu', 7);
-					}
-				} else {
-					if(!getMainMenu('auto-brands-menu',false)){
-					  $backup = $wp_query;
-					  $wp_query = NULL;
-					  $wp_query = new WP_Query(array('post_type' => 'post'));
-					  getMainMenu('auto-brands-menu',false);
-					  $wp_query = $backup;
-					} 
-					//randMenu('auto-brands-menu', 7);
-				}
+			<?php 
+
+				// if(!is_archive()){
+				// 	if (!is_front_page()){
+				// 		randMenu('auto-brands-menu', 7);
+				// 	}
+				// } else {
+				// 	if(!getMainMenu('auto-brands-menu',false)){
+				// 	  $backup = $wp_query;
+				// 	  $wp_query = NULL;
+				// 	  $wp_query = new WP_Query(array('post_type' => 'post'));
+				// 	  getMainMenu('auto-brands-menu',false);
+				// 	  $wp_query = $backup;
+				// 	} 
+				// 	//randMenu('auto-brands-menu', 7);
+				// }
+
+				if(!is_archive()){
+					?>
+					<section id='auto-brands' class='auto-brands'>
+					<?php 
+						randMenu('auto-brands-menu', 7); 
+					?>
+					</section>
+					<?php
+				} 
+				// else {
+				// 	  $backup = $wp_query;
+				// 	  $wp_query = NULL;
+				// 	  $wp_query = new WP_Query(array('post_type' => 'post'));
+				// 	  getMainMenu('auto-brands-menu',7);
+				// 	  $wp_query = $backup;
+				// }
 			?>
-			
 		</div>
 	</header><!-- #masthead -->
+	
 	<hgroup class='hgroup'>
 		<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 		<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
@@ -161,23 +180,47 @@
 		<?php if (wp_is_mobile()) : ?>
 			<?php if (is_front_page()) : ?>
 				<div id="mobile-backgroundimage" class='mobile-bkimage-div'></div>
-				<section id='auto-brands' class='auto-brands'>
-					<?php randMenu('auto-brands-menu', 7)?>
-				</section>
 			<?php endif; ?>
 		<?php else : ?>
 			<?php if (is_front_page()) : ?>
 				<div id="backgroundimage" class='bkimage-div'></div>
 				<div id="nextimg" class='nxt-bkimage-div'></div>
-				<section id='auto-brands' class='auto-brands'>
-					<?php randMenu('auto-brands-menu', 7)?>
-				</section>
 			<?php endif; ?>
 		<?php endif; ?>
 	</div><!-- #background-slider-holder -->
 	<div id="main" class="main">
 		<div id="main-inner" class="main-inner wrapper">
 			
+			<nav id="content-navigation" class="content-navigation wrapper" role="navigation">
+				<?php 
+					if(!getMainMenu('content-nav-left')){
+					  $backup = $wp_query;
+					  $wp_query = NULL;
+					  $wp_query = new WP_Query(array('post_type' => 'post'));
+					  getMainMenu('content-nav-left');
+					  $wp_query = $backup;
+					}
+ 
+					if(!getMainMenu('content-nav-right')){
+					  $backup = $wp_query;
+					  $wp_query = NULL;
+					  $wp_query = new WP_Query(array('post_type' => 'post'));
+					  getMainMenu('content-nav-right');
+					  $wp_query = $backup;
+					}
+				?>
+				<ul id='social-menu' class='social-menu menu'>
+					<li class='menu-item facebook-li'><a href='https://www.facebook.com/europeanmotors.wa'>FB</a></li>
+					<li class='menu-item twitter-li'><a href='https://twitter.com/euromotoservcen'>TW</a></li>
+					<li class='menu-item linkedin-li'><a href='https://www.linkedin.com/company/european-motors-service-center'>Pi</a></li>
+					<li class='menu-item google-plus-li'><a href='https://plus.google.com/100002154887378139579/about'>In</a></li>
+				</ul>
+				<ul id='customer-menu' class='customer-menu'>
+					<li class='menu-item'><a href='/wp-admin'>Customer Login</a></li>
+					<li class='menu-item'><a href='/schedule-automotive-appointment-lakewood-tacoma-seattle-washington/'>Schedule Today</a></li>
+				</ul>
+			</nav><!-- #content-navigation -->
+
 			<!-- Move header above page content on front page -->
 			<?php if (is_front_page()) : ?>
 				<header class="entry-header">
