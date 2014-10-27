@@ -47,9 +47,22 @@
 			?>
 
 			<?php if ( !is_single() ) : ?>
-			<h1 class="entry-title">
-				<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-			</h1>
+
+				<?php if (is_post_type_archive( "testimonials" ) ) : ?>
+					<h1 class="entry-title">
+						<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+					</h1>
+
+					<div class="entry-content">
+						<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
+					</div><!-- .entry-content -->
+				<?php else :  ?>
+					<h1 class="entry-title">
+						<?php the_title(); ?>
+					</h1>
+				<?php endif; // is_post_type_archive() ?>
+
 			<?php endif; // is_single() ?>
 
 			<?php if ( comments_open() ) : ?>

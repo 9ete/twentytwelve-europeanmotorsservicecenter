@@ -34,7 +34,7 @@ function lm_custom_post_type_creator($post_type_name, $description, $public, $me
 }
 
 add_action( 'init', lm_custom_post_type_creator('Staff', 'Holds our staff specific data', true, 5, array( 'title', 'editor', 'thumbnail' ), true, false));
-add_action( 'init', lm_custom_post_type_creator('Testimonial', 'Holds our testimonials', true, 4, array( 'title', 'editor', 'thumbnail' ), true, true));
+add_action( 'init', lm_custom_post_type_creator('Testimonials', 'Holds our testimonials', true, 4, array( 'title', 'editor', 'thumbnail' ), true, false));
 //add_action( 'init', lm_custom_post_type_creator('Testimonial', 'Holds our testimonials', true, 4, array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ), true, true));
 
 
@@ -81,14 +81,33 @@ add_action( 'init', lm_custom_post_type_creator('Testimonial', 'Holds our testim
  */
 function lm_add_meta_box() {
 
-        add_meta_box(
-            'myplugin_sectionid',
-            __( 'Staff Position', 'myplugin_textdomain' ),
-            'myplugin_meta_box_callback',
-            'staff',//$screen
-            'side',
-            'high'
-        );
+    add_meta_box(
+        'lm_staff_position',
+        __( 'Staff Position', 'myplugin_textdomain' ),
+        'myplugin_meta_box_callback',
+        'staff',//$screen
+        'side',
+        'high'
+    );
+
+    add_meta_box(
+        'lm_testimonial_source',
+        __( 'Testimonial Source', 'myplugin_textdomain' ),
+        'myplugin_meta_box2_callback',
+        'testimonials',//$screen
+        'side',
+        'high'
+    );
+
+    // add_meta_box(
+    //     'lm_testimonial_author',
+    //     __( 'Testimonial Author', 'myplugin_textdomain' ),
+    //     'myplugin_meta_box2_callback',
+    //     'testimonial',//$screen
+    //     'side',
+    //     'high'
+    // );
+        
 }
 add_action( 'add_meta_boxes', 'lm_add_meta_box' );
 
@@ -112,6 +131,23 @@ function myplugin_meta_box_callback( $post ) {
     _e( '', 'myplugin_textdomain' );
     echo '</label> ';
     echo '<input type="text" id="myplugin_new_field" name="myplugin_new_field" value="' . esc_attr( $value ) . '" size="25" />';
+}
+
+function myplugin_meta_box2_callback( $post ) {
+
+    // Add an nonce field so we can check for it later.
+    wp_nonce_field( 'myplugin_meta_box', 'myplugin_meta_box_nonce' );
+
+    /*
+     * Use get_post_meta() to retrieve an existing value
+     * from the database and use the value for the form.
+     */
+    $value = get_post_meta( $post->ID, '_my_meta_value_key', true );
+
+    echo '<label for="myplugin_new_field2">';
+    _e( '', 'myplugin_textdomain' );
+    echo '</label> ';
+    echo '<input type="text" id="myplugin_new_field2" name="myplugin_new_field2" value="' . esc_attr( $value ) . '" size="25" />';
 }
 
 /**

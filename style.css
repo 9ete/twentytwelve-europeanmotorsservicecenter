@@ -858,6 +858,13 @@
 		}
 	}
 
+	/*Center text on testimonials page*/
+	.post-type-archive-testimonials {
+		text-align: center;
+	}
+
+	.post-type-archive-testimonials .site-content article {border:none;}
+
 /* -- FOOTER -- */
 
 	body .colophon-footer {
