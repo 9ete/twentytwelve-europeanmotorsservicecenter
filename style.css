@@ -135,7 +135,7 @@
 /* -- GLOBAL -- */
 
 	a {color:#043789;}
-	
+
 	a:hover {color:#5B5B5E;}
 
 	/*.site-header .site-title, 
@@ -485,7 +485,7 @@
 
 	hgroup {
 		display:block;
-		/*margin:350px 0;*/
+		margin:20px 0;
 		width:100%;
 		/*background-color: rgba(91,91,94,0.455);
 		box-shadow: 1px 0px 76px rgba(91,91,94,0.955);*/
@@ -910,8 +910,8 @@
 
 		.bkimage-div,
 		.nxt-bkimage-div,
-		.mobile-bkimage-div,
-		hgroup {
+		.mobile-bkimage-div
+		{
 			/*background-size:auto 300px;
 			background-position:center -70px;*/
 			display:none;
