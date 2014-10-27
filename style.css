@@ -197,7 +197,10 @@
 
 	.main {z-index: 197;}
 	.site-header .auto-brands,
-	.home .auto-brands {z-index: 198;}
+	.home .auto-brands {
+		margin-top:10px;
+		z-index: 198;
+	}
 
 	.site-header .auto-brands,
 	.home .auto-brands, 
@@ -304,14 +307,14 @@
 
 	.home .site-header {
 		/*height: 660px;*/
-		height:170px;
+		height:180px;
 		/*max-height: 660px;*/
 		/*background-image: url('http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg');*/
 		/*background-size: auto 930px;*/
 		background-size:100%;
 		background-size:100vh 100%;
 		background-repeat: no-repeat;
-		background-position: center -170px;
+		background-position: center 0px;
 		background-attachment: fixed;
 	}
 
@@ -333,7 +336,7 @@
 		/*max-height: 660px;*/
 		background-size: auto 1250px;
 		background-repeat: no-repeat;
-		background-position: center -170px;
+		background-position: center 0px;
 		background-attachment: fixed;
 	}
 
@@ -347,7 +350,7 @@
 		max-height: 660px;
 		background-size: auto 930px;
 		background-repeat: no-repeat;
-		background-position: center -170px;
+		background-position: center 0;
 		background-attachment: fixed;
 	}
 
@@ -363,7 +366,7 @@
 		float:left;
 	}
 
-	#menu-mobile-menu-left .menu-item ,
+	#menu-mobile-menu-left .menu-item,
 	#menu-mobile-menu-right .menu-item {
 		width: 80%;
 		margin: 5px auto;
@@ -373,17 +376,19 @@
 
 	.mini-mobile-menu-column {display:none;}
 
-	.main-navigation,
+	/*.main-navigation,*/
 	.sticky-wrapper,
 	.sticky-holder,
 	.site-header,
-	.page .main-navigation,
-	.archive .main-navigation {height:170px;}
+	/*.page .main-navigation,*/
+	.archive .main-navigation {height:180px;}
 
 	.show-1024 {display:none;}
 	.hide-1024 {display:block;}
 
 	@media only screen and (max-width : 1024px) {
+
+		.home .site-header {height:230px;}
 
 		.show-1024 {display:block;}
 		.hide-1024 {display:none;}
@@ -730,28 +735,41 @@
 
 	.menu-primary-menu-container .nav-menu {margin:10px 0;}
 
+	.content-column {
+		width: 50%;
+		display: inline-block;
+	}
+
+	.content-column .social-menu {text-align: left;}
+	.content-column .customer-menu {text-align: right;}
+
+	.content-navigation {margin: 10px 0;}
+
+	.menu-primary-menu-container {margin-top:5px;}
+
 /* -- SIDEBAR -- */
 
-	/*.widget-area .widget {
+	.widget-area .widget {
 		min-height:300px;
 		background-color:rgba(0,0,0,.1);
 		vertical-align: top;
 		margin: 10px 1%;
 		width:30%;
-	}*/
+	}
 
-	/*.site-content, .widget-area {width:100%;}
+	.site-content, .widget-area {width:100%;}
 
 	.widget-area .widget {
 		width: 33%;
 		display: inline-block;
 		text-align: center;
-	}*/
+	}
 
 	.widget-area .widget {text-align: center;}
 
 /* -- CONTENT -- */
 
+	.wrapper .site-content {margin-top:0;}
 	
 	.pre-content-widget-holder {white-space:nowrap;}
 
