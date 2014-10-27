@@ -38,11 +38,9 @@
 <?php endif; ?>
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
+
 	<header id="masthead" class="site-header" role="banner">
-		<!-- <div class='background-image-slider'>
-		</div>
-		<div class='sticky-back'>
-		</div> -->
+
 		<div class='sticky-holder sticky-holder-one'>
 			<nav id="site-navigation" class="main-navigation wrapper" role="navigation">
 				<div class='show-1024'>
