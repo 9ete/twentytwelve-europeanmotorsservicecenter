@@ -31,20 +31,24 @@
 <![endif]-->
 <?php wp_head(); ?>
 </head>
+
 <?php if (wp_is_mobile()) : ?>
 	<script>
 		console.log('We are mobile.');
 	</script>
 <?php endif; ?>
+
 <body <?php body_class(); ?>>
+
 <div id="page" class="hfeed site">
 
 	<header id="masthead" class="site-header" role="banner">
 
 		<div class='sticky-holder sticky-holder-one'>
+			
 			<nav id="site-navigation" class="main-navigation wrapper" role="navigation">
 				<div class='show-1024'>
-					<?php //if (wp_is_mobile()) : ?>
+					
 					<div class='mobile-column-left mobile-column mobile-left-menu'>
 						<ul id='social-menu' class='social-menu menu'>
 							<li class='menu-item facebook-li'><a href='https://www.facebook.com/europeanmotors.wa'>FB</a></li>
@@ -59,9 +63,10 @@
 							  $wp_query = new WP_Query(array('post_type' => 'post'));
 							  getMainMenu('mobile-menu-left', true, '');
 							  $wp_query = $backup;
-							} //else {wp_nav_menu( array( 'theme_location' => 'mobile-menu-left', 'menu_class' => 'nav-menu' ) ); }
+							} 
 						?>
 					</div>
+
 					<div class='mobile-logo-wrap mobile-column-center mobile-column'>
 						<?php if ( get_header_image() ) : ?>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
@@ -73,6 +78,7 @@
 							</a>
 						<?php endif; ?>
 					</div>
+
 					<div class='mobile-column-right mobile-column mobile-left-menu'>
 						<ul id='customer-menu' class='customer-menu'>
 							<li class='menu-item'><a href='/wp-admin'>Login</a></li>
@@ -85,12 +91,11 @@
 							  $wp_query = new WP_Query(array('post_type' => 'post'));
 							  getMainMenu('mobile-menu-right', true, '');
 							  $wp_query = $backup;
-							} //else {wp_nav_menu( array( 'theme_location' => 'mobile-menu-right', 'menu_class' => 'nav-menu' ) ); }
+							} 
 						?>
 					</div>
 				</div>
 
-				<?php //else :?>
 				<div class='hide-1024'>
 					<nav id="top-navigation" class="top-navigation wrapper" role="navigation">
 						<ul id='social-menu' class='social-menu menu'>
@@ -113,10 +118,10 @@
 						  $wp_query = new WP_Query(array('post_type' => 'post'));
 						  getMainMenu('primary');
 						  $wp_query = $backup;
-						} //else {wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); }
+						}
 					?>
 				</div>
-				<?php //endif; ?>
+
 				<div class='mini-mobile-menu-column mobile-column'>
 					<?php 
 						if(!getMainMenu('mini-mobile-menu')){
@@ -125,10 +130,11 @@
 						  $wp_query = new WP_Query(array('post_type' => 'post'));
 						  getMainMenu('mini-mobile-menu');
 						  $wp_query = $backup;
-						} //else {wp_nav_menu( array( 'theme_location' => 'mobile-menu-right', 'menu_class' => 'nav-menu' ) ); }
+						}
 					?>
 				</div>
 			</nav><!-- #site-navigation -->
+
 			<?php if(!is_archive()){
 					if (!is_front_page()){
 						randMenu('auto-brands-menu', 7);
@@ -167,10 +173,6 @@
 		<?php if (is_front_page()) : ?>
 			<div id="backgroundimage" class='bkimage-div'></div>
 			<div id="nextimg" class='nxt-bkimage-div'></div>
-			<!-- <div id='bkimg-nav-button-container' class='bkimg-nav-button-container'>
-				<div id="bkimg-next" class='bkimg-next bkimg-nav-button'><a class="next" title="Next" href="javascript:void(0);" id="next">Next</a></div>
-				<div id="bkimg-prev" class='bkimg-prev bkimg-nav-button'><a class="prev" title="Previous" href="javascript:void(0);" id="prev">Previous</a></div>
-			</div> -->
 			<section id='auto-brands' class='auto-brands'>
 				<?php randMenu('auto-brands-menu', 7)?>
 			</section>
