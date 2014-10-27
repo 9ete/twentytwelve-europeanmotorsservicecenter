@@ -180,11 +180,16 @@
 	<?php endif; ?>
 	<div id="main" class="main">
 		<div id="main-inner" class="main-inner wrapper">
-		<?php if (is_front_page()) : ?>
-			<header class="entry-header">
-				<?php if ( ! is_page_template( 'page-templates/front-page.php' ) ) : ?>
-				<?php the_post_thumbnail(); ?>
-				<?php endif; ?>
-				<h1 class="entry-title"><?php the_title(); ?></h1>
-			</header>
-		<?php endif; ?>
+			<hgroup class='hgroup'>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+			</hgroup>
+			<!-- Move header above page content on front page -->
+			<?php if (is_front_page()) : ?>
+				<header class="entry-header">
+					<?php if ( ! is_page_template( 'page-templates/front-page.php' ) ) : ?>
+					<?php the_post_thumbnail(); ?>
+					<?php endif; ?>
+					<h1 class="entry-title"><?php the_title(); ?></h1>
+				</header>
+			<?php endif; ?>
