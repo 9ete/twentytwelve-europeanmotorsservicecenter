@@ -135,24 +135,28 @@
 /* -- GLOBAL -- */
 
 	a {color:#043789;}
+	
 	a:hover {color:#5B5B5E;}
 
-	.site-header .site-title, 
-	.site-header .site-description {
+	/*.site-header .site-title, 
+	.site-header .site-description*/
+	hgroup {
 		text-shadow: 1px 1px 1px #e8a825;
 		font-family: 'PorschaRegular', sans-serif;
 		font-size: 32px;
 		width: 90%;
 		margin: 0 auto;
 		line-height: 30px;
-		
+		text-decoration: none;
+		color:#043789;
 	}
 
-	.site-header .site-title {border-radius:50px 50px 0 0;} 
-	.site-header .site-description {border-radius:0 0 50px 50px;}
+	hgroup a {text-decoration: none;color:#043789;}
 
+	/*.site-header .site-title {border-radius:50px 50px 0 0;} 
+	.site-header .site-description {border-radius:0 0 50px 50px;}
 	.site-header .site-title a, 
-	.site-header .site-description {color:#043789;}
+	.site-header .site-description {color:#043789;}*/
 
 /* -- HTML/BODY/SITE -- */
 
