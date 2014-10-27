@@ -483,8 +483,8 @@
 		display:block;
 		/*margin:350px 0;*/
 		width:100%;
-		background-color: rgba(91,91,94,0.455);
-		box-shadow: 1px 0px 76px rgba(91,91,94,0.955);
+		/*background-color: rgba(91,91,94,0.455);
+		box-shadow: 1px 0px 76px rgba(91,91,94,0.955);*/
 	}
 
 	hgroup .site-title,
