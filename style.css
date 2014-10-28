@@ -601,10 +601,10 @@
 		#menu-item-12 {display: none;}
 	}
 
-	.customer-menu li a,
+	/*.customer-menu li a,
 	.social-menu li a{
 		color:white;
-	}
+	}*/
 
 	.top-navigation .social-menu {
 		float:left;
@@ -640,9 +640,9 @@
 	}
 
 	.social-menu .menu-item {
-		background:#f9be19;
+		/*background:#f9be19;*/
 		width: 30px;
-		background-size:45px 45px;
+		/*background-size:45px 45px;*/
 	}
 
 	/*.social-menu .menu-item a,
