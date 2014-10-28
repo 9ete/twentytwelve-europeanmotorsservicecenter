@@ -50,12 +50,12 @@
 				<div class='show-1024'>
 					
 					<div class='mobile-column-left mobile-column mobile-left-menu'>
-						<ul id='social-menu' class='social-menu menu'>
+						<!-- <ul id='social-menu' class='social-menu menu'>
 							<li class='menu-item facebook-li'><a href='https://www.facebook.com/europeanmotors.wa'>FB</a></li>
 							<li class='menu-item twitter-li'><a href='https://twitter.com/euromotoservcen'>TW</a></li>
 							<li class='menu-item linkedin-li'><a href='https://www.linkedin.com/company/european-motors-service-center'>Pi</a></li>
 							<li class='menu-item google-plus-li'><a href='https://plus.google.com/100002154887378139579/about'>In</a></li>
-						</ul>
+						</ul> -->
 						<?php 
 							if(!getMainMenu('mobile-menu-left', true, '')){
 							  $backup = $wp_query;
@@ -80,10 +80,10 @@
 					</div>
 
 					<div class='mobile-column-right mobile-column mobile-left-menu'>
-						<ul id='customer-menu' class='customer-menu'>
+						<!-- <ul id='customer-menu' class='customer-menu'>
 							<li class='menu-item'><a href='/wp-admin'>Login</a></li>
 							<li class='menu-item'><a href='/schedule-automotive-appointment-lakewood-tacoma-seattle-washington/'>Schedule</a></li>
-						</ul>
+						</ul> -->
 						<?php 
 							if(!getMainMenu('mobile-menu-right', true, '')){
 							  $backup = $wp_query;
@@ -97,18 +97,7 @@
 				</div>
 
 				<div class='hide-1024'>
-					<nav id="top-navigation" class="top-navigation wrapper" role="navigation">
-						<ul id='social-menu' class='social-menu menu'>
-							<li class='menu-item facebook-li'><a href='https://www.facebook.com/europeanmotors.wa'>FB</a></li>
-							<li class='menu-item twitter-li'><a href='https://twitter.com/euromotoservcen'>TW</a></li>
-							<li class='menu-item linkedin-li'><a href='https://www.linkedin.com/company/european-motors-service-center'>Pi</a></li>
-							<li class='menu-item google-plus-li'><a href='https://plus.google.com/100002154887378139579/about'>In</a></li>
-						</ul>
-						<ul id='customer-menu' class='customer-menu'>
-							<li class='menu-item'><a href='/wp-admin'>Customer Login</a></li>
-							<li class='menu-item'><a href='/schedule-automotive-appointment-lakewood-tacoma-seattle-washington/'>Schedule Today</a></li>
-						</ul>
-					</nav><!-- #top-navigation -->
+					
 					<button class="menu-toggle"><?php _e( 'Menu', 'twentytwelve' ); ?></button>
 					<a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentytwelve' ); ?>"><?php _e( 'Skip to content', 'twentytwelve' ); ?></a>
 					<?php 
