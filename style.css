@@ -31,106 +31,7 @@
         bottom:28px;
     }
 
-/* -- FONT IMPORTS -- */
 
-	/*KubusBold*/
-	@font-face {
-	    font-family: 'KubusBold';
-	    src: url('fonts/KubusBold/kubus-bold.eot');
-	    src: url('fonts/KubusBold/kubus-bold.eot') format('embedded-opentype'),
-	         url('fonts/KubusBold/kubus-bold.woff2') format('woff2'),
-	         url('fonts/KubusBold/kubus-bold.woff') format('woff'),
-	         url('fonts/KubusBold/kubus-bold.ttf') format('truetype'),
-	         url('fonts/KubusBold/kubus-bold.svg#KubusBold') format('svg');
-	}
-
-	/*KubusThin*/
-	@font-face {
-	    font-family: 'KubusThin';
-	    src: url('fonts/KubusThin/kubus-thin.eot');
-	    src: url('fonts/KubusThin/kubus-thin.eot') format('embedded-opentype'),
-	         url('fonts/KubusThin/kubus-thin.woff2') format('woff2'),
-	         url('fonts/KubusThin/kubus-thin.woff') format('woff'),
-	         url('fonts/KubusThin/kubus-thin.ttf') format('truetype'),
-	         url('fonts/KubusThin/kubus-thin.svg#KubusThin') format('svg');
-	}
-
-	/*PorschaRegular*/
-	@font-face {
-	    font-family: 'PorschaRegular';
-	    src: url('fonts/PorschaRegular/911v2.eot');
-	    src: url('fonts/PorschaRegular/911v2.eot') format('embedded-opentype'),
-	         url('fonts/PorschaRegular/911v2.woff2') format('woff2'),
-	         url('fonts/PorschaRegular/911v2.woff') format('woff'),
-	         url('fonts/PorschaRegular/911v2.ttf') format('truetype'),
-	         url('fonts/PorschaRegular/911v2.svg#PorschaRegular') format('svg');
-	}
-
-	/*PorschaBoldBold*/
-	@font-face {
-	    font-family: 'PorschaBold';
-	    src: url('fonts/PorschaBold/911v2b.eot');
-	    src: url('fonts/PorschaBold/911v2b.eot') format('embedded-opentype'),
-	         url('fonts/PorschaBold/911v2b.woff2') format('woff2'),
-	         url('fonts/PorschaBold/911v2b.woff') format('woff'),
-	         url('fonts/PorschaBold/911v2b.ttf') format('truetype'),
-	         url('fonts/PorschaBold/911v2b.svg#PorschaBold') format('svg');
-	}
-
-	/*PorschaCondensed*/
-	@font-face {
-	    font-family: 'PorschaCondensed';
-	    src: url('fonts/PorschaCondensed/911v2c.eot');
-	    src: url('fonts/PorschaCondensed/911v2c.eot') format('embedded-opentype'),
-	         url('fonts/PorschaCondensed/911v2c.woff2') format('woff2'),
-	         url('fonts/PorschaCondensed/911v2c.woff') format('woff'),
-	         url('fonts/PorschaCondensed/911v2c.ttf') format('truetype'),
-	         url('fonts/PorschaCondensed/911v2c.svg#911PorschaCondensedCondensed') format('svg');
-	}
-
-	/*PorschaItalic*/
-	@font-face {
-	    font-family: 'PorschaItalic';
-	    src: url('fonts/PorschaItalic/911v2i.eot');
-	    src: url('fonts/PorschaItalic/911v2i.eot') format('embedded-opentype'),
-	         url('fonts/PorschaItalic/911v2i.woff2') format('woff2'),
-	         url('fonts/PorschaItalic/911v2i.woff') format('woff'),
-	         url('fonts/PorschaItalic/911v2i.ttf') format('truetype'),
-	         url('fonts/PorschaItalic/911v2i.svg#PorschaItalic') format('svg');
-	}
-
-	/*PorschaLeftalic*/
-	@font-face {
-	    font-family: 'PorschaLeftalic';
-	    src: url('fonts/PorschaLeftalic/911v2l.eot');
-	    src: url('fonts/PorschaLeftalic/911v2l.eot') format('embedded-opentype'),
-	         url('fonts/PorschaLeftalic/911v2l.woff2') format('woff2'),
-	         url('fonts/PorschaLeftalic/911v2l.woff') format('woff'),
-	         url('fonts/PorschaLeftalic/911v2l.ttf') format('truetype'),
-	         url('fonts/PorschaLeftalic/911v2l.svg#PorschaLeftalic') format('svg');
-	}
-
-	/*LaserItalic*/
-	@font-face {
-	    font-family: 'PorschaLaserItalic';
-	    src: url('fonts/PorschaLaserItalic/911v2li.eot');
-	    src: url('fonts/PorschaLaserItalic/911v2li.eot') format('embedded-opentype'),
-	         url('fonts/PorschaLaserItalic/911v2li.woff2') format('woff2'),
-	         url('fonts/PorschaLaserItalic/911v2li.woff') format('woff'),
-	         url('fonts/PorschaLaserItalic/911v2li.ttf') format('truetype'),
-	         url('fonts/PorschaLaserItalic/911v2li.svg#911PorschaLaserItalicLaserItalic') format('svg');
-	}
-
-	/*LunasolSequenceRegular*/
-	@font-face {
-	    font-family: 'LunasolSequenceRegular';
-	    src: url('fonts/LunasolSequence/lunasolsequence.eot');
-	    src: url('fonts/LunasolSequence/lunasolsequence.eot') format('embedded-opentype'),
-	         url('fonts/LunasolSequence/lunasolsequence.woff2') format('woff2'),
-	         url('fonts/LunasolSequence/lunasolsequence.woff') format('woff'),
-	         url('fonts/LunasolSequence/lunasolsequence.ttf') format('truetype'),
-	         url('fonts/LunasolSequence/lunasolsequence.svg#LunasolSequenceRegular') format('svg');
-	}
 
 /* -- GLOBAL -- */
 
@@ -161,12 +62,15 @@
 
 /* -- HTML/BODY/SITE -- */
 
-	html {background-color:#043789;}
+	html, body {
+		/*background-color:#043789;*/
+		background-image:url('img/carbon-texture.png');
+		background-size:250px;
+	}
 
 	body {
 		min-width:1024px;
 		min-width: 100vw;
-		background-color:#043789;
 		font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 	}
 
@@ -195,11 +99,18 @@
 		background-color:#D1D2D4;
 	}
 
-	.main {z-index: 197;}
+	.main { z-index: 197; }
+
 	.site-header .auto-brands,
 	.home .auto-brands {
-		margin-top:10px;
 		z-index: 198;
+	}
+
+	@media only screen and (min-width : 1024px) {
+		.site-header .auto-brands,
+		.home .auto-brands {
+			margin-top:10px;
+		}
 	}
 
 	.site-header .auto-brands,
@@ -327,16 +238,18 @@
 
 	.bkimage-div, 
 	.nxt-bkimage-div {
+		background-image: url(http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg);
+		background-image:url(img/bkimg-1250w-833h.jpg);
 		position: absolute;
 		left: 0;
 		top: 0;
 		width: 100%;
 		/*height:90vh;*/
-		height:4000px;
+		height:400px;
 		/*max-height: 660px;*/
 		background-size: auto 1250px;
 		background-repeat: no-repeat;
-		background-position: center 0px;
+		background-position: center 0;
 		background-attachment: fixed;
 	}
 
@@ -379,9 +292,11 @@
 	/*.main-navigation,*/
 	.sticky-wrapper,
 	.sticky-holder,
-	.site-header,
+	.site-header
 	/*.page .main-navigation,*/
-	.archive .main-navigation {height:180px;}
+	/*.archive .main-navigation */{height:180px;}
+
+	.archive-title {text-align: center;}
 
 	.show-1024 {display:none;}
 	.hide-1024 {display:block;}
@@ -438,10 +353,6 @@
 		}
 
 		.site-header {
-			height: 522px;
-		}
-
-		.home .site-header {
 			height: 542px;
 		}
 
@@ -544,7 +455,7 @@
 	.main-navigation li a {width:100%;}
 
 	.site-header .main-navigation .current-menu-item > a,
-	.site-header .main-navigation .current-page-ancestor > a {color:#f9be19;}
+	.site-header .main-navigation .current_page_ancestor > a {color:#f9be19;}
 
 	/*sub nav style*/
 	.main-navigation li ul li {
@@ -642,7 +553,23 @@
 	.social-menu .menu-item {
 		/*background:#f9be19;*/
 		width: 30px;
+		width: 55px;
+		height: 55px;
+		padding: 0;
+		background: none;
+		border: none;
 		/*background-size:45px 45px;*/
+	}
+
+	.social-menu .menu-item a {line-height: 1;}
+
+	.social-menu .menu-item a:hover {color:#f9be19;}
+
+	.social-menu .menu-item .genericon-yelp {
+	font-size: 24px;
+	text-transform: capitalize;
+	line-height: 55px;
+	font-family: futura;
 	}
 
 	/*.social-menu .menu-item a,
@@ -738,6 +665,7 @@
 	.content-column {
 		width: 50%;
 		display: inline-block;
+		vertical-align: middle;
 	}
 
 	.content-column .social-menu {text-align: left;}
@@ -769,6 +697,11 @@
 
 /* -- CONTENT -- */
 
+.post-type-archive-testimonials .site-content article,
+.post-type-archive-carcaretips .site-content article {
+margin-bottom:0;
+}
+
 	.wrapper .site-content {margin-top:0;}
 	
 	.pre-content-widget-holder {white-space:nowrap;}
@@ -795,8 +728,15 @@
 		width: 150px;
 		height: 150px;
 		vertical-align: top;
-		margin: 20px;display:inline-block;
-		line-height: 150px;
+		margin: 20px;
+		display: inline-block;
+		line-height: 20px;
+	}
+
+	.menu-auto-services-menu-container li a {
+		display: table;
+		margin: 40px auto;
+		max-width: 100px;
 	}
 
 	.pre-content-widget .menu-auto-services-menu-container li {
@@ -895,16 +835,56 @@
 
 	.post-type-archive-testimonials .site-content article {border:none;}
 
+	/*SERVICES PAGE ACCORDIAN MENU STYLES*/
+	.accordion h2 {
+		color: #f9be19;
+		text-shadow: .5px 1px 1px black;
+		background: #043789;
+		padding: 0 5px;
+		text-align: center;
+		box-shadow: 1px 1px 1px black;
+		border-radius: 5px;
+		width:100%;
+	}
+
+	.accordion .ui-accordion-header::after {
+		content: "\f500";
+		text-align: center;
+		-moz-transition: color .1s ease-in 0;
+		-webkit-transition: color .1s ease-in 0;
+		display: inline-block;
+		font-family: "Genericons";
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		line-height: 1;
+		text-decoration: inherit;
+		text-transform: none;
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		speak: none;
+		vertical-align: top;
+		margin-left:10px;
+	}
+
+	.accordion .ui-state-active::after {
+		content: "\f502";
+		vertical-align: bottom;
+		vertical-align: -webkit-baseline-middle;
+	}
+
 /* -- FOOTER -- */
 
 	body .colophon-footer {
-		background-color: #043789;
-		margin-top:0;
-		border-top-color:#E8A826;
-		max-width:100%;
+		/*background-color: #043789;*/
+		margin-top: 0;
+		border-top: 2px solid#E8A826;
+		max-width: 100%;
 		z-index: 200;
 		position: relative;
 		width: 100%;
+		/*background-image:url('img/carbon-texture.png');
+		background-size: 20%;*/
 	}
 
 	body .colophon-footer .wrapper {
@@ -912,6 +892,10 @@
 		position: relative;
 		background-color: #043789;
 		white-space: nowrap;
+		/*background-image:url('img/carbon-texture.png');*/
+		background-color: rgba(4,55,137,0.4);
+		background-color: rgba(249,190,25,0.4);
+		border-radius: 10px;
 	}
 
 	.footer-column {
@@ -927,22 +911,196 @@
 		margin: 10px 0;
 	}
 
-	.footer-column .customer-menu .menu-item a {font-size: 12px;}
+	.footer-column .customer-menu .menu-item a {
+		display: block;
+		height: 35px;
+		font-size: 12px;
+		line-height: 3;
+	}
+
 	.footer-column .customer-menu .menu-item a:hover {color:#6a6a6a;}
 
 /* -- Media Queries -- */
 
+	@media only screen and (max-width : 1024px) {
+		.bkimage-div, 
+		.nxt-bkimage-div { background-position:center 15vw; }
+	}
+
 	@media only screen and (max-width : 600px) {
+
+		hgroup {width:90%;}
 
 		.bkimage-div,
 		.nxt-bkimage-div,
-		.mobile-bkimage-div
+		.mobile-bkimage-div,
+		.background-slider-holder
 		{
 			/*background-size:auto 300px;
 			background-position:center -70px;*/
 			display:none;
 		}
 
+		.main-inner .content-navigation {height:100px;}
+
+		.content-column {
+			width: 90%;
+			display: block;
+			vertical-align: top;
+			margin: auto;
+		}
+
+		.content-column .social-menu,
+		.content-column .customer-menu { text-align: center; }
+
+		.content-column .social-menu .menu-item { display:inline-block; max-width:15%; }
+		.content-column .customer-menu .menu-item  { width: 6rem; }
+
+
+		body .colophon-footer {
+			background-image:url('img/carbon-texture.png');
+			background-size:20%;
+		}
+
+		.footer-column {
+			min-height: 0;
+			display: block;
+			width: 95%;
+			padding:0 2.5%;
+		}
+
+		.sticky-holder {
+			background: transparent;
+			left: -7.5px;
+		}
+
+		.home .sticky-holder { left: -7.5px; }
+
+		.is-sticky .sticky-holder { left: 0; }
+
+		.home .entry-header {
+			width: 85%;
+			margin: 0 auto;
+		}
+
+		.site-header { margin-bottom: 0; }
+
+		.mini-mobile-menu-column .menu .menu-item a {display:block;}
+
+	}
+
+	/*@media only screen and (max-width : 1024px) { body {min-width:1024px;} }
+	@media only screen and (max-width : 960px) { body {min-width:960px;} }
+	@media only screen and (max-width : 850px) { body {min-width:850px;} }
+	@media only screen and (max-width : 800px) { body {min-width:800px;} }
+	@media only screen and (max-width : 750px) { body {min-width:750px;} }
+	@media only screen and (max-width : 700px) { body {min-width:700px;} }
+	@media only screen and (max-width : 650px) { body {min-width:650px;} }
+	@media only screen and (max-width : 640px) { body {min-width:640px;} }
+	@media only screen and (max-width : 600px) { body {min-width:600px;} }
+	@media only screen and (max-width : 568px) { body {min-width:568px;} }
+	@media only screen and (max-width : 330px) { body {min-width:330px;} }
+	@media only screen and (max-width : 320px) { body {min-width:320px;} }*/
+
+/* -- FONT IMPORTS -- */
+
+	/*KubusBold*/
+	@font-face {
+	    font-family: 'KubusBold';
+	    src: url('fonts/KubusBold/kubus-bold.eot');
+	    src: url('fonts/KubusBold/kubus-bold.eot') format('embedded-opentype'),
+	         url('fonts/KubusBold/kubus-bold.woff2') format('woff2'),
+	         url('fonts/KubusBold/kubus-bold.woff') format('woff'),
+	         url('fonts/KubusBold/kubus-bold.ttf') format('truetype'),
+	         url('fonts/KubusBold/kubus-bold.svg#KubusBold') format('svg');
+	}
+
+	/*KubusThin*/
+	@font-face {
+	    font-family: 'KubusThin';
+	    src: url('fonts/KubusThin/kubus-thin.eot');
+	    src: url('fonts/KubusThin/kubus-thin.eot') format('embedded-opentype'),
+	         url('fonts/KubusThin/kubus-thin.woff2') format('woff2'),
+	         url('fonts/KubusThin/kubus-thin.woff') format('woff'),
+	         url('fonts/KubusThin/kubus-thin.ttf') format('truetype'),
+	         url('fonts/KubusThin/kubus-thin.svg#KubusThin') format('svg');
+	}
+
+	/*PorschaRegular*/
+	@font-face {
+	    font-family: 'PorschaRegular';
+	    src: url('fonts/PorschaRegular/911v2.eot');
+	    src: url('fonts/PorschaRegular/911v2.eot') format('embedded-opentype'),
+	         url('fonts/PorschaRegular/911v2.woff2') format('woff2'),
+	         url('fonts/PorschaRegular/911v2.woff') format('woff'),
+	         url('fonts/PorschaRegular/911v2.ttf') format('truetype'),
+	         url('fonts/PorschaRegular/911v2.svg#PorschaRegular') format('svg');
+	}
+
+	/*PorschaBoldBold*/
+	@font-face {
+	    font-family: 'PorschaBold';
+	    src: url('fonts/PorschaBold/911v2b.eot');
+	    src: url('fonts/PorschaBold/911v2b.eot') format('embedded-opentype'),
+	         url('fonts/PorschaBold/911v2b.woff2') format('woff2'),
+	         url('fonts/PorschaBold/911v2b.woff') format('woff'),
+	         url('fonts/PorschaBold/911v2b.ttf') format('truetype'),
+	         url('fonts/PorschaBold/911v2b.svg#PorschaBold') format('svg');
+	}
+
+	/*PorschaCondensed*/
+	@font-face {
+	    font-family: 'PorschaCondensed';
+	    src: url('fonts/PorschaCondensed/911v2c.eot');
+	    src: url('fonts/PorschaCondensed/911v2c.eot') format('embedded-opentype'),
+	         url('fonts/PorschaCondensed/911v2c.woff2') format('woff2'),
+	         url('fonts/PorschaCondensed/911v2c.woff') format('woff'),
+	         url('fonts/PorschaCondensed/911v2c.ttf') format('truetype'),
+	         url('fonts/PorschaCondensed/911v2c.svg#911PorschaCondensedCondensed') format('svg');
+	}
+
+	/*PorschaItalic*/
+	@font-face {
+	    font-family: 'PorschaItalic';
+	    src: url('fonts/PorschaItalic/911v2i.eot');
+	    src: url('fonts/PorschaItalic/911v2i.eot') format('embedded-opentype'),
+	         url('fonts/PorschaItalic/911v2i.woff2') format('woff2'),
+	         url('fonts/PorschaItalic/911v2i.woff') format('woff'),
+	         url('fonts/PorschaItalic/911v2i.ttf') format('truetype'),
+	         url('fonts/PorschaItalic/911v2i.svg#PorschaItalic') format('svg');
+	}
+
+	/*PorschaLeftalic*/
+	@font-face {
+	    font-family: 'PorschaLeftalic';
+	    src: url('fonts/PorschaLeftalic/911v2l.eot');
+	    src: url('fonts/PorschaLeftalic/911v2l.eot') format('embedded-opentype'),
+	         url('fonts/PorschaLeftalic/911v2l.woff2') format('woff2'),
+	         url('fonts/PorschaLeftalic/911v2l.woff') format('woff'),
+	         url('fonts/PorschaLeftalic/911v2l.ttf') format('truetype'),
+	         url('fonts/PorschaLeftalic/911v2l.svg#PorschaLeftalic') format('svg');
+	}
+
+	/*LaserItalic*/
+	@font-face {
+	    font-family: 'PorschaLaserItalic';
+	    src: url('fonts/PorschaLaserItalic/911v2li.eot');
+	    src: url('fonts/PorschaLaserItalic/911v2li.eot') format('embedded-opentype'),
+	         url('fonts/PorschaLaserItalic/911v2li.woff2') format('woff2'),
+	         url('fonts/PorschaLaserItalic/911v2li.woff') format('woff'),
+	         url('fonts/PorschaLaserItalic/911v2li.ttf') format('truetype'),
+	         url('fonts/PorschaLaserItalic/911v2li.svg#911PorschaLaserItalicLaserItalic') format('svg');
+	}
+
+	/*LunasolSequenceRegular*/
+	@font-face {
+	    font-family: 'LunasolSequenceRegular';
+	    src: url('fonts/LunasolSequence/lunasolsequence.eot');
+	    src: url('fonts/LunasolSequence/lunasolsequence.eot') format('embedded-opentype'),
+	         url('fonts/LunasolSequence/lunasolsequence.woff2') format('woff2'),
+	         url('fonts/LunasolSequence/lunasolsequence.woff') format('woff'),
+	         url('fonts/LunasolSequence/lunasolsequence.ttf') format('truetype'),
+	         url('fonts/LunasolSequence/lunasolsequence.svg#LunasolSequenceRegular') format('svg');
 	}
 
 /* -- Genericons -- */
@@ -979,7 +1137,7 @@
  */
 
 .genericon {
-	font-size: 16px;
+	font-size: 55px;
 	vertical-align: top;
 	text-align: center;
 	-moz-transition: color .1s ease-in 0;
@@ -1149,7 +1307,4 @@
 .genericon-xpost:before { content: "\f504"; }
 .genericon-youtube:before { content: "\f213"; }
 .genericon-zoom:before { content: "\f402"; }
-
-
-
 
