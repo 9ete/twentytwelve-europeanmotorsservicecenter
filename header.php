@@ -179,7 +179,7 @@
 			</div>
 		<?php endif; ?>
 	<?php endif; ?>
-	</div><!-- #background-slider-holder -->
+	<!-- </div>#background-slider-holder -->
 
 	<div id="main" class="main">
 		<div id="main-inner" class="main-inner wrapper">
