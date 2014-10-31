@@ -37,53 +37,10 @@ add_action( 'init', lm_custom_post_type_creator('Staff', 'Holds our staff specif
 add_action( 'init', lm_custom_post_type_creator('Car Care Tips', 'Holds our car care tips.', true, 6, array( 'title', 'editor', 'thumbnail', 'excerpt' ), true, false));
 add_action( 'init', lm_custom_post_type_creator('Car Care Videos', 'Holds our car care videos.', true, 7, array( 'title', 'editor', 'thumbnail' ), true, false));
 
-
-//add_action( 'init', lm_custom_post_type_creator('Testimonial', 'Holds our testimonials', true, 4, array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ), true, true));
-
-
-// add_action( 'add_meta_boxes', 'staff_position_box' );
-// function staff_position_box() {
-//     add_meta_box( 
-//         'staff_position_box',
-//         __( 'Staff Position', 'myplugin_textdomain' ),
-//         'staff_position_box_content',
-//         'staff',
-//         'side',
-//         'high'
-//     );
-// }
-
-// function staff_position_box_content( $post ) {
-//   wp_nonce_field( plugin_basename( __FILE__ ), 'staff_position_box_content_nonce' );
-//   echo '<label for="staff_position"></label>';
-//   echo '<input type="text" id="staff_position" name="staff_position" placeholder="enter a position" />';
-// }
-
-// add_action( 'save_post', 'staff_position_box_save' );
-// function staff_position_box_save( $post_id ) {
-
-//   if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) 
-//   return;
-
-//   if ( !wp_verify_nonce( $_POST['staff_position_box_content_nonce'], plugin_basename( __FILE__ ) ) )
-//   return;
-
-//   if ( 'page' == $_POST['post_type'] ) {
-//     if ( !current_user_can( 'edit_page', $post_id ) )
-//     return;
-//   } else {
-//     if ( !current_user_can( 'edit_post', $post_id ) )
-//     return;
-//   }
-//   $staff_position = $_POST['staff_position'];
-//   update_post_meta( $post_id, 'staff_position', $staff_position );
-// }
-
 /**
  * Adds a box to the main column on the Post and Page edit screens.
  */
 function lm_add_meta_box() {
-
     add_meta_box(
         'lm_staff_position',
         __( 'Staff Position', 'myplugin_textdomain' ),
@@ -100,17 +57,7 @@ function lm_add_meta_box() {
         'testimonials',//$screen
         'side',
         'high'
-    );
-
-    // add_meta_box(
-    //     'lm_testimonial_author',
-    //     __( 'Testimonial Author', 'myplugin_textdomain' ),
-    //     'myplugin_meta_box2_callback',
-    //     'testimonial',//$screen
-    //     'side',
-    //     'high'
-    // );
-        
+    );  
 }
 add_action( 'add_meta_boxes', 'lm_add_meta_box' );
 
@@ -166,44 +113,20 @@ function myplugin_save_meta_box_data( $post_id ) {
      */
 
     // Check if our nonce is set.
-    if ( ! isset( $_POST['myplugin_meta_box_nonce'] ) ) {
-        return;
-    }
-
+    if ( ! isset( $_POST['myplugin_meta_box_nonce'] ) ) { return; }
     // Verify that the nonce is valid.
-    if ( ! wp_verify_nonce( $_POST['myplugin_meta_box_nonce'], 'myplugin_meta_box' ) ) {
-        return;
-    }
-
+    if ( ! wp_verify_nonce( $_POST['myplugin_meta_box_nonce'], 'myplugin_meta_box' ) ) { return; }
     // If this is an autosave, our form has not been submitted, so we don't want to do anything.
-    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
-        return;
-    }
-
+    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) { return; }
     // Check the user's permissions.
-    if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) {
-
-        if ( ! current_user_can( 'edit_page', $post_id ) ) {
-            return;
-        }
-
-    } else {
-
-        if ( ! current_user_can( 'edit_post', $post_id ) ) {
-            return;
-        }
-    }
+    if ( isset( $_POST['post_type'] ) && 'page' == $_POST['post_type'] ) { if ( ! current_user_can( 'edit_page', $post_id ) ) { return; }
+    } else { if ( ! current_user_can( 'edit_post', $post_id ) ) { return; } }
 
     /* OK, it's safe for us to save the data now. */
-    
     // Make sure that it is set.
-    if ( ! isset( $_POST['myplugin_new_field'] ) ) {
-        return;
-    }
-
+    if ( ! isset( $_POST['myplugin_new_field'] ) ) { return;  }
     // Sanitize user input.
     $my_data = sanitize_text_field( $_POST['myplugin_new_field'] );
-
     // Update the meta field in the database.
     update_post_meta( $post_id, '_my_meta_value_key', $my_data );
 }
@@ -357,7 +280,6 @@ add_action( 'init', 'lowermedia_menus_init' );
 function load_fonts() {
     wp_dequeue_style( 'twentytwelve-fonts' );
     wp_deregister_style( 'twentytwelve-fonts' );
-
     wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Signika:400,700|Open+Sans:400italic,700italic,400,700&amp;subset=latin,latin-ext');
     wp_enqueue_style( 'googleFonts');
 }
@@ -379,17 +301,13 @@ add_action( 'wp_print_scripts', 'lowermedia_deregister_javascript', 100 );
 /*
 #
 #   CONTACT FORM  FUNCTION
-#   - changing default wordpress email settings
+#   - changing default WordPress email settings
 */
 
-function new_mail_from($old) {
- return 'pete@europeanmotorsservicecenter.petelower.com';
-}
+function new_mail_from($old) { return 'pete@europeanmotorsservicecenter.petelower.com'; }
 add_filter('wp_mail_from', 'new_mail_from');
 
-function new_mail_from_name($old) {
- return 'European Motors Service Center';
-}
+function new_mail_from_name($old) { return 'European Motors Service Center'; }
 add_filter('wp_mail_from_name', 'new_mail_from_name');
 
 /*
@@ -397,10 +315,12 @@ add_filter('wp_mail_from_name', 'new_mail_from_name');
 #   WHITE LABEL
 #
 */
+
 function lm_custom_admin_styles() {
        echo '<style type="text/css">
            /* Styles here! */
-           body {font-family: futura;}
+            body {font-family: futura;}
+
            /*change sidebar icon for testimonials, staff, tips, videos */
             #menu-posts-testimonials .dashicons-admin-post:before,
             #menu-posts-testimonials .dashicons-format-standard:before { content:"\f155"; }
@@ -432,7 +352,6 @@ function lm_custom_admin_styles() {
             #adminmenu li>a.menu-top:focus { background: linear-gradient(to bottom,#f9f9f9 37%,#c9c9c9 100%); }
          </style>';
 }
-
 add_action('admin_head', 'lm_custom_admin_styles');
 
 //* Replace WordPress login logo with your own
@@ -454,43 +373,41 @@ function lm_custom_login_logo() {
 add_action('login_head', 'lm_custom_login_logo');
 
 //* Change the URL of the WordPress login logo
-function lm_url_login_logo(){
-    return get_bloginfo( 'wpurl' );
-}
+function lm_url_login_logo(){ return get_bloginfo( 'wpurl' ); }
 add_filter('login_headerurl', 'lm_url_login_logo');
 
 //* Login Screen: Change login logo hover text
-function lm_login_logo_url_title() {
-  return 'A LowerMedia Site';
-}
+function lm_login_logo_url_title() { return 'A LowerMedia Site'; }
 add_filter( 'login_headertitle', 'lm_login_logo_url_title' );
 
 //* Login Screen: Don't inform user which piece of credential was incorrect
-function lm_failed_login () {
-  return 'The login information you have entered is incorrect. Please try again.';
-}
+function lm_failed_login () { return 'The login information you have entered is incorrect. Please try again.'; }
 add_filter ( 'login_errors', 'lm_failed_login' );
 
 //* Modify the admin footer text
-function lm_modify_footer_admin () {
-  echo '<span id="footer-meta"><a href="http://lowermedia.net" target="_blank">A LowerMedia Site</a></span>';
-}
+function lm_modify_footer_admin () { echo '<span id="footer-meta"><a href="http://lowermedia.net" target="_blank">A LowerMedia Site</a></span>'; }
 add_filter('admin_footer_text', 'lm_modify_footer_admin');
 
 //* Add theme info box into WordPress Dashboard
-function lm_add_dashboard_widgets() {
-  wp_add_dashboard_widget('wp_dashboard_widget', 'Theme Details', 'lm_theme_info');
-}
+function lm_add_dashboard_widgets() { wp_add_dashboard_widget('wp_dashboard_widget', 'Theme Details', 'lm_theme_info'); }
 add_action('wp_dashboard_setup', 'lm_add_dashboard_widgets' );
- 
+
+/*
+#   Create widget info for above function: lm_add_dashboard_widgets
+*/
 function lm_theme_info() {
-  echo "<ul>
-  <li><strong>Developed By:</strong> LowerMedia.Net</li>
-  <li><strong>Website:</strong> <a href='http://lowermedia.net'>www.lowermedia.net</a></li>
-  <li><strong>Contact:</strong> <a href='mailto:pete.lower@gmail.com'>pete.lower@gmail.com</a></li>
-  </ul>";
+  echo "
+      <ul>
+      <li><strong>Developed By:</strong> LowerMedia.Net</li>
+      <li><strong>Website:</strong> <a href='http://lowermedia.net'>www.lowermedia.net</a></li>
+      <li><strong>Contact:</strong> <a href='mailto:pete.lower@gmail.com'>pete.lower@gmail.com</a></li>
+      </ul>"
+  ;
 }
 
+/*
+#   Add custom admin login logo
+*/
 function custom_admin_logo() {
     echo '
         <style type="text/css">
@@ -499,6 +416,35 @@ function custom_admin_logo() {
     ';
 }
 add_action('admin_head', 'custom_admin_logo');
+
+/*
+#   Move admin bar to the bottom on front end
+*/
+if(current_user_can( 'edit_posts' )) {
+    if(!is_admin()) {
+        function lm_admin_bar_bottom() {
+            echo '
+                <style type="text/css">
+
+                    .admin-bar {
+                        margin-top: -28px;
+                        padding-bottom: 28px;
+                    }
+
+                    .no-grav {
+                        top: auto !important;
+                        bottom: 0;
+                    }
+
+                    .no-grav .quicklinks>ul>li { position: relative; }
+
+                    .no-grav .ab-top-menu>.menupop>.ab-sub-wrapper { bottom: 28px; }
+                </style>'
+            ;
+        }
+        add_action('wp_head', 'lm_admin_bar_bottom');
+    }
+}
 
 /*
 #
