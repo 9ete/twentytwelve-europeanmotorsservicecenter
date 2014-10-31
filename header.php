@@ -21,7 +21,6 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="initial-scale=1.0">
-<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -181,6 +180,7 @@
 		<?php endif; ?>
 	<?php endif; ?>
 	</div><!-- #background-slider-holder -->
+
 	<div id="main" class="main">
 		<div id="main-inner" class="main-inner wrapper">
 			
@@ -204,19 +204,19 @@
 				?>
 				<div class='column-left content-column'>
 					<ul id='social-menu' class='social-menu menu'>
-						<li class='menu-item facebook-li'><a href='https://www.facebook.com/europeanmotors.wa'>FB</a></li>
-						<li class='menu-item twitter-li'><a href='https://twitter.com/euromotoservcen'>TW</a></li>
-						<li class='menu-item linkedin-li'><a href='https://www.linkedin.com/company/european-motors-service-center'>Pi</a></li>
-						<li class='menu-item google-plus-li'><a href='https://plus.google.com/100002154887378139579/about'>In</a></li>
-						<li class='menu-item facebook-li'><a href='https://www.facebook.com/europeanmotors.wa'>FB</a></li>
-						<li class='menu-item twitter-li'><a href='https://twitter.com/euromotoservcen'>TW</a></li>
+						<li class='menu-item facebook-li'><a target='_blank' class='genericon genericon-facebook' href='https://www.facebook.com/europeanmotors.wa'></a></li>
+						<li class='menu-item instagram-li'><a target='_blank' class='genericon genericon-instagram'  href='https://www.facebook.com/europeanmotors.wa'></a></li>
+						<li class='menu-item google-plus-li'><a target='_blank' class='genericon genericon-googleplus'  href='https://plus.google.com/100002154887378139579/about'></a></li>
+						<li class='menu-item twitter-li'><a target='_blank' class='genericon genericon-twitter'  href='https://twitter.com/euromotoservcen'></a></li>
+						<li class='menu-item youtube-li'><a target='_blank' class='genericon genericon-youtube'  href='https://twitter.com/euromotoservcen'></a></li>
+						<li class='menu-item yelp-li'><a target='_blank' class='genericon genericon-yelp'  href='https://www.linkedin.com/company/european-motors-service-center'>Yelp</a></li>
 					</ul>
 				</div>
 				<div class='column-right content-column'>
 					<ul id='customer-menu' class='customer-menu'>
 						<li class='menu-item'><a href='/testimonials/'>Testimonials</a></li>
-						<li class='menu-item'><a href='/wp-admin'>Customer Login</a></li>
-						<li class='menu-item'><a href='/schedule-automotive-appointment-lakewood-tacoma-seattle-washington/'>Schedule Today</a></li>
+						<li class='menu-item'><a target='_blank' href='http://www.procarcarezone.com/topshop/web/web_template/temp5/carcare/default.asp?id=151886'>Customer Login</a></li>
+						<li class='menu-item'><a target='_blank' href='http://www.procarcarezone.com/topshop/web/web_template/temp5/makeappointment/default.asp?id=151886'>Schedule Today</a></li>
 					</ul>
 				</div>
 
