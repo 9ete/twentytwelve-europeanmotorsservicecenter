@@ -202,7 +202,8 @@
 		position: fixed;
 	}
 
-	.home .sticky-holder {background:transparent;}
+	.home .sticky-holder {background:#043789;}
+	
 
 	.sticky-holder-two {
 		/*top:180px !important;*/
