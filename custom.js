@@ -7,6 +7,13 @@
 #   - ONLY WORKS ON HOME PAGE (WHEN BODY HAS CLASS .home)
 */
 
+  jQuery(function() {
+    jQuery( ".accordion" ).accordion({
+      collapsible: true,
+      heightStyle: "content"
+    });
+  });
+
   jQuery(window).scroll(function(){
     if (jQuery('body').hasClass('home')) {
       //create Variables
@@ -63,43 +70,45 @@
 
 //jQuery(window).load(function () {
 //$(document).ready(function(){})
-var bkimgFunction = jQuery(document).ready(function(){//jQuery(window).load(function () {
-  if (jQuery('body').hasClass('home')) {
-    var i = 0;
-    var images = [
-        // 'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/fix-my-bmw-seattle-tacoma-lakewood-washington-jaquar-audi-mercedes.png',
-        // 'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/fix-my-audi-seattle-tacoma-lakewood-washington-jaquar-audi-mercedes.png',
-        // 'http://dummyimage.com/1400x660/FC0/000&text=Slide+1',
-        // 'http://dummyimage.com/1400x660/CF0/000&text=Slide+2',
-        // 'http://dummyimage.com/1400x660/0FC/000&text=Slide+3'];
-        // var  images = ['http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg',
-                    'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg',
-                    'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0127-3.jpg',
-                    'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/fix-my-bmw-tacoma-seattle-washington-audi.jpg'];
-    jQuery('#backgroundimage').css('background-image', 'url(' + images[i] + ')');
-    setInterval(function () {
-        if (++i === images.length) {
-            i = 0;//reset index
-        }
-        console.log(i);
-        jQuery('#nextimg').css('background-image', 'url(' + images[i] + ')');//load bkimg into 'on deck' div
-        // transition animation of 3 seconds then perform the function to set the bkimg of the bkimg holder div to same as 'on deck' div
-        jQuery('#backgroundimage').fadeOut(3000, function () {
-            jQuery('#backgroundimage').css('background-image', 'url(' + images[i] + ')').show();
-        });
-        // slide change: 9s
-    }, 9000);
-  }
 
-  var n = 0;
-  jQuery( "#masthead" )
-  .mouseenter(function() {
-    jQuery( "#bkimg-nav-button-container" ).css( "margin-top","-100px" );
-  })
-  .mouseleave(function() {
-    jQuery( "#bkimg-nav-button-container" ).css( "margin-top","0" );
-  });
-});
+
+// var bkimgFunction = jQuery(document).ready(function(){//jQuery(window).load(function () {
+//   if (jQuery('body').hasClass('home')) {
+//     var i = 0;
+//     var images = [
+//         // 'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/fix-my-bmw-seattle-tacoma-lakewood-washington-jaquar-audi-mercedes.png',
+//         // 'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/fix-my-audi-seattle-tacoma-lakewood-washington-jaquar-audi-mercedes.png',
+//         // 'http://dummyimage.com/1400x660/FC0/000&text=Slide+1',
+//         // 'http://dummyimage.com/1400x660/CF0/000&text=Slide+2',
+//         // 'http://dummyimage.com/1400x660/0FC/000&text=Slide+3'];
+//         // var  images = ['http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg',
+//                     'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg',
+//                     'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0127-3.jpg',
+//                     'http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/fix-my-bmw-tacoma-seattle-washington-audi.jpg'];
+//     jQuery('#backgroundimage').css('background-image', 'url(' + images[i] + ')');
+//     setInterval(function () {
+//         if (++i === images.length) {
+//             i = 0;//reset index
+//         }
+//         console.log(i);
+//         jQuery('#nextimg').css('background-image', 'url(' + images[i] + ')');//load bkimg into 'on deck' div
+//         // transition animation of 3 seconds then perform the function to set the bkimg of the bkimg holder div to same as 'on deck' div
+//         jQuery('#backgroundimage').fadeOut(3000, function () {
+//             jQuery('#backgroundimage').css('background-image', 'url(' + images[i] + ')').show();
+//         });
+//         // slide change: 9s
+//     }, 9000);
+//   }
+
+//   var n = 0;
+//   jQuery( "#masthead" )
+//   .mouseenter(function() {
+//     jQuery( "#bkimg-nav-button-container" ).css( "margin-top","-100px" );
+//   })
+//   .mouseleave(function() {
+//     jQuery( "#bkimg-nav-button-container" ).css( "margin-top","0" );
+//   });
+// });
 
 
 
