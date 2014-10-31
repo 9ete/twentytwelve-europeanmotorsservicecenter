@@ -32,9 +32,12 @@ function lm_custom_post_type_creator($post_type_name, $description, $public, $me
   );
   register_post_type( $post_type_name, $args ); 
 }
-
-add_action( 'init', lm_custom_post_type_creator('Staff', 'Holds our staff specific data', true, 5, array( 'title', 'editor', 'thumbnail' ), true, false));
 add_action( 'init', lm_custom_post_type_creator('Testimonials', 'Holds our testimonials', true, 4, array( 'title', 'editor', 'thumbnail' ), true, false));
+add_action( 'init', lm_custom_post_type_creator('Staff', 'Holds our staff specific data', true, 5, array( 'title', 'editor', 'thumbnail' ), true, false));
+add_action( 'init', lm_custom_post_type_creator('Car Care Tips', 'Holds our car care tips.', true, 6, array( 'title', 'editor', 'thumbnail', 'excerpt' ), true, false));
+add_action( 'init', lm_custom_post_type_creator('Car Care Videos', 'Holds our car care videos.', true, 7, array( 'title', 'editor', 'thumbnail' ), true, false));
+
+
 //add_action( 'init', lm_custom_post_type_creator('Testimonial', 'Holds our testimonials', true, 4, array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ), true, true));
 
 
@@ -394,6 +397,43 @@ add_filter('wp_mail_from_name', 'new_mail_from_name');
 #   WHITE LABEL
 #
 */
+function lm_custom_admin_styles() {
+       echo '<style type="text/css">
+           /* Styles here! */
+           body {font-family: futura;}
+           /*change sidebar icon for testimonials, staff, tips, videos */
+            #menu-posts-testimonials .dashicons-admin-post:before,
+            #menu-posts-testimonials .dashicons-format-standard:before { content:"\f155"; }
+
+            #menu-posts-staff .dashicons-admin-post:before,
+            #menu-posts-staff .dashicons-format-standard:before { content:"\f307"; }
+
+            #menu-posts-carcarevideos .dashicons-admin-post:before,
+            #menu-posts-carcarevideos .dashicons-format-standard:before { content:"\f126"; }
+
+            #menu-posts-carcaretips .dashicons-admin-post:before,
+            #menu-posts-carcaretips .dashicons-format-standard:before { content:"\f339"; }
+
+           
+           /*change admin menu coloring*/ 
+            #adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap { background-color: #043789; }
+
+            #adminmenu .wp-submenu a {color: rgba(249,190,25,0.6);}
+
+            #adminmenu .opensub .wp-submenu li.current a,
+            #adminmenu .wp-submenu li.current, 
+            #adminmenu .wp-submenu li.current a, 
+            #adminmenu .wp-submenu li.current a:focus, 
+            #adminmenu .wp-submenu li.current a:hover, 
+            #adminmenu a.wp-has-current-submenu:focus+.wp-submenu li.current a { color: rgba(249,190,25,1); }
+
+            #adminmenu li.menu-top:hover,
+            #adminmenu li.opensub>a.menu-top, 
+            #adminmenu li>a.menu-top:focus { background: linear-gradient(to bottom,#f9f9f9 37%,#c9c9c9 100%); }
+         </style>';
+}
+
+add_action('admin_head', 'lm_custom_admin_styles');
 
 //* Replace WordPress login logo with your own
 function lm_custom_login_logo() {
@@ -478,6 +518,7 @@ function lowermedia_scripts() {
         get_stylesheet_directory_uri() . '/custom.js',
         array( 'jquery' )
     );
+    wp_enqueue_script('jquery-ui-accordion');
 }
 add_action( 'wp_enqueue_scripts', 'lowermedia_scripts' );
 
