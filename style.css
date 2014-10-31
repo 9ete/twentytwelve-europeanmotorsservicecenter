@@ -278,6 +278,8 @@
 		float:left;
 	}
 
+	@media only screen and (min-width : 600px) { .mobile-column .menu { margin-top:30px; } }
+
 	#menu-mobile-menu-left .menu-item,
 	#menu-mobile-menu-right .menu-item {
 		width: 80%;
@@ -352,7 +354,7 @@
 		}
 
 		.site-header {
-			height: 542px;
+			height: 577px;
 		}
 
 		.site-header .auto-brands, .menu-auto-brands-menu-container {display:none;}
@@ -924,9 +926,23 @@ margin-bottom:0;
 	@media only screen and (max-width : 1024px) {
 		.bkimage-div, 
 		.nxt-bkimage-div { background-position:center 15vw; }
+
+		.page .content-navigation {
+			height: 40px;
+			width: 80%;
+			margin: 10px auto;
+		}
 	}
 
 	@media only screen and (max-width : 600px) {
+
+		.menu-auto-services-menu-container .menu {width:100%;}
+
+		.menu-auto-services-menu-container li {
+			width: 120px;
+			height: 120px;
+			margin: 10px 10px;
+		}
 
 		hgroup {width:90%;}
 
@@ -943,7 +959,7 @@ margin-bottom:0;
 		.main-inner .content-navigation {height:100px;}
 
 		.content-column {
-			width: 90%;
+			width: 100%;
 			display: block;
 			vertical-align: top;
 			margin: auto;
