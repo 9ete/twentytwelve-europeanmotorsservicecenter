@@ -41,7 +41,7 @@
 
       //toggle background image and color
       if(jQuery(window).scrollTop()<changePoint){
-        jQuery('.sticky-holder-one').css("background","transparent");
+        //jQuery('.sticky-holder-one').css("background","transparent");
       } else {
         //jQuery('.sticky-holder-one').toggle("#043789");
         jQuery('.sticky-holder-one').css("background","#043789");
