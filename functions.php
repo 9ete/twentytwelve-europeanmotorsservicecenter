@@ -152,15 +152,11 @@ add_action( 'init' , 'lm_add_cat_tag_to_attachments' );
  **/
 
 function randMenu ($menuName, $numItemsReturnedPlusOne) {
+    $autoBrandsMenu = wp_nav_menu( array( 'theme_location' => $menuName, 'echo' => false, 'before' => '--' ) );
+
     //randomize and output 5 menu items
     //ADD MENU TO VAR, DISABLE ECHO AS TO NOT ECHO THE MENU IMMEDIATLY
-    $autoBrandsMenu = wp_nav_menu( 
-        array( 
-            'theme_location' => $menuName, 
-            'echo' => false,
-            'before' => '--'
-        ) 
-    );
+    // $autoBrandsMenu = wp_nav_menu( array( 'theme_location' => $menuName, 'echo' => false, 'before' => '--' ) );
     //put each menu li into an array
     $menuArray = explode ("--", $autoBrandsMenu);
     $newMenuArray = array();
@@ -439,6 +435,8 @@ if(current_user_can( 'edit_posts' )) {
                     .no-grav .quicklinks>ul>li { position: relative; }
 
                     .no-grav .ab-top-menu>.menupop>.ab-sub-wrapper { bottom: 28px; }
+
+                    #wp-admin-bar-wp-logo { display: none; }
                 </style>'
             ;
         }
@@ -464,6 +462,20 @@ function lowermedia_scripts() {
         get_stylesheet_directory_uri() . '/custom.js',
         array( 'jquery' )
     );
+
+    wp_enqueue_script(
+        'jssor',
+        get_stylesheet_directory_uri() . '/js/jssor.js',
+        array( 'jquery' )
+    );
+
+    wp_enqueue_script(
+        'jssorslider',
+        get_stylesheet_directory_uri() . '/js/jssor.slider.js',
+        array( 'jquery' )
+    );
+
+
     wp_enqueue_script('jquery-ui-accordion');
 }
 add_action( 'wp_enqueue_scripts', 'lowermedia_scripts' );
