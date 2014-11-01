@@ -41,36 +41,37 @@ get_header(); ?>
 			?>
 
 		<?php else : ?>
-			<?php //get_template_part( 'content', 'none' ); ?>
+		<?php //get_template_part( 'content', 'none' ); ?>
 			<header class="archive-header">
 				<h1 class="archive-title"><?php printf( __( "At European Motors we fix %s's", 'twentytwelve' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
 
-			<?php if ( category_description() ) : // Show an optional category description ?>
+				<?php if ( category_description() ) : // Show an optional category description ?>
 				<div class="archive-meta"><?php echo category_description(); ?></div>
-			<?php endif; ?>
+				<?php endif; ?>
 			</header><!-- .archive-header -->
 		<?php endif; ?>
+		<?php
+		$tag_var = strtolower(single_cat_title('',false));
+		$wp_query = new WP_Query();
+		$query_images_args = array(
+			'tag' => $tag_var,
+			'post_type' => 'attachment', 
+			'post_mime_type' =>'image', 
+			'post_status' => 'inherit',
+			'posts_per_page' => -1,
+		);
 
+		$query_images = new WP_Query( $query_images_args );
+		$images = array();
+		foreach ( $query_images->posts as $image) {
+			$images[]= wp_get_attachment_url( $image->ID );
+			echo "<img src='".wp_get_attachment_url( $image->ID )."' />";
+		}
+		?>
 
 		</div><!-- #content -->
 	</section><!-- #primary -->
-<?php
-	wp_reset_query();
-	$query_images_args = array(
-	    'tag' => 'bmw',
-	    'post_type' => 'attachment', 
-	    'post_mime_type' =>'image', 
-	    'post_status' => 'inherit',
-	    'posts_per_page' => -1,
-	);
 
-	$query_images = new WP_Query( $query_images_args );
-	$images = array();
-	foreach ( $query_images->posts as $image) {
-	    $images[]= wp_get_attachment_url( $image->ID );
-	}
 
-	var_dump($images);
-?>
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
