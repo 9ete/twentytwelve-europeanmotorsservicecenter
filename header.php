@@ -163,7 +163,7 @@
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
-	<?php endif; ?>
+	
 	<div id='background-slider-holder' class='background-slider-holder'>
 	<!-- Jssor Slider Begin -->
     <!-- You can move inline styles to css file or css block. -->
@@ -287,7 +287,7 @@
     </div>
     <!-- Jssor Slider End -->
 </div>
-	
+	<?php endif; ?>
 	<?php if (wp_is_mobile()) : ?>
 		<?php if (is_front_page()) : ?>
 			<!-- <div id='background-slider-holder' class='background-slider-holder'>
