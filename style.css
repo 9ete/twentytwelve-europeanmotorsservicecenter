@@ -15,12 +15,18 @@
 
 /* -- GLOBAL -- */
 
-	a {color:#043789;}
+/*
+DARK BLUE = #043789
+PINSTRIP YELLOW = #f9be19
+GUNMETAL GREY = #5B5B5E
+*/
 
-	a:hover {color:#5B5B5E;}
+	a { color:#043789; }
+
+	a:hover { color:#5B5B5E; }
 
 	hgroup {
-		text-shadow: .5px .5px .5px #e8a825;
+		text-shadow: .5px .5px .5px #f9be19;
 		font-family: 'PorschaRegular', sans-serif;
 		line-height: 30px;
 		text-align: center;
@@ -379,14 +385,14 @@
 	.main-navigation li {
 			margin: 0;
 			position: relative;
-			width: 8.38rem;
+			width: 8rem;
 			text-align: center;
 			padding: 0 .5rem;
 			background-color:#262466;
 			font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 		}
 
-	.main-navigation li a {width:100%;}
+	.main-navigation li a { width:100%; }
 
 	.site-header .main-navigation .current-menu-item > a,
 	.site-header .main-navigation .current_page_ancestor > a {color:#f9be19;}
@@ -439,8 +445,7 @@
 		width: 140px;
 	}
 
-	@media only screen 
-	and (max-width : 1024px) {
+	@media only screen and (max-width : 1024px) {
 		/* can we hide this will only php, do we do it anyway? */
 		#menu-item-12 { display: none; }
 	}
@@ -500,12 +505,10 @@
 		width: 131px;
 	}
 
-	.main-navigation li { width: 8rem; }
-
 	.main-navigation li,
-	.customer-menu .menu-item,
 	.pre-content-widget li,
-	.post-content-widget .menu-auto-services-menu-container li,
+	.customer-menu .menu-item,
+	.menu-auto-services-menu-container li,
 	.menu-toggle,
 	button,
 	input[type="submit"],
@@ -531,27 +534,27 @@
 		border: 1px solid #f9be19;
 	}
 
-	.pre-content-widget li,
+	/*.pre-content-widget li,
 	.customer-menu .menu-item,
-	.post-content-widget .menu-auto-services-menu-container li {
+	.post-content-widget .menu-auto-services-menu-container li {*/
 		/*Reverse background color on hover for main nav */
-		background: #c9c9c9;
+		/*background: #c9c9c9;*/
 		/* Old browsers */
-		background: -moz-linear-gradient(top,#c9c9c9 0%,#f9f9f9 63%);
+		/*background: -moz-linear-gradient(top,#f9f9f9 0%,#c9c9c9 63%);*/
 		/* FF3.6+ */
-		background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#c9c9c9),color-stop(63%,#f9f9f9));
+		/*background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#f9f9f9),color-stop(63%,#c9c9c9));*/
 		/* Chrome,Safari4+ */
-		background: -webkit-linear-gradient(top,#c9c9c9 0%,#f9f9f9 63%);
+		/*background: -webkit-linear-gradient(top,#f9f9f9 0%,#c9c9c9 63%);*/
 		/* Chrome10+,Safari5.1+ */
-		background: -o-linear-gradient(top,#c9c9c9 0%,#f9f9f9 63%);
+		/*background: -o-linear-gradient(top,#f9f9f9 0%,#c9c9c9 63%);*/
 		/* Opera 11.10+ */
-		background: -ms-linear-gradient(top,#c9c9c9 0%,#f9f9f9 63%);
+		/*background: -ms-linear-gradient(top,#f9f9f9 0%,#c9c9c9 63%);*/
 		/* IE10+ */
-		background: linear-gradient(to bottom,#c9c9c9 0%,#f9f9f9 63%);
+		/*background: linear-gradient(to bottom,#f9f9f9 0%,#c9c9c9 63%);*/
 		/* W3C */
-		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c9c9c9',endColorstr='#f9f9f9',GradientType=0);
+		/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#c9c9c9',GradientType=0);*/
 		/* IE6-9 */
-	}
+	/*}*/
 
 	.customer-menu .menu-item a {
 		line-height: 2;
@@ -576,6 +579,8 @@
 	.content-navigation { margin: 10px 0; }
 
 	.menu-primary-menu-container { margin-top:5px; }
+
+	.menu-all-services-button-container .menu { text-align: center; }
 
 /* -- SIDEBAR -- */
 
