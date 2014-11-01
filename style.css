@@ -13,32 +13,12 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
-	/*.admin-bar {
-        margin-top: -28px;
-        padding-bottom: 28px;
-    }
-
-    .no-grav {
-        top: auto !important;
-        bottom: 0;
-    }
-
-    .no-grav .quicklinks>ul>li {
-        position:relative;
-    }
-
-    .no-grav .ab-top-menu>.menupop>.ab-sub-wrapper {
-        bottom:28px;
-    }*/
-
 /* -- GLOBAL -- */
 
 	a {color:#043789;}
 
 	a:hover {color:#5B5B5E;}
 
-	/*.site-header .site-title, 
-	.site-header .site-description*/
 	hgroup {
 		text-shadow: 1px 1px 1px #e8a825;
 		font-family: 'PorschaRegular', sans-serif;
@@ -53,15 +33,9 @@
 
 	hgroup .site-description {font-size:22px;}
 
-	/*.site-header .site-title {border-radius:50px 50px 0 0;} 
-	.site-header .site-description {border-radius:0 0 50px 50px;}
-	.site-header .site-title a, 
-	.site-header .site-description {color:#043789;}*/
-
 /* -- HTML/BODY/SITE -- */
 
-	html, body {
-		/*background-color:#043789;*/
+	html, body, .colophon-footer {
 		background-image:url('img/carbon-texture.png');
 		background-size:250px;
 	}
@@ -143,8 +117,6 @@
 		text-decoration: none;
 	}
 
-	/*.brands-serviced-brand img {height:15px;}*/
-
 	.site-header .auto-brands,
 	.site-header .menu-auto-brands-menu-container,
 	.home .auto-brands,
@@ -189,9 +161,7 @@
 
 /* -- HEADER -- */
 
-	#sticky-wrapper-undefined-2 {
-		margin-top: 40vh;
-	}
+	#sticky-wrapper-undefined-2 { margin-top: 40vh; }
 
 	.sticky-holder {
 		width:100%;
@@ -200,11 +170,10 @@
 		position: fixed;
 	}
 
-	.home .sticky-holder {background:#043789;}
+	.home .sticky-holder { background:#043789; }
 
 
 	.sticky-holder-two {
-		/*top:180px !important;*/
 		z-index: 190 !important;
 		position:fixed;
 	}
@@ -216,11 +185,7 @@
 	}
 
 	.home .site-header {
-		/*height: 660px;*/
 		height:180px;
-		/*max-height: 660px;*/
-		/*background-image: url('http://lowermedia.net/europeanmotors/wp-content/blog.dir/sites/44/2014/08/european-motors-auto-service-center-tacoma-seattle-washington-fix-my-car.jpg');*/
-		/*background-size: auto 930px;*/
 		background-size:100%;
 		background-size:100vh 100%;
 		background-repeat: no-repeat;
@@ -274,47 +239,6 @@
     .jssora21ldn { background-position: -243px -33px; }
     .jssora21rdn { background-position: -303px -33px; }
 
-	.background-slider-holder {
-		/*position: relative;
-		height: 400px;*/
-	}
-
-	/*.bkimage-div, 
-	.nxt-bkimage-div {
-		background-image: url(http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg);
-		background-image:url(img/bkimg-1250w-833h.jpg);
-		background-image:url('http://dummyimage.com/2500x400/CF0/000&text=Slide+1');
-		background-image:url(img/background-front-2500w-400h-2.jpg);
-		width: 100%;
-		height:400px;
-		/*height:90vh;*/
-		/*max-height: 660px;*/
-		/*background-repeat: no-repeat;
-		position: absolute;
-		background-position: center;*/
-		/*
-		position: absolute;
-		left: 0;
-		top: 0;
-		background-position: center 0;
-		background-attachment: fixed;
-		background-size: auto 1250px;*/
-	}*/
-
-	/*.mobile-bkimage-div {
-		background-image: url(http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg);
-		position: fixed;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height:90vh;
-		max-height: 660px;
-		background-size: auto 930px;
-		background-repeat: no-repeat;
-		background-position: center 0;
-		background-attachment: fixed;
-	}*/
-
 	.mobile-column {
 		display:inline-block;
 		width:30%;
@@ -327,8 +251,6 @@
 		float:left;
 	}
 
-	@media only screen and (min-width : 600px) { .mobile-column .menu { margin-top:30px; } }
-
 	#menu-mobile-menu-left .menu-item,
 	#menu-mobile-menu-right .menu-item {
 		width: 80%;
@@ -337,38 +259,41 @@
 		display:block;
 	}
 
-	.mini-mobile-menu-column {display:none;}
+	.mini-mobile-menu-column { display:none; }
 
-	/*.main-navigation,*/
 	.sticky-wrapper,
 	.sticky-holder,
-	.site-header
-	/*.page .main-navigation,*/
-	/*.archive .main-navigation */{height:180px;}
+	.site-header{ height:180px; }
 
-	.archive-title {text-align: center;}
+	.archive-title { text-align: center; }
 
-	.show-1024 {display:none;}
-	.hide-1024 {display:block;}
+	.show-1024 { display:none; }
+
+	.hide-1024 { display:block; }
+
+	.mobile-column {
+		display: inline-block;
+		width: 30%;
+		vertical-align: middle;
+	}
 
 	@media only screen and (max-width : 1024px) {
 
-		.home .site-header {height:230px;}
+		.home .site-header { height:230px; }
 
-		.show-1024 {display:block;}
-		.hide-1024 {display:none;}
+		.show-1024 { display:block; }
+
+		.hide-1024 { display:none; }
 
 		.top-navigation,
-		.menu-primary-menu-container {display:none;}
+		.menu-primary-menu-container { display:none; }
 
 		.main-navigation,
 		.sticky-wrapper,
 		.sticky-holder,
 		.site-header,
 		.page .main-navigation,
-		.archive .main-navigation {
-			height: 211px;
-		}
+		.archive .main-navigation { height: 211px; }
 
 		body.template-front-page .site-content, 
 		body.attachment .site-content, 
@@ -382,7 +307,7 @@
 
 	@media only screen and (max-width : 600px) {
 
-		body {max-width:600px;}
+		body { max-width:600px; }
 		
 		.mobile-column-left,
 		.mobile-column-right {display:none;}
@@ -406,90 +331,41 @@
 			height: 577px;
 		}
 
-		.site-header .auto-brands, .menu-auto-brands-menu-container {display:none;}
+		.site-header .auto-brands, .menu-auto-brands-menu-container { display:none; }
 
-		.sticky-holder {position:relative;}
+		.sticky-holder { position:relative; }
 
-		.main {z-index: 200;border-top:5px solid #f9be19;}
+		.main { 
+			z-index: 200;
+			border-top:5px solid #f9be19; 
+		}
 
 	}
-	/*
-
-	on mobile background image div
-	set height to inner page height of header
-	still use bk image but position in a good light
-	do this to prevent scroll effect as it is very choppy on mobile
-
-	*/
-
-	/*
-	
-	use media queries to set height of background images according to mobile device height.
-
-	mq for ipad @ 1024 width
-	mq for ipad @ 768 width
-	iphones
-	android
-	windows etc
-
-	*/
-
-	/*.bkimage-div {
-	    z-index: 2;
-	}
-
-	.nxt-bkimage-div {
-	    z-index: 1;
-	}
-
-	.bkimg-nav-button-container {
-		z-index: 198;
-		position:absolute;
-		left: 48%;
-	}
-
-	.bkimg-nav-button {
-		height: 25px;
-		width: 25px;
-		display:inline-block;
-		margin-left:10px;
-		margin-right:10px;
-	}*/
 
 	hgroup {
 		display:block;
 		padding:10px;
 		width:100%;
-		/*border-top:2px solid #e8a825;*/
-		/*background-color: rgba(91,91,94,0.455);
-		box-shadow: 1px 0px 76px rgba(91,91,94,0.955);*/
 	}
 
 	hgroup .site-title,
-	hgroup .site-description
-	 {text-align: center;}
+	hgroup .site-description { text-align: center; }
 
-	.automotive-certifications {text-align: center;}
-	.automotive-certifications .auto-cert-item {display:block;}
-	.automotive-certifications .auto-cert-item img {height:50px;}
+	.automotive-certifications { text-align: center; }
+
+	.automotive-certifications .auto-cert-item { display:block; }
+
+	.automotive-certifications .auto-cert-item img { height:50px; }
 
 /* -- NAVIGATION -- */
-
-	.mobile-column {
-		display: inline-block;
-		width: 30%;
-		vertical-align: middle;
-	}
 
 	@media screen and (min-width: 600px) {
 		.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
 			border:none;
 		}
 
-		.mini-mobile-menu-column {display:block;}
+		.mini-mobile-menu-column {display:none;}
 	}
-
-	.mini-mobile-menu-column {display:none;}
 
 	@media screen and (max-width: 600px) {
 		.mobile-hide {display:none;}
@@ -567,27 +443,16 @@
 
 	@media only screen 
 	and (max-width : 1024px) {
-		/* Styles */
 		/* can we hide this will only php, do we do it anyway? */
-		#menu-item-12 {display: none;}
+		#menu-item-12 { display: none; }
 	}
 
-	/*.customer-menu li a,
-	.social-menu li a{
-		color:white;
-	}*/
+	.top-navigation .social-menu { float:left; }
 
-	.top-navigation .social-menu {
-		float:left;
-	}
-
-	.top-navigation .customer-menu {
-		float:right;
-	}
-
-	
+	.top-navigation .customer-menu { float:right; }
 
 	.mobile-column .customer-menu .menu-item {padding:0;}
+
 	.mobile-logo-wrap img {
 		height: 100%;
 		width: auto;
@@ -596,11 +461,10 @@
 	}
 
 	.main-navigation .social-menu,
-	.main-navigation .customer-menu {margin-top:5px;}
+	.main-navigation .customer-menu { margin-top:5px; }
 
 	.top-navigation {
 		position: absolute;
-		/*width: 960px;*/
 		width:100%;
 	}
 
@@ -613,53 +477,32 @@
 	}
 
 	.social-menu .menu-item {
-		/*background:#f9be19;*/
 		width: 30px;
 		width: 55px;
 		height: 55px;
 		padding: 0;
 		background: none;
 		border: none;
-		/*background-size:45px 45px;*/
 	}
 
-	.social-menu .menu-item a {line-height: 1;}
+	.social-menu .menu-item a { line-height: 1; }
 
-	.social-menu .menu-item a:hover {color:#f9be19;}
+	.social-menu .menu-item a:hover { color:#f9be19; }
 
 	.social-menu .menu-item .genericon-yelp {
-	font-size: 24px;
-	text-transform: capitalize;
-	line-height: 55px;
-	font-family: futura;
+		font-size: 24px;
+		text-transform: capitalize;
+		line-height: 55px;
+		font-family: futura;
 	}
 
-	/*.social-menu .menu-item a,
-	.social-menu .menu-item a:hover {color:transparent;}*/
-
-	/*.social-menu .facebook-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/facebook-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
-	.social-menu .facebook-li:hover {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/square-facebook-128-gradient.png');}
-
-	.social-menu .twitter-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/twitter-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
-	.social-menu .twitter-li:hover {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/square-twitter-128-gradient.png');}
-
-	.social-menu .google-plus-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/google-plus-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
-	.social-menu .google-plus-li:hover {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/square-google-plus-128-gradient.png');}
-
-	.social-menu .linkedin-li {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/10/linkedin-european-motors-tacoma-seattle-bmw-jaguar-porsche-ferrari.png');}
-	.social-menu .linkedin-li:hover {background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/square-linkedin-128-gradient.png');}
-*/
 	.main-navigation .menu-item .sub-menu .sub-menu {
 		margin-left: 2px;
 		top: -3px;
 		width: 131px;
 	}
 
-	.main-navigation li {
-		/*making nav widths maller*/
-		width: 8rem;
-		
-	}
+	.main-navigation li { width: 8rem; }
 
 	.main-navigation li,
 	.customer-menu .menu-item,
@@ -718,11 +561,9 @@
 		text-decoration: none;
 	}
 
-	.mobile-column .customer-menu .menu-item a {
-		line-height: 3.5;
-	}
+	.mobile-column .customer-menu .menu-item a { line-height: 3.5; }
 
-	.menu-primary-menu-container .nav-menu {margin:10px 0;}
+	.menu-primary-menu-container .nav-menu { margin:10px 0; }
 
 	.content-column {
 		width: 50%;
@@ -730,24 +571,26 @@
 		vertical-align: middle;
 	}
 
-	.content-column .social-menu {text-align: left;}
-	.content-column .customer-menu {text-align: right;}
+	.content-column .social-menu { text-align: left; }
 
-	.content-navigation {margin: 10px 0;}
+	.content-column .customer-menu { text-align: right; }
 
-	.menu-primary-menu-container {margin-top:5px;}
+	.content-navigation { margin: 10px 0; }
+
+	.menu-primary-menu-container { margin-top:5px; }
 
 /* -- SIDEBAR -- */
 
 	.widget-area .widget {
-		min-height:300px;
-		background-color:rgba(0,0,0,.1);
+		min-height: 300px;
+		background-color: #f9be19;
+		background-color: rgba(0,0,0,.1);
 		vertical-align: top;
 		margin: 10px 1%;
-		width:30%;
+		width: 30%;
 	}
 
-	.site-content, .widget-area {width:100%;}
+	.site-content, .widget-area { width:100%; }
 
 	.widget-area .widget {
 		width: 33%;
@@ -755,18 +598,14 @@
 		text-align: center;
 	}
 
-	.widget-area .widget {text-align: center;}
-
 /* -- CONTENT -- */
 
-.post-type-archive-testimonials .site-content article,
-.post-type-archive-carcaretips .site-content article {
-margin-bottom:0;
-}
+	.post-type-archive-testimonials .site-content article,
+	.post-type-archive-carcaretips .site-content article { margin-bottom:0; }
 
-	.wrapper .site-content {margin-top:0;}
+	.wrapper .site-content { margin-top:0; }
 	
-	.pre-content-widget-holder {white-space:nowrap;}
+	.pre-content-widget-holder { white-space:nowrap; }
 
 	.pre-content-widget-holder,
 	.post-content-widget-holder {
@@ -775,7 +614,7 @@ margin-bottom:0;
 	}
 
 	.pre-content-widget h2,
-	.post-content-widget h2 {display: none;}
+	.post-content-widget h2 { display: none; }
 
 	.pre-content-widget li,
 	.post-content-widget li {
@@ -811,12 +650,12 @@ margin-bottom:0;
 		margin: auto;
 	}
 
-	.menu-auto-services-menu-container {white-space: normal;}
+	.menu-auto-services-menu-container { white-space: normal; }
 
 	.pre-content-widget .current-menu-item,
-	.post-content-widget .current-menu-item {display: none;}
+	.post-content-widget .current-menu-item { display: none; }
 
-	.pre-content-widget .menu-item-334 {display:inline-block;}
+	.pre-content-widget .menu-item-334 { display:inline-block; }
 
 	.pre-content-widget li a,
 	.post-content-widget li a {
@@ -831,7 +670,7 @@ margin-bottom:0;
 		text-transform: uppercase;
 	}
 
-	.home .entry-header {margin: 30px 0px 5px 0px;}
+	.home .entry-header { margin: 30px 0px 5px 0px; }
 
 	.page-id-32.entry-content {
 		width: 78%;
@@ -872,7 +711,7 @@ margin-bottom:0;
 		font-family: futura;
 	}
 
-	.cert-button a { text-decoration:none; }
+	.cert-button a { text-decoration: none; }
 
 	.content-left,
 	.content-right {
@@ -881,7 +720,7 @@ margin-bottom:0;
 		vertical-align: top;
 	}
 
-	.wpcf7-submit {width:350px;}
+	.wpcf7-submit { width:350px; }
 
 	@media only screen and (max-width : 1024px) {
 		.content-left, .content-right {
@@ -891,11 +730,9 @@ margin-bottom:0;
 	}
 
 	/*Center text on testimonials page*/
-	.post-type-archive-testimonials {
-		text-align: center;
-	}
+	.post-type-archive-testimonials { text-align: center; }
 
-	.post-type-archive-testimonials .site-content article {border:none;}
+	.post-type-archive-testimonials .site-content article { border:none; }
 
 	/*SERVICES PAGE ACCORDIAN MENU STYLES*/
 	.accordion h2 {
@@ -938,15 +775,12 @@ margin-bottom:0;
 /* -- FOOTER -- */
 
 	body .colophon-footer {
-		/*background-color: #043789;*/
 		margin-top: 0;
 		border-top: 2px solid#E8A826;
 		max-width: 100%;
 		z-index: 200;
 		position: relative;
 		width: 100%;
-		/*background-image:url('img/carbon-texture.png');
-		background-size: 20%;*/
 	}
 
 	body .colophon-footer .wrapper {
@@ -954,7 +788,6 @@ margin-bottom:0;
 		position: relative;
 		background-color: #043789;
 		white-space: nowrap;
-		/*background-image:url('img/carbon-texture.png');*/
 		background-color: rgba(4,55,137,0.4);
 		background-color: rgba(249,190,25,0.4);
 		border-radius: 10px;
@@ -980,14 +813,11 @@ margin-bottom:0;
 		line-height: 3;
 	}
 
-	.footer-column .customer-menu .menu-item a:hover {color:#6a6a6a;}
+	.footer-column .customer-menu .menu-item a:hover { color:#6a6a6a; }
 
 /* -- Media Queries -- */
 
 	@media only screen and (max-width : 1024px) {
-		/*.bkimage-div, 
-		.nxt-bkimage-div { background-position:center 15vw; }*/
-
 		.page .content-navigation {
 			height: 40px;
 			width: 80%;
@@ -997,7 +827,7 @@ margin-bottom:0;
 
 	@media only screen and (max-width : 600px) {
 
-		.menu-auto-services-menu-container .menu {width:100%;}
+		.menu-auto-services-menu-container .menu { width:100%; }
 
 		.menu-auto-services-menu-container li {
 			width: 120px;
@@ -1005,15 +835,13 @@ margin-bottom:0;
 			margin: 10px 10px;
 		}
 
-		hgroup {width:90%;}
+		hgroup { width:90%; }
 
 		.bkimage-div,
 		.nxt-bkimage-div,
 		.mobile-bkimage-div,
 		.background-slider-holder
 		{
-			/*background-size:auto 300px;
-			background-position:center -70px;*/
 			display:none;
 		}
 
@@ -1022,21 +850,19 @@ margin-bottom:0;
 		.content-column {
 			width: 100%;
 			display: block;
-			vertical-align: top;
+305			vertical-align: top;
 			margin: auto;
 		}
 
 		.content-column .social-menu,
 		.content-column .customer-menu { text-align: center; }
 
-		.content-column .social-menu .menu-item { display:inline-block; max-width:15%; }
-		.content-column .customer-menu .menu-item  { width: 6rem; }
-
-
-		body .colophon-footer {
-			background-image:url('img/carbon-texture.png');
-			background-size:20%;
+		.content-column .social-menu .menu-item { 
+			display:inline-block; 
+			max-width:15%; 
 		}
+
+		.content-column .customer-menu .menu-item  { width: 6rem; }
 
 		.footer-column {
 			min-height: 0;
@@ -1061,22 +887,9 @@ margin-bottom:0;
 
 		.site-header { margin-bottom: 0; }
 
-		.mini-mobile-menu-column .menu .menu-item a {display:block;}
+		.mini-mobile-menu-column .menu .menu-item a { display:block; }
 
 	}
-
-	/*@media only screen and (max-width : 1024px) { body {min-width:1024px;} }
-	@media only screen and (max-width : 960px) { body {min-width:960px;} }
-	@media only screen and (max-width : 850px) { body {min-width:850px;} }
-	@media only screen and (max-width : 800px) { body {min-width:800px;} }
-	@media only screen and (max-width : 750px) { body {min-width:750px;} }
-	@media only screen and (max-width : 700px) { body {min-width:700px;} }
-	@media only screen and (max-width : 650px) { body {min-width:650px;} }
-	@media only screen and (max-width : 640px) { body {min-width:640px;} }
-	@media only screen and (max-width : 600px) { body {min-width:600px;} }
-	@media only screen and (max-width : 568px) { body {min-width:568px;} }
-	@media only screen and (max-width : 330px) { body {min-width:330px;} }
-	@media only screen and (max-width : 320px) { body {min-width:320px;} }*/
 
 /* -- FONT IMPORTS -- */
 
