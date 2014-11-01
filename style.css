@@ -230,29 +230,78 @@
 
 /* -- img slider -- */
 
+        
+    /* jssor slider bullet navigator skin 21 css */
+    /*
+    .jssorb21 div           (normal)
+    .jssorb21 div:hover     (normal mouseover)
+    .jssorb21 .av           (active)
+    .jssorb21 .av:hover     (active mouseover)
+    .jssorb21 .dn           (mousedown)
+    */
+    .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av
+    {
+        background: url(../img/b21.png) no-repeat;
+        overflow:hidden;
+        cursor: pointer;
+    }
+    .jssorb21 div { background-position: -5px -5px; }
+    .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
+    .jssorb21 .av { background-position: -65px -5px; }
+    .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
+
+    /* jssor slider arrow navigator skin 21 css */
+            /*
+    .jssora21l              (normal)
+    .jssora21r              (normal)
+    .jssora21l:hover        (normal mouseover)
+    .jssora21r:hover        (normal mouseover)
+    .jssora21ldn            (mousedown)
+    .jssora21rdn            (mousedown)
+    */
+    .jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn
+    {
+    	position: absolute;
+    	cursor: pointer;
+    	display: block;
+        background: url(http://europeanmotorsservicecenter.petelower.com/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/a21.png) center center no-repeat;
+        overflow: hidden;
+    }
+    .jssora21l { background-position: -3px -33px; }
+    .jssora21r { background-position: -63px -33px; }
+    .jssora21l:hover { background-position: -123px -33px; }
+    .jssora21r:hover { background-position: -183px -33px; }
+    .jssora21ldn { background-position: -243px -33px; }
+    .jssora21rdn { background-position: -303px -33px; }
+
 	.background-slider-holder {
-		position: relative;
-		height: 400px;
+		/*position: relative;
+		height: 400px;*/
 	}
 
-	.bkimage-div, 
+	/*.bkimage-div, 
 	.nxt-bkimage-div {
 		background-image: url(http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg);
 		background-image:url(img/bkimg-1250w-833h.jpg);
+		background-image:url('http://dummyimage.com/2500x400/CF0/000&text=Slide+1');
+		background-image:url(img/background-front-2500w-400h-2.jpg);
+		width: 100%;
+		height:400px;
+		/*height:90vh;*/
+		/*max-height: 660px;*/
+		/*background-repeat: no-repeat;
+		position: absolute;
+		background-position: center;*/
+		/*
 		position: absolute;
 		left: 0;
 		top: 0;
-		width: 100%;
-		/*height:90vh;*/
-		height:400px;
-		/*max-height: 660px;*/
-		background-size: auto 1250px;
-		background-repeat: no-repeat;
 		background-position: center 0;
 		background-attachment: fixed;
-	}
+		background-size: auto 1250px;*/
+	}*/
 
-	.mobile-bkimage-div {
+	/*.mobile-bkimage-div {
 		background-image: url(http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0090.jpg);
 		position: fixed;
 		left: 0;
@@ -264,7 +313,7 @@
 		background-repeat: no-repeat;
 		background-position: center 0;
 		background-attachment: fixed;
-	}
+	}*/
 
 	.mobile-column {
 		display:inline-block;
@@ -385,7 +434,7 @@
 
 	*/
 
-	.bkimage-div {
+	/*.bkimage-div {
 	    z-index: 2;
 	}
 
@@ -405,7 +454,7 @@
 		display:inline-block;
 		margin-left:10px;
 		margin-right:10px;
-	}
+	}*/
 
 	hgroup {
 		display:block;
@@ -426,11 +475,21 @@
 
 /* -- NAVIGATION -- */
 
+	.mobile-column {
+		display: inline-block;
+		width: 30%;
+		vertical-align: middle;
+	}
+
 	@media screen and (min-width: 600px) {
 		.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
 			border:none;
 		}
+
+		.mini-mobile-menu-column {display:block;}
 	}
+
+	.mini-mobile-menu-column {display:none;}
 
 	@media screen and (max-width: 600px) {
 		.mobile-hide {display:none;}
@@ -525,6 +584,8 @@
 	.top-navigation .customer-menu {
 		float:right;
 	}
+
+	
 
 	.mobile-column .customer-menu .menu-item {padding:0;}
 	.mobile-logo-wrap img {
@@ -924,8 +985,8 @@ margin-bottom:0;
 /* -- Media Queries -- */
 
 	@media only screen and (max-width : 1024px) {
-		.bkimage-div, 
-		.nxt-bkimage-div { background-position:center 15vw; }
+		/*.bkimage-div, 
+		.nxt-bkimage-div { background-position:center 15vw; }*/
 
 		.page .content-navigation {
 			height: 40px;
