@@ -55,7 +55,7 @@ GUNMETAL GREY = #5B5B5E
 		font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 	}
 
-	.custom-font-enabled {font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
+	/* .custom-font-enabled { font-family: Futura, "Trebuchet MS", Arial, sans-serif; } */
 
 	body .site {
 		background: none;
@@ -71,40 +71,42 @@ GUNMETAL GREY = #5B5B5E
 		margin:auto;
 	}
 
-	.main,
+	.sticky-wrapper,
+	.sticky-holder,
+	.site-header,
+	.main-navigation { height: 180px; }
+
+	/*.main,
 	.site-header .auto-brands,
 	.home .auto-brands,
 	.site-header .menu-auto-brands-menu-container,
 	.home .menu-auto-brands-menu-container {
 		position:relative;
 		background-color:#D1D2D4;
-	}
+	}*/
 
 	.main { z-index: 197; }
 
-	.site-header .auto-brands,
-	.home .auto-brands {
+	/*.site-header .auto-brands,
+	.home */
+	.auto-brands {
 		z-index: 198;
+		border-top: 1px solid #f9be19;
 	}
 
-	@media only screen and (min-width : 1024px) {
-		.site-header .auto-brands,
-		.home .auto-brands {
-			margin-top:10px;
-		}
-	}
-
-	.site-header .auto-brands,
+	/*.site-header .auto-brands,
 	.home .auto-brands, 
 	.site-header .menu-auto-brands-menu-container,
-	.home .menu-auto-brands-menu-container {
+	.home */
+	.menu-auto-brands-menu-container {
 		width:100%;
 		border-top: 1px solid #f9be19;
 	}
 
 	/*.brands-serviced-nav, */
-	.site-header .menu-auto-brands-menu-container .menu,
-	.home .menu-auto-brands-menu-container .menu {
+	/*.site-header .menu-auto-brands-menu-container .menu,
+	.home */
+	.menu-auto-brands-menu-container .menu {
 		width:960px;
 		margin:auto;
 		max-height: 26px;
@@ -112,24 +114,28 @@ GUNMETAL GREY = #5B5B5E
 	}
 
 	/*.brands-serviced-brand, */
-	.site-header .menu-auto-brands-menu-container .menu .menu-item,
-	.home .menu-auto-brands-menu-container .menu .menu-item {
-		display:inline-block;
-		margin:5px 2.5px;
+	/*.site-header .menu-auto-brands-menu-container .menu .menu-item,
+	.home */
+	.menu-auto-brands-menu-container .menu .menu-item {
+		display: inline-block;
+		margin: 5px 2.5px;
 		width: 15%;
 		text-align: center;
 	}
 
-	.site-header .menu-auto-brands-menu-container .menu .menu-item a ,
-	.home .menu-auto-brands-menu-container .menu .menu-item a {
+	/*.site-header .menu-auto-brands-menu-container .menu .menu-item a,
+	.home */
+	.menu-auto-brands-menu-container .menu .menu-item a {
 		font-family: KubusBold, "Trebuchet MS", Arial, sans-serif;
 		text-decoration: none;
 	}
 
-	.site-header .auto-brands,
+	/*.site-header .auto-brands,
 	.site-header .menu-auto-brands-menu-container,
 	.home .auto-brands,
-	.home .menu-auto-brands-menu-container {
+	.home*/ 
+	/*.auto-brands,*/
+	.menu-auto-brands-menu-container {
 		background: #ffffff;
 		/* Old browsers */
 		background: -moz-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);
@@ -148,29 +154,9 @@ GUNMETAL GREY = #5B5B5E
 		/* IE6-9 */
 	}
 
-	/*adding similar gradient to body with less noticable change*/
-	/*body .site, body .main {*/
-		/*background: #ffffff;*/
-		/* Old browsers */
-		/*background: -moz-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);*/
-		/* FF3.6+ */
-		/*background: -webkit-gradient(linear,left top,left bottom,color-stop(50%,#ffffff),color-stop(100%,#e8e8e8));*/
-		/* Chrome,Safari4+ */
-		/*background: -webkit-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);*/
-		/* Chrome10+,Safari5.1+ */
-		/*background: -o-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);*/
-		/* Opera 11.10+ */
-		/*background: -ms-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);*/
-		/* IE10+ */
-		/*background: linear-gradient(to bottom,#ffffff 50%,#e8e8e8 100%);*/
-		/* W3C */
-		/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff',endColorstr='#e8e8e8',GradientType=0);*/
-		/* IE6-9 */
-	/*}*/
+
 
 /* -- HEADER -- */
-
-	#sticky-wrapper-undefined-2 { margin-top: 40vh; }
 
 	.sticky-holder {
 		width:100%;
@@ -179,27 +165,63 @@ GUNMETAL GREY = #5B5B5E
 		position: fixed;
 	}
 
-	.home .sticky-holder { background:#043789; }
+	/*.home .sticky-holder { background:#043789; }*/
 
 
-	.sticky-holder-two {
+	/*.sticky-holder-two {
 		z-index: 190 !important;
 		position:fixed;
 	}
-
+*/
 	.site-header {
 		padding: 0;
-		background-color: #043789;
+		/*background-color: #043789;*/
 		margin-bottom:25px;
 	}
 
-	.home .site-header {
+	/*.home .site-header {
 		height:180px;
 		background-size:100%;
 		background-size:100vh 100%;
 		background-repeat: no-repeat;
 		background-position: center 0px;
 		background-attachment: fixed;
+	}*/
+
+	.mobile-column {
+		display:inline-block;
+		width:30%;
+		height:100%;
+		vertical-align:top;
+	}
+
+	.mobile-column .menu {
+		width:100%;
+		float:left;
+	}
+
+	#menu-mobile-menu-left .menu-item,
+	#menu-mobile-menu-right .menu-item {
+		width: 80%;
+		margin: 5px auto;
+		padding: 0;
+		display:block;
+	}
+
+	.mini-mobile-menu-column { display:none; }
+
+	
+
+	.archive-title { text-align: center; }
+
+	.show-1024 { display:none; }
+
+	.hide-1024 { display:block; }
+
+	.mobile-column {
+		display: inline-block;
+		width: 30%;
+		vertical-align: middle;
 	}
 
 /* -- img slider -- */
@@ -242,7 +264,7 @@ GUNMETAL GREY = #5B5B5E
     	position: absolute;
     	cursor: pointer;
     	display: block;
-        background: url(http://europeanmotorsservicecenter.petelower.com/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/a21.png) center center no-repeat;
+        background: url(/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/a21.png) center center no-repeat;
         overflow: hidden;
     }
     .jssora21l { background-position: -3px -33px; }
@@ -252,43 +274,7 @@ GUNMETAL GREY = #5B5B5E
     .jssora21ldn { background-position: -243px -33px; }
     .jssora21rdn { background-position: -303px -33px; }
 
-	.mobile-column {
-		display:inline-block;
-		width:30%;
-		height:100%;
-		vertical-align:top;
-	}
-
-	.mobile-column .menu {
-		width:100%;
-		float:left;
-	}
-
-	#menu-mobile-menu-left .menu-item,
-	#menu-mobile-menu-right .menu-item {
-		width: 80%;
-		margin: 5px auto;
-		padding: 0;
-		display:block;
-	}
-
-	.mini-mobile-menu-column { display:none; }
-
-	.sticky-wrapper,
-	.sticky-holder,
-	.site-header{ height:180px; }
-
-	.archive-title { text-align: center; }
-
-	.show-1024 { display:none; }
-
-	.hide-1024 { display:block; }
-
-	.mobile-column {
-		display: inline-block;
-		width: 30%;
-		vertical-align: middle;
-	}
+	
 
 	@media only screen and (max-width : 1024px) {
 
