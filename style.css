@@ -306,6 +306,7 @@ GUNMETAL GREY = #5B5B5E
 		.main { 
 			z-index: 200;
 			border-top:5px solid #FBC81E; 
+			position:relative;
 		}
 
 	}
@@ -806,7 +807,7 @@ GUNMETAL GREY = #5B5B5E
 		.content-column {
 			width: 100%;
 			display: block;
-305			vertical-align: top;
+			vertical-align: top;
 			margin: auto;
 		}
 
@@ -828,7 +829,7 @@ GUNMETAL GREY = #5B5B5E
 		}
 
 		.sticky-holder {
-			background: transparent;
+			/*background: transparent;*/
 			left: -7.5px;
 		}
 
