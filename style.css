@@ -16,8 +16,8 @@
 /* -- GLOBAL -- */
 
 /*
-DARK BLUE = #043789
-PINSTRIP YELLOW = #f9be19
+ROYAL BLUE = #043789 // #004B9B
+PINSTRIP YELLOW =  #FBC81E // #f9be19
 GUNMETAL GREY = #5B5B5E
 */
 
@@ -26,7 +26,7 @@ GUNMETAL GREY = #5B5B5E
 	a:hover { color:#5B5B5E; }
 
 	hgroup {
-		text-shadow: .5px .5px .5px #f9be19;
+		text-shadow: .5px .5px .5px #FBC81E;
 		font-family: 'PorschaRegular', sans-serif;
 		line-height: 30px;
 		text-align: center;
@@ -44,18 +44,11 @@ GUNMETAL GREY = #5B5B5E
 
 /* -- HTML/BODY/SITE -- */
 
-	.main {
-		background-image: url('img/white-carbon.png');
-		background-size: 200px;
-	}
-
 	body {
 		min-width:1024px;
 		min-width: 100vw;
 		font-family: Futura, "Trebuchet MS", Arial, sans-serif;
 	}
-
-	/* .custom-font-enabled { font-family: Futura, "Trebuchet MS", Arial, sans-serif; } */
 
 	body .site {
 		background: none;
@@ -76,36 +69,22 @@ GUNMETAL GREY = #5B5B5E
 	.site-header,
 	.main-navigation { height: 180px; }
 
-	/*.main,
-	.site-header .auto-brands,
-	.home .auto-brands,
-	.site-header .menu-auto-brands-menu-container,
-	.home .menu-auto-brands-menu-container {
-		position:relative;
-		background-color:#D1D2D4;
-	}*/
+	.main {
+		background-image: url('img/white-carbon.png');
+		background-size: 200px;
+		z-index: 197;
+	}
 
-	.main { z-index: 197; }
-
-	/*.site-header .auto-brands,
-	.home */
 	.auto-brands {
 		z-index: 198;
-		border-top: 1px solid #f9be19;
+		border-top: 1px solid #FBC81E;
 	}
 
-	/*.site-header .auto-brands,
-	.home .auto-brands, 
-	.site-header .menu-auto-brands-menu-container,
-	.home */
 	.menu-auto-brands-menu-container {
 		width:100%;
-		border-top: 1px solid #f9be19;
+		border-top: 1px solid #FBC81E;
 	}
 
-	/*.brands-serviced-nav, */
-	/*.site-header .menu-auto-brands-menu-container .menu,
-	.home */
 	.menu-auto-brands-menu-container .menu {
 		width:960px;
 		margin:auto;
@@ -113,9 +92,6 @@ GUNMETAL GREY = #5B5B5E
 		overflow:hidden;
 	}
 
-	/*.brands-serviced-brand, */
-	/*.site-header .menu-auto-brands-menu-container .menu .menu-item,
-	.home */
 	.menu-auto-brands-menu-container .menu .menu-item {
 		display: inline-block;
 		margin: 5px 2.5px;
@@ -123,18 +99,11 @@ GUNMETAL GREY = #5B5B5E
 		text-align: center;
 	}
 
-	/*.site-header .menu-auto-brands-menu-container .menu .menu-item a,
-	.home */
 	.menu-auto-brands-menu-container .menu .menu-item a {
 		font-family: KubusBold, "Trebuchet MS", Arial, sans-serif;
 		text-decoration: none;
 	}
 
-	/*.site-header .auto-brands,
-	.site-header .menu-auto-brands-menu-container,
-	.home .auto-brands,
-	.home*/ 
-	/*.auto-brands,*/
 	.menu-auto-brands-menu-container {
 		background: #ffffff;
 		/* Old browsers */
@@ -184,7 +153,7 @@ GUNMETAL GREY = #5B5B5E
 		background-size:100%;
 		background-size:100vh 100%;
 		background-repeat: no-repeat;
-		background-position: center 0px;
+		background-position: center 0;
 		background-attachment: fixed;
 	}*/
 
@@ -227,8 +196,8 @@ GUNMETAL GREY = #5B5B5E
 /* -- img slider -- */
 
 	.background-slider-holder {
-		border-top: 1px solid #f9be19;
-		border-bottom: 1px solid #f9be19;
+		border-top: 1px solid #FBC81E;
+		border-bottom: 1px solid #FBC81E;
 	}
         
     /* jssor slider bullet navigator skin 21 css */
@@ -336,7 +305,7 @@ GUNMETAL GREY = #5B5B5E
 
 		.main { 
 			z-index: 200;
-			border-top:5px solid #f9be19; 
+			border-top:5px solid #FBC81E; 
 		}
 
 	}
@@ -381,7 +350,7 @@ GUNMETAL GREY = #5B5B5E
 	.main-navigation li a { width:100%; }
 
 	.site-header .main-navigation .current-menu-item > a,
-	.site-header .main-navigation .current_page_ancestor > a {color:#f9be19;}
+	.site-header .main-navigation .current_page_ancestor > a {color:#FBC81E;}
 
 	/*sub nav style*/
 	.main-navigation li ul li {
@@ -417,11 +386,13 @@ GUNMETAL GREY = #5B5B5E
 		vertical-align: middle;
 		border-radius: 50px;
 		background-position: center center;
-		background-image: url('http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/EM_Logo_Colors-9-27-02.png');
+		/*background-image: url('img/european-motors-service-center-automobile-experts-tacoma-lakewood-seattle-washington-menu-logo-alt.png');*/
+		background-image: url('img/european-motors-menu-logo.png');
 		background-size: 184px;
 		border: none;
 		height: 164px;
-		width: 154px;
+		width: 154px;		
+		/*width: 150px;*/
 	}
 
 	#menu-item-12 a,
@@ -476,7 +447,7 @@ GUNMETAL GREY = #5B5B5E
 
 	.social-menu .menu-item a { line-height: 1; }
 
-	.social-menu .menu-item a:hover { color:#f9be19; }
+	.social-menu .menu-item a:hover { color:#FBC81E; }
 
 	.social-menu .menu-item .genericon-yelp {
 		font-size: 24px;
@@ -517,7 +488,7 @@ GUNMETAL GREY = #5B5B5E
 		/* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#c9c9c9',GradientType=0);
 		/* IE6-9 */
-		border: 1px solid #f9be19;
+		border: 1px solid #FBC81E;
 	}
 
 	/*.pre-content-widget li,
@@ -562,7 +533,10 @@ GUNMETAL GREY = #5B5B5E
 
 	.content-column .customer-menu { text-align: right; }
 
-	.content-navigation { margin: 10px 0; }
+	.content-navigation { 
+		height:auto;
+		margin: 10px 0; 
+	}
 
 	.menu-primary-menu-container { margin-top:5px; }
 
@@ -572,7 +546,7 @@ GUNMETAL GREY = #5B5B5E
 
 	.widget-area .widget {
 		min-height: 300px;
-		background-color: #f9be19;
+		background-color: #FBC81E;
 		background-color: rgba(0,0,0,.1);
 		vertical-align: top;
 		margin: 10px 1%;
@@ -602,19 +576,28 @@ GUNMETAL GREY = #5B5B5E
 		margin-bottom: 30px;
 	}
 
-	.pre-content-widget h2,
-	.post-content-widget h2 { display: none; }
+	.pre-content-widget h2 { display: none; }
+
+	.post-content-widget h2 { text-align:center; }
 
 	.pre-content-widget li,
 	.post-content-widget li {
 		text-align: center;
-		display:inline-block;
-		width:33%;
 		line-height: 2;
 		text-transform: uppercase;
 	}
 
-	.menu-auto-services-menu-container li {
+	.pre-content-widget li {
+		display:inline-block;
+		width:33%;
+	}
+
+	.post-content-widget li { 
+		width:50%;
+		margin:10px auto; 
+	}
+
+	/*.menu-auto-services-menu-container li {
 		width: 150px;
 		height: 150px;
 		vertical-align: top;
@@ -627,7 +610,7 @@ GUNMETAL GREY = #5B5B5E
 		display: table;
 		margin: 40px auto;
 		max-width: 100px;
-	}
+	}*/
 
 	.pre-content-widget .menu-auto-services-menu-container li {
 		height:50px;
@@ -649,17 +632,17 @@ GUNMETAL GREY = #5B5B5E
 	.pre-content-widget li a,
 	.post-content-widget li a {
 		text-decoration:none;
-		font-family:Futura, 'Trebuchet MS', Arial, sans-serif;
+		/*font-family:Futura, 'Trebuchet MS', Arial, sans-serif;*/
 	}
 	
 	.entry-title {
 		text-align: center;
-		font-family:Futura, 'Trebuchet MS', Arial, sans-serif;
+		/*font-family:Futura, 'Trebuchet MS', Arial, sans-serif;*/
 		color:#043789;
 		text-transform: uppercase;
 	}
 
-	.home .entry-header { margin: 30px 0px 5px 0px; }
+	.home .entry-header { margin: 30px 0 5px 0; }
 
 	.page-id-32.entry-content {
 		width: 78%;
@@ -687,7 +670,7 @@ GUNMETAL GREY = #5B5B5E
 			/* W3C */
 			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#c9c9c9',GradientType=0);
 			/* IE6-9 */
-			border: 1px solid #f9be19;
+			border: 1px solid #FBC81E;
 			text-align: center;
 		}
 
@@ -725,7 +708,7 @@ GUNMETAL GREY = #5B5B5E
 
 	/*SERVICES PAGE ACCORDIAN MENU STYLES*/
 	.accordion h2 {
-		color: #f9be19;
+		color: #FBC81E;
 		text-shadow: .5px 1px 1px black;
 		background: #043789;
 		padding: 0 5px;
@@ -765,7 +748,7 @@ GUNMETAL GREY = #5B5B5E
 
 	body .colophon-footer {
 		margin-top: 0;
-		border-top: 2px solid #E8A826;
+		border-top: 2px solid #FBC81E;
 		max-width: 100%;
 		z-index: 200;
 		position: relative;
