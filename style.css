@@ -467,6 +467,7 @@ GUNMETAL GREY = #5B5B5E
 	.customer-menu .menu-item,
 	.menu-auto-services-menu-container li,
 	.menu-toggle,
+	.em-button,
 	button,
 	input[type="submit"],
 	input[type="button"],
@@ -644,46 +645,21 @@ GUNMETAL GREY = #5B5B5E
 
 	.home .entry-header { margin: 30px 0 5px 0; }
 
-	.page-id-32.entry-content {
+	.page-id-32 .entry-content {
 		width: 78%;
 		margin: auto;
 	}
 
 	.em-button {
-			/*making nav widths maller*/
-			height: 300px;
-			width: 300px;
-			border-radius: 5px;
-			background: #f9f9f9;
-			/* Old browsers */
-			background: -moz-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
-			/* FF3.6+ */
-			background: -webkit-gradient(linear,left top,left bottom,color-stop(37%,#f9f9f9),color-stop(100%,#c9c9c9));
-			/* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
-			/* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
-			/* Opera 11.10+ */
-			background: -ms-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
-			/* IE10+ */
-			background: linear-gradient(to bottom,#f9f9f9 37%,#c9c9c9 100%);
-			/* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#c9c9c9',GradientType=0);
-			/* IE6-9 */
-			border: 1px solid #FBC81E;
-			text-align: center;
-		}
-
-	.cert-button {
 		height: 300px;
 		width: 300px;
+		text-align: center;
 		display:inline-block;
 		margin:0 9%;
 		line-height: 300px;
-		font-family: futura;
 	}
 
-	.cert-button a { text-decoration: none; }
+	.em-button a { text-decoration: none; }
 
 	.content-left,
 	.content-right {
