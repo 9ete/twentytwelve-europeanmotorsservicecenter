@@ -15,11 +15,11 @@
 
 /* -- GLOBAL -- */
 
-/*
-ROYAL BLUE = #043789 // #004B9B
-PINSTRIP YELLOW =  #FBC81E // #f9be19
-GUNMETAL GREY = #5B5B5E
-*/
+	/*
+		ROYAL BLUE = #043789 // #004B9B
+		PINSTRIP YELLOW =  #FBC81E // #f9be19
+		GUNMETAL GREY = #5B5B5E
+	*/
 
 	a { color:#043789; }
 
@@ -123,8 +123,6 @@ GUNMETAL GREY = #5B5B5E
 		/* IE6-9 */
 	}
 
-
-
 /* -- HEADER -- */
 
 	.sticky-holder {
@@ -134,28 +132,11 @@ GUNMETAL GREY = #5B5B5E
 		position: fixed;
 	}
 
-	/*.home .sticky-holder { background:#043789; }*/
-
-
-	/*.sticky-holder-two {
-		z-index: 190 !important;
-		position:fixed;
-	}
-*/
 	.site-header {
 		padding: 0;
 		/*background-color: #043789;*/
 		margin-bottom:25px;
 	}
-
-	/*.home .site-header {
-		height:180px;
-		background-size:100%;
-		background-size:100vh 100%;
-		background-repeat: no-repeat;
-		background-position: center 0;
-		background-attachment: fixed;
-	}*/
 
 	.mobile-column {
 		display:inline-block;
@@ -178,8 +159,6 @@ GUNMETAL GREY = #5B5B5E
 	}
 
 	.mini-mobile-menu-column { display:none; }
-
-	
 
 	.archive-title { text-align: center; }
 
@@ -208,15 +187,21 @@ GUNMETAL GREY = #5B5B5E
     .jssorb21 .av:hover     (active mouseover)
     .jssorb21 .dn           (mousedown)
     */
-    .jssorb21 div, .jssorb21 div:hover, .jssorb21 .av
+    .jssorb21 div, 
+    .jssorb21 div:hover, 
+    .jssorb21 .av
     {
         background: url(../img/b21.png) no-repeat;
         overflow:hidden;
         cursor: pointer;
     }
+
     .jssorb21 div { background-position: -5px -5px; }
+
     .jssorb21 div:hover, .jssorb21 .av:hover { background-position: -35px -5px; }
+
     .jssorb21 .av { background-position: -65px -5px; }
+
     .jssorb21 .dn, .jssorb21 .dn:hover { background-position: -95px -5px; }
 
     /* jssor slider arrow navigator skin 21 css */
@@ -228,7 +213,10 @@ GUNMETAL GREY = #5B5B5E
     .jssora21ldn            (mousedown)
     .jssora21rdn            (mousedown)
     */
-    .jssora21l, .jssora21r, .jssora21ldn, .jssora21rdn
+    .jssora21l, 
+    .jssora21r, 
+    .jssora21ldn, 
+    .jssora21rdn
     {
     	position: absolute;
     	cursor: pointer;
@@ -236,14 +224,18 @@ GUNMETAL GREY = #5B5B5E
         background: url(/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/a21.png) center center no-repeat;
         overflow: hidden;
     }
-    .jssora21l { background-position: -3px -33px; }
-    .jssora21r { background-position: -63px -33px; }
-    .jssora21l:hover { background-position: -123px -33px; }
-    .jssora21r:hover { background-position: -183px -33px; }
-    .jssora21ldn { background-position: -243px -33px; }
-    .jssora21rdn { background-position: -303px -33px; }
 
-	
+    .jssora21l { background-position: -3px -33px; }
+
+    .jssora21r { background-position: -63px -33px; }
+
+    .jssora21l:hover { background-position: -123px -33px; }
+
+    .jssora21r:hover { background-position: -183px -33px; }
+
+    .jssora21ldn { background-position: -243px -33px; }
+
+    .jssora21rdn { background-position: -303px -33px; }
 
 	@media only screen and (max-width : 1024px) {
 
@@ -394,7 +386,6 @@ GUNMETAL GREY = #5B5B5E
 		vertical-align: middle;
 		border-radius: 50px;
 		background-position: center center;
-		/*background-image: url('img/european-motors-service-center-automobile-experts-tacoma-lakewood-seattle-washington-menu-logo-alt.png');*/
 		background-image: url('img/european-motors-menu-logo.png');
 		background-size: 184px;
 		border: none;
@@ -500,28 +491,6 @@ GUNMETAL GREY = #5B5B5E
 		border: 1px solid #FBC81E;
 	}
 
-	/*.pre-content-widget li,
-	.customer-menu .menu-item,
-	.post-content-widget .menu-auto-services-menu-container li {*/
-		/*Reverse background color on hover for main nav */
-		/*background: #c9c9c9;*/
-		/* Old browsers */
-		/*background: -moz-linear-gradient(top,#f9f9f9 0%,#c9c9c9 63%);*/
-		/* FF3.6+ */
-		/*background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#f9f9f9),color-stop(63%,#c9c9c9));*/
-		/* Chrome,Safari4+ */
-		/*background: -webkit-linear-gradient(top,#f9f9f9 0%,#c9c9c9 63%);*/
-		/* Chrome10+,Safari5.1+ */
-		/*background: -o-linear-gradient(top,#f9f9f9 0%,#c9c9c9 63%);*/
-		/* Opera 11.10+ */
-		/*background: -ms-linear-gradient(top,#f9f9f9 0%,#c9c9c9 63%);*/
-		/* IE10+ */
-		/*background: linear-gradient(to bottom,#f9f9f9 0%,#c9c9c9 63%);*/
-		/* W3C */
-		/*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#c9c9c9',GradientType=0);*/
-		/* IE6-9 */
-	/*}*/
-
 	.customer-menu .menu-item a {
 		line-height: 2;
 		color:#043789;
@@ -606,21 +575,6 @@ GUNMETAL GREY = #5B5B5E
 		margin:10px auto; 
 	}
 
-	/*.menu-auto-services-menu-container li {
-		width: 150px;
-		height: 150px;
-		vertical-align: top;
-		margin: 20px;
-		display: inline-block;
-		line-height: 20px;
-	}
-
-	.menu-auto-services-menu-container li a {
-		display: table;
-		margin: 40px auto;
-		max-width: 100px;
-	}*/
-
 	.pre-content-widget .menu-auto-services-menu-container li {
 		height:50px;
 		line-height:50px;
@@ -639,14 +593,10 @@ GUNMETAL GREY = #5B5B5E
 	.pre-content-widget .menu-item-334 { display:inline-block; }
 
 	.pre-content-widget li a,
-	.post-content-widget li a {
-		text-decoration:none;
-		/*font-family:Futura, 'Trebuchet MS', Arial, sans-serif;*/
-	}
+	.post-content-widget li a { text-decoration:none; }
 	
 	.entry-title {
 		text-align: center;
-		/*font-family:Futura, 'Trebuchet MS', Arial, sans-serif;*/
 		color:#043789;
 		text-transform: uppercase;
 	}
@@ -685,12 +635,10 @@ GUNMETAL GREY = #5B5B5E
 		}
 	}
 
-	/*Center text on testimonials page*/
 	.post-type-archive-testimonials { text-align: center; }
 
 	.post-type-archive-testimonials .site-content article { border:none; }
 
-	/*SERVICES PAGE ACCORDIAN MENU STYLES*/
 	.accordion h2 {
 		color: #FBC81E;
 		text-shadow: .5px 1px 1px black;
@@ -743,22 +691,16 @@ GUNMETAL GREY = #5B5B5E
 	body .colophon-footer .wrapper {
 		z-index: 200;
 		position: relative;
-		/*background-color: #043789;*/
 		white-space: nowrap;
-		/*background-color: rgba(4,55,137,0.4);
-		background-color: rgba(249,190,25,0.4);*/
 		border-radius: 10px;
 	}
 
 	.footer-column {
-		/*width: 24.5%;*/
 		width:100%;
-		/*min-height: 100px;*/
 		display: block;
 	}
 
 	.footer-column .customer-menu .menu-item {
-		/*max-width: 100%;*/
 		width:23%;
 		display: inline-block;
 		margin: 10px 0;
