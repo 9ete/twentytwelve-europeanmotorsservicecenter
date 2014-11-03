@@ -300,7 +300,7 @@ add_action( 'wp_print_scripts', 'lowermedia_deregister_javascript', 100 );
 #   - changing default WordPress email settings
 */
 
-function new_mail_from($old) { return 'pete@europeanmotorsservicecenter.petelower.com'; }
+function new_mail_from($old) { return 'europeanmotorsservicecenter@gmail.com'; }
 add_filter('wp_mail_from', 'new_mail_from');
 
 function new_mail_from_name($old) { return 'European Motors Service Center'; }
