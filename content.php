@@ -49,21 +49,30 @@
 			<?php if ( !is_single() ) : ?>
 
 				<?php if (is_post_type_archive( "testimonials" ) ) : ?>
-					<h1 class="entry-title">
-						<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-					</h1>
-
-					<div class="entry-content">
-						<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
-						<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
-					</div><!-- .entry-content -->
+					<?php if ( get_post_meta( get_the_ID(), '_my_meta_value_key', true ) ) : ?>
+					    <a target='_blank' href="<?php echo get_post_meta( get_the_ID(), '_my_meta_value_key', true ); ?>" rel="bookmark"> 
+					<?php endif; ?>
+						<h1 class="entry-title"><?php the_title(); ?></a></h1>
+						<div class="entry-content">
+							<?php if ( get_post_meta( get_the_ID(), '_my_meta_value_key', true ) ) : ?>
+							    <a target='_blank' href="<?php echo get_post_meta( get_the_ID(), '_my_meta_value_key', true ); ?>" rel="bookmark"> 
+							<?php endif; ?>
+							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+							<?php if ( get_post_meta( get_the_ID(), '_my_meta_value_key', true ) ) : ?>
+							    </a> 
+							<?php endif; ?>
+							<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
+						</div><!-- .entry-content -->
+					<?php if ( get_post_meta( get_the_ID(), '_my_meta_value_key', true ) ) : ?>
+					    </a> 
+					<?php endif; ?>
 				<?php else :  ?>
 					<h1 class="entry-title">
 						<?php the_title(); ?>
 					</h1>
 				<?php endif; // is_post_type_archive() ?>
 
-			<?php endif; // is_single() ?>
+			<?php endif; // !is_single() ?>
 
 			<?php if ( comments_open() ) : ?>
 				<div class="comments-link">
