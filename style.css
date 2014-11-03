@@ -221,7 +221,7 @@
     	position: absolute;
     	cursor: pointer;
     	display: block;
-        background: url(/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/a21.png) center center no-repeat;
+        background: url(img/a21.png) center center no-repeat;
         overflow: hidden;
     }
 
