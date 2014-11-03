@@ -13,20 +13,20 @@
     });
   });
 
-  jQuery(window).scroll(function(){
-    if (jQuery('body').hasClass('home')) {
+  // jQuery(window).scroll(function(){
+  //   if (jQuery('body').hasClass('home')) {
       //create Variables
-      var amountScrolled = jQuery(window).scrollTop(),
-        headerHeight = jQuery(".site-header").height(),
-        stickyHolderHeight = jQuery(".sticky-holder").height(),
-        hgroupHeight = jQuery(".hgroup").height(),
-        changePoint = headerHeight-stickyHolderHeight;//the change point is the point where we add the background color
+      // var amountScrolled = jQuery(window).scrollTop(),
+      //   headerHeight = jQuery(".site-header").height(),
+      //   stickyHolderHeight = jQuery(".sticky-holder").height(),
+      //   hgroupHeight = jQuery(".hgroup").height(),
+      //   changePoint = headerHeight-stickyHolderHeight;//the change point is the point where we add the background color
 
       //if the user is logged in and can see the admin bar we need to account for that, we add the height of the admin bar to the change point
-      if (jQuery('body').hasClass('admin-bar')) {
-        adminBarHeight = jQuery("#wpadminbar").height();
-        changePoint = changePoint + adminBarHeight;
-      }
+      // if (jQuery('body').hasClass('admin-bar')) {
+      //   adminBarHeight = jQuery("#wpadminbar").height();
+      //   changePoint = changePoint + adminBarHeight;
+      // }
 
       //DEBUG OUTPUT
       // console.log(
@@ -56,8 +56,8 @@
       // else if(jQuery(window).scrollTop()<changePoint) {
       //   jQuery('.auto-brands').css("top","0px");
       // }
-    }
-  });
+  //   }
+  // });
 
 /*
 #
