@@ -269,6 +269,8 @@
 
 		body { max-width:600px; }
 		
+		.home .site-header { height:550px; }
+
 		.mobile-column-left,
 		.mobile-column-right {display:none;}
 
@@ -294,7 +296,7 @@
 		.site-header .auto-brands, 
 		.menu-auto-brands-menu-container { display:none; }
 
-		.sticky-holder { position:relative; }
+		/*.sticky-holder { position:relative; }*/
 
 		.main { 
 			z-index: 200;
@@ -771,9 +773,9 @@
 			padding:0 2.5%;
 		}
 
-		.sticky-holder {
+		.home .sticky-holder {
 			/*background: transparent;*/
-			left: -7.5px;
+			position:relative;
 		}
 
 		.home .sticky-holder { left: -7.5px; }
