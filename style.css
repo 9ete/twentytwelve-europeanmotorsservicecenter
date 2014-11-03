@@ -296,10 +296,11 @@ GUNMETAL GREY = #5B5B5E
 		}
 
 		.site-header {
-			height: 577px;
+			height: 547px;
 		}
 
-		.site-header .auto-brands, .menu-auto-brands-menu-container { display:none; }
+		.site-header .auto-brands, 
+		.menu-auto-brands-menu-container { display:none; }
 
 		.sticky-holder { position:relative; }
 
