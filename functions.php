@@ -291,40 +291,40 @@ add_filter('wp_mail_from_name', 'new_mail_from_name');
 */
 
 function lm_custom_admin_styles() {
-       echo '<style type="text/css">
-           /* Styles here! */
-            body {font-family: futura;}
+   echo '<style type="text/css">
+       /* Styles here! */
+        body {font-family: futura;}
 
-           /*change sidebar icon for testimonials, staff, tips, videos */
-            #menu-posts-testimonials .dashicons-admin-post:before,
-            #menu-posts-testimonials .dashicons-format-standard:before { content:"\f155"; }
+       /*change sidebar icon for testimonials, staff, tips, videos */
+        #menu-posts-testimonials .dashicons-admin-post:before,
+        #menu-posts-testimonials .dashicons-format-standard:before { content:"\f155"; }
 
-            #menu-posts-staff .dashicons-admin-post:before,
-            #menu-posts-staff .dashicons-format-standard:before { content:"\f307"; }
+        #menu-posts-staff .dashicons-admin-post:before,
+        #menu-posts-staff .dashicons-format-standard:before { content:"\f307"; }
 
-            #menu-posts-carcarevideos .dashicons-admin-post:before,
-            #menu-posts-carcarevideos .dashicons-format-standard:before { content:"\f126"; }
+        #menu-posts-carcarevideos .dashicons-admin-post:before,
+        #menu-posts-carcarevideos .dashicons-format-standard:before { content:"\f126"; }
 
-            #menu-posts-carcaretips .dashicons-admin-post:before,
-            #menu-posts-carcaretips .dashicons-format-standard:before { content:"\f339"; }
+        #menu-posts-carcaretips .dashicons-admin-post:before,
+        #menu-posts-carcaretips .dashicons-format-standard:before { content:"\f339"; }
 
-           
-           /*change admin menu coloring*/ 
-            #adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap { background-color: #043789; }
+       
+       /*change admin menu coloring*/ 
+        #adminmenu, #adminmenu .wp-submenu, #adminmenuback, #adminmenuwrap { background-color: #043789; }
 
-            #adminmenu .wp-submenu a {color: rgba(249,190,25,0.6);}
+        #adminmenu .wp-submenu a {color: rgba(249,190,25,0.6);}
 
-            #adminmenu .opensub .wp-submenu li.current a,
-            #adminmenu .wp-submenu li.current, 
-            #adminmenu .wp-submenu li.current a, 
-            #adminmenu .wp-submenu li.current a:focus, 
-            #adminmenu .wp-submenu li.current a:hover, 
-            #adminmenu a.wp-has-current-submenu:focus+.wp-submenu li.current a { color: rgba(249,190,25,1); }
+        #adminmenu .opensub .wp-submenu li.current a,
+        #adminmenu .wp-submenu li.current, 
+        #adminmenu .wp-submenu li.current a, 
+        #adminmenu .wp-submenu li.current a:focus, 
+        #adminmenu .wp-submenu li.current a:hover, 
+        #adminmenu a.wp-has-current-submenu:focus+.wp-submenu li.current a { color: rgba(249,190,25,1); }
 
-            #adminmenu li.menu-top:hover,
-            #adminmenu li.opensub>a.menu-top, 
-            #adminmenu li>a.menu-top:focus { background: linear-gradient(to bottom,#f9f9f9 37%,#c9c9c9 100%); }
-         </style>';
+        #adminmenu li.menu-top:hover,
+        #adminmenu li.opensub>a.menu-top, 
+        #adminmenu li>a.menu-top:focus { background: linear-gradient(to bottom,#f9f9f9 37%,#c9c9c9 100%); }
+     </style>';
 }
 add_action('admin_head', 'lm_custom_admin_styles');
 
