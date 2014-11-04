@@ -58,15 +58,6 @@ function lm_add_meta_box() {
         'side',
         'high'
     );
-
-    // add_meta_box(
-    //     'lm_testimonial_source',
-    //     __( 'Testimonial Source', 'myplugin_textdomain' ),
-    //     'myplugin_meta_box2_callback',
-    //     'testimonials',//$screen
-    //     'side',
-    //     'high'
-    // );  
 }
 add_action( 'add_meta_boxes', 'lm_add_meta_box' );
 
