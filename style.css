@@ -78,17 +78,17 @@
 		z-index: 197;
 	}
 
-	.auto-brands {
+	.site-header .auto-brands {
 		z-index: 198;
 		border-top: 1px solid #FBC81E;
 	}
 
-	.menu-auto-brands-menu-container {
+	.site-header .menu-auto-brands-menu-container {
 		width:100%;
 		border-top: 1px solid #FBC81E;
 	}
 
-	.menu-auto-brands-menu-container .menu {
+	.site-header .menu-auto-brands-menu-container .menu {
 		width:960px;
 		margin:auto;
 		max-height: 26px;
@@ -96,19 +96,19 @@
 		text-align: center;
 	}
 
-	.menu-auto-brands-menu-container .menu .menu-item {
+	.site-header .menu-auto-brands-menu-container .menu .menu-item {
 		display: inline-block;
 		margin: 5px 2.5px;
 		width: 15%;
 		text-align: center;
 	}
 
-	.menu-auto-brands-menu-container .menu .menu-item a {
+	.site-header .menu-auto-brands-menu-container .menu .menu-item a {
 		font-family: KubusBold, "Trebuchet MS", Arial, sans-serif;
 		text-decoration: none;
 	}
 
-	.menu-auto-brands-menu-container {
+	.site-header .menu-auto-brands-menu-container {
 		background: #ffffff;
 		/* Old browsers */
 		background: -moz-linear-gradient(top,#ffffff 50%,#e8e8e8 100%);
@@ -244,7 +244,7 @@
 
     .jssora21rdn { background-position: -303px -33px; }
 
-    .background-slider-holder img { top: -245px !important; }
+    /*.background-slider-holder img { top: -245px !important; }*/
 
 	.automotive-certifications { text-align: center; }
 
@@ -453,7 +453,6 @@
 		background-color: rgba(0,0,0,.1);
 		vertical-align: top;
 		margin: 10px 1%;
-		width: 30%;
 		width: 33%;
 		display: inline-block;
 		text-align: center;
@@ -837,12 +836,7 @@
 				padding:0 2.5%;
 			}
 
-			.home .sticky-holder {
-				/*background: transparent;*/
-				position:relative;
-			}
-
-			.home .sticky-holder { left: -7.5px; }
+			.home .sticky-holder { position: relative; }
 
 			.is-sticky .sticky-holder { left: 0; }
 
