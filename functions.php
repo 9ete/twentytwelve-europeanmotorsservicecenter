@@ -272,19 +272,6 @@ function load_fonts() {
 }
 add_action('wp_print_styles', 'load_fonts');
 
-//Remove contact form 7 stylesheet as it is unnecessary
-function lowermedia_deregister_cf7style (){
-    wp_dequeue_style( 'contact-form-7' );
-    wp_deregister_style( 'contact-form-7' );
-}
-add_action( 'wp_enqueue_scripts', 'lowermedia_deregister_cf7style' );
-
-//Remove contact form 7 javascript as it is unnecessary
-function lowermedia_deregister_javascript() {
-    wp_deregister_script( 'contact-form-7' );
-}
-add_action( 'wp_print_scripts', 'lowermedia_deregister_javascript', 100 );
-
 /*
 #
 #   CONTACT FORM  FUNCTION
