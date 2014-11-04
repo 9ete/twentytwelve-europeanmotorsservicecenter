@@ -248,6 +248,7 @@
 
 /* -- NAVIGATION -- */
 
+	.site-content img { max-width: 100%; }
 
 	.main-navigation {
 		margin-top:0;
@@ -659,13 +660,15 @@
 			}
 
 			.content-img-holder .wp-caption {
-				margin: 0 5px;
+				margin: auto 5px;
 				display: inline-block;
 			}
 
 		}
 
 	@media only screen and (max-width : 1024px) {
+
+		.content-img-holder { height: 525px; }
 
 		.home .site-header { height:230px; }
 
