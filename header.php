@@ -114,13 +114,11 @@
 			</nav><!-- #site-navigation -->
 
 			<?php 
-
-				if(!is_archive()){ ?>
+				if(!is_archive()) {  ?>
 					<section id='auto-brands' class='auto-brands'>
 					<?php randMenu('auto-brands-menu', 7); ?>
 					</section>
-					<?php
-				} else {
+				<?php } else {
 					  $backup = $wp_query;
 					  $wp_query = NULL;
 					  $wp_query = new WP_Query(array('post_type' => 'post'));
@@ -136,115 +134,115 @@
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</hgroup>
 	
-    <div id='background-slider-holder' class='background-slider-holder'>
-        <!-- Jssor Slider Begin -->
-        <!-- You can move inline styles to css file or css block. -->
-        <div id="slider1_container" style="position: relative; margin: 0 auto;
-        top: 0px; left: 0px; width: 1300px; height: 400px; overflow: hidden;">
+	    <div id='background-slider-holder' class='background-slider-holder'>
+	        <!-- Jssor Slider Begin -->
+	        <!-- You can move inline styles to css file or css block. -->
+	        <div id="slider1_container" style="position: relative; margin: 0 auto;
+	        top: 0px; left: 0px; width: 1300px; height: 400px; overflow: hidden;">
 
-            <!-- Slides Container -->
-            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
-            height: 400px; overflow: hidden;">
-                    <div>
-                    <img 
-                    	u="image" 
-                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x375_greencar.jpg" 
-                    	/>
-                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                    color: #FFFFFF;"><!-- Title Slide #1 -->
-                    </div>
-                    <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 36px; font-size: 30px;
-                    color: #FFFFFF;">
-                    <!-- Text Area Slide #1 -->
-                    </div>
-                </div>
+	            <!-- Slides Container -->
+	            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
+	            height: 400px; overflow: hidden;">
+	                    <div>
+	                    <img 
+	                    	u="image" 
+	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x375_greencar.jpg" 
+	                    	/>
+	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
+	                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
+	                    color: #FFFFFF;"><!-- Title Slide #1 -->
+	                    </div>
+	                    <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
+	                    text-align: left; line-height: 36px; font-size: 30px;
+	                    color: #FFFFFF;">
+	                    <!-- Text Area Slide #1 -->
+	                    </div>
+	                </div>
 
-                <div>
-                    <img 
-                    	u="image" 
-                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x400_greencar.jpg" 
-                    />
-                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                    color: #FFFFFF;"><!-- Title Slide #2 -->
-                    </div>
-                    <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 36px; font-size: 30px;
-                    color: #FFFFFF;">
-                    <!-- Text Area Slide #2 -->
-                    </div>
-                </div>
+	                <div>
+	                    <img 
+	                    	u="image" 
+	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x400_greencar.jpg" 
+	                    />
+	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
+	                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
+	                    color: #FFFFFF;"><!-- Title Slide #2 -->
+	                    </div>
+	                    <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
+	                    text-align: left; line-height: 36px; font-size: 30px;
+	                    color: #FFFFFF;">
+	                    <!-- Text Area Slide #2 -->
+	                    </div>
+	                </div>
 
-                <div>
-                    <img 
-                    	u="image" 
-                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x375_outside.jpg" 
-                    />
-                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                    color: #FFFFFF;"><!-- Title Slide #3 -->
-                    </div>
-                    <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 36px; font-size: 30px;
-                    color: #FFFFFF;">
-                    <!-- Text Area Slide #3 -->
-                    </div>
-                </div>
+	                <div>
+	                    <img 
+	                    	u="image" 
+	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x375_outside.jpg" 
+	                    />
+	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
+	                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
+	                    color: #FFFFFF;"><!-- Title Slide #3 -->
+	                    </div>
+	                    <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
+	                    text-align: left; line-height: 36px; font-size: 30px;
+	                    color: #FFFFFF;">
+	                    <!-- Text Area Slide #3 -->
+	                    </div>
+	                </div>
 
-                <div>
-                    <img 
-                    	u="image" 
-                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x400_outside.jpg" 
-                    />
-                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                    color: #FFFFFF;"><!-- Title Slide #3 -->
-                    </div>
-                    <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 36px; font-size: 30px;
-                    color: #FFFFFF;">
-                    <!-- Text Area Slide #3 -->
-                    </div>
-                </div>
+	                <div>
+	                    <img 
+	                    	u="image" 
+	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x400_outside.jpg" 
+	                    />
+	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
+	                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
+	                    color: #FFFFFF;"><!-- Title Slide #3 -->
+	                    </div>
+	                    <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
+	                    text-align: left; line-height: 36px; font-size: 30px;
+	                    color: #FFFFFF;">
+	                    <!-- Text Area Slide #3 -->
+	                    </div>
+	                </div>
 
-                <div>
-                    <img 
-                    	u="image" 
-                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x400_team.jpg" 
-                    />
-                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                    color: #FFFFFF;"><!-- Title Slide #3 -->
-                    </div>
-                    <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 36px; font-size: 30px;
-                    color: #FFFFFF;">
-                    <!-- Text Area Slide #3 -->
-                    </div>
-                </div>
-            </div>
+	                <div>
+	                    <img 
+	                    	u="image" 
+	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x400_team.jpg" 
+	                    />
+	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
+	                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
+	                    color: #FFFFFF;"><!-- Title Slide #3 -->
+	                    </div>
+	                    <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
+	                    text-align: left; line-height: 36px; font-size: 30px;
+	                    color: #FFFFFF;">
+	                    <!-- Text Area Slide #3 -->
+	                    </div>
+	                </div>
+	            </div>
 
-            <!-- bullet navigator container -->
-            <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
-                <!-- bullet navigator item prototype -->
-                <div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
-            </div>
-            <!-- Bullet Navigator Skin End -->
+	            <!-- bullet navigator container -->
+	            <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
+	                <!-- bullet navigator item prototype -->
+	                <div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
+	            </div>
+	            <!-- Bullet Navigator Skin End -->
 
-            <!-- Arrow Navigator Skin Begin -->
-            <!-- Arrow Left -->
-            <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
-            </span>
-            <!-- Arrow Right -->
-            <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px">
-            </span>
-            <!-- Arrow Navigator Skin End -->
-            <a style="display: none" href="http://www.jssor.com">javascript</a>
-        </div>
-        <!-- Jssor Slider End -->
-    </div>
+	            <!-- Arrow Navigator Skin Begin -->
+	            <!-- Arrow Left -->
+	            <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
+	            </span>
+	            <!-- Arrow Right -->
+	            <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px">
+	            </span>
+	            <!-- Arrow Navigator Skin End -->
+	            <a style="display: none" href="http://www.jssor.com">javascript</a>
+	        </div>
+	        <!-- Jssor Slider End -->
+	    </div>
 	<?php endif; ?>
 
 	<div id="main" class="main">
