@@ -50,26 +50,26 @@
 
 				<?php if (is_post_type_archive( "testimonials" ) ) : ?>
 					<?php if ( get_post_meta( get_the_ID(), 'l_m_meta_value_key', true ) ) : ?>
-					    <a target='_blank' href="<?php echo get_post_meta( get_the_ID(), '_my_meta_value_key', true ); ?>" rel="bookmark"> 
+					    <a class='testimonial-link' target='_blank' href="<?php echo get_post_meta( get_the_ID(), '_my_meta_value_key', true ); ?>" rel="bookmark"> 
 					<?php endif; ?>
-						<h1 class="entry-title"><?php the_title(); ?></a></h1>
 						<div class="entry-content">
 							<?php if ( get_post_meta( get_the_ID(), '_lm_meta_value_key', true ) ) : ?>
-							    <a target='_blank' href="<?php echo get_post_meta( get_the_ID(), '_my_meta_value_key', true ); ?>" rel="bookmark"> 
+							    <a class='testimonial-link' target='_blank' href="<?php echo get_post_meta( get_the_ID(), '_my_meta_value_key', true ); ?>" rel="bookmark"> 
 							<?php endif; ?>
-							<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+								<blockquote>
+								<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
+								</blockquote>
 							<?php if ( get_post_meta( get_the_ID(), '_lm_meta_value_key', true ) ) : ?>
 							    </a> 
 							<?php endif; ?>
 							<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'twentytwelve' ), 'after' => '</div>' ) ); ?>
 						</div><!-- .entry-content -->
+						<h1 class="entry-title"> -- <?php the_title(); ?></a></h1>
 					<?php if ( get_post_meta( get_the_ID(), '_my_meta_value_key', true ) ) : ?>
 					    </a> 
 					<?php endif; ?>
 				<?php else :  ?>
-					<h1 class="entry-title">
-						<?php the_title(); ?>
-					</h1>
+					<h2> -- <?php the_title(); ?> </h2>
 				<?php endif; // is_post_type_archive() ?>
 
 			<?php endif; // !is_single() ?>
