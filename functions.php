@@ -321,6 +321,7 @@ add_action('admin_head', 'lm_custom_admin_styles');
 //* Replace WordPress login logo with your own
 function lm_custom_login_logo() {
     echo '<style type="text/css">
+    body { font-family: Futura, "Trebuchet MS", Arial, sans-serif; }
     h1 a 
     { 
         background-image:url('.get_stylesheet_directory_uri().'/img/european-motors-menu-logo.png) !important; 
