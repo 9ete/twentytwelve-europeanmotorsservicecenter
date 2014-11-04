@@ -397,6 +397,7 @@
 	input[type="button"],
 	input[type="reset"] {
 		border-radius: 5px;
+		border: 1px solid #FBC81E;
 		background: #f9f9f9;
 		/* Old browsers */
 		background: -moz-linear-gradient(top,#f9f9f9 37%,#c9c9c9 100%);
@@ -413,7 +414,6 @@
 		/* W3C */
 		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9',endColorstr='#c9c9c9',GradientType=0);
 		/* IE6-9 */
-		border: 1px solid #FBC81E;
 	}
 
 	.customer-menu .menu-item a {
