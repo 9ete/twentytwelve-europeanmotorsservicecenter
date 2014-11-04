@@ -50,24 +50,26 @@ get_header(); ?>
 				<?php endif; ?>
 			</header><!-- .archive-header -->
 		<?php endif; ?>
+		<section id='catpage-tagged-media' class='catpage-tagged-media'>
 		<?php
-		$tag_var = strtolower(single_cat_title('',false));
-		$wp_query = new WP_Query();
-		$query_images_args = array(
-			'tag' => $tag_var,
-			'post_type' => 'attachment', 
-			'post_mime_type' =>'image', 
-			'post_status' => 'inherit',
-			'posts_per_page' => -1,
-		);
+			$tag_var = strtolower(single_cat_title('',false));
+			$wp_query = new WP_Query();
+			$query_images_args = array(
+				'tag' => $tag_var,
+				'post_type' => 'attachment', 
+				'post_mime_type' =>'image', 
+				'post_status' => 'inherit',
+				'posts_per_page' => -1,
+			);
 
-		$query_images = new WP_Query( $query_images_args );
-		$images = array();
-		foreach ( $query_images->posts as $image) {
-			$images[]= wp_get_attachment_url( $image->ID );
-			echo "<img src='".wp_get_attachment_url( $image->ID )."' />";
-		}
-		?>
+			$query_images = new WP_Query( $query_images_args );
+			$images = array();
+			foreach ( $query_images->posts as $image) {
+				$images[]= wp_get_attachment_url( $image->ID );
+				echo "<div class='catpage-tagged-image-wrap'><img class='catpage-tagged-image' src='".wp_get_attachment_url( $image->ID )."' /></div>";
+			}
+			?>
+		</section>
 
 		</div><!-- #content -->
 	</section><!-- #primary -->
