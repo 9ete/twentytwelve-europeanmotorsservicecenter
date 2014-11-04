@@ -25,6 +25,9 @@
 
 	a:hover { color:#5B5B5E; }
 
+	a:visited,
+	.entry-content a:visited { color:#004B9B; }
+
 	hgroup {
 		text-shadow: .5px .5px .5px #FBC81E;
 		font-family: 'PorschaRegular', sans-serif;
@@ -448,14 +451,15 @@
 		vertical-align: top;
 		margin: 10px 1%;
 		width: 30%;
-	}
-
-	.site-content, .widget-area { width:100%; }
-
-	.widget-area .widget {
 		width: 33%;
 		display: inline-block;
 		text-align: center;
+	}
+
+	/*.site-content, .widget-area { width:100%; }*/
+
+	.widget-area .widget {
+		
 	}
 
 /* -- CONTENT -- */
