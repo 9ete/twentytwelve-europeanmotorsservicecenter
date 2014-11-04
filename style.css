@@ -198,7 +198,7 @@
     .jssorb21 div:hover, 
     .jssorb21 .av
     {
-        background: url(../img/b21.png) no-repeat;
+        /*background: url(../img/b21.png) no-repeat;*/
         overflow:hidden;
         cursor: pointer;
     }
