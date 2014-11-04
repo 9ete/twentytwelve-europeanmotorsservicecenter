@@ -67,7 +67,7 @@
 							</a>
 						<?php else : ?>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<img src='http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/EM_Logo_Colors-9-27-02.png' />
+								<img src='/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/european-motors-menu-logo.png' />
 							</a>
 						<?php endif; ?>
 					</div>
