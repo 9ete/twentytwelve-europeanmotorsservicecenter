@@ -148,7 +148,7 @@
                     <div>
                     <img 
                     	u="image" 
-                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/bkimg/bkimg1-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
+                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x375_greencar.jpg" 
                     	/>
                     <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
                     text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
@@ -162,7 +162,10 @@
                 </div>
 
                 <div>
-                    <img u="image" src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/bkimg/bkimg2-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" />
+                    <img 
+                    	u="image" 
+                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x400_greencar.jpg" 
+                    />
                     <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
                     text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
                     color: #FFFFFF;"><!-- Title Slide #2 -->
@@ -175,7 +178,10 @@
                 </div>
 
                 <div>
-                    <img u="image" src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/bkimg/bkimg3-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" />
+                    <img 
+                    	u="image" 
+                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x375_outside.jpg" 
+                    />
                     <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
                     text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
                     color: #FFFFFF;"><!-- Title Slide #3 -->
@@ -188,7 +194,10 @@
                 </div>
 
                 <div>
-                    <img u="image" src="http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/10615596_10152214843642273_394731043275449831_n.jpg" />
+                    <img 
+                    	u="image" 
+                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x400_outside.jpg" 
+                    />
                     <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
                     text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
                     color: #FFFFFF;"><!-- Title Slide #3 -->
@@ -201,20 +210,10 @@
                 </div>
 
                 <div>
-                    <img u="image" src="http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/IMG_0127-3.jpg" />
-                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
-                    color: #FFFFFF;"><!-- Title Slide #3 -->
-                    </div>
-                    <div style="position: absolute; width: 480px; height: 120px; top: 300px; left: 30px; padding: 5px;
-                    text-align: left; line-height: 36px; font-size: 30px;
-                    color: #FFFFFF;">
-                    <!-- Text Area Slide #3 -->
-                    </div>
-                </div>
-
-                <div>
-                    <img u="image" src="http://europeanmotorsservicecenter.petelower.com/wp-content/uploads/2014/09/fix-my-bmw-seattle-tacoma-lakewood-washington-jaquar-audi-mercedes.png" />
+                    <img 
+                    	u="image" 
+                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x400_team.jpg" 
+                    />
                     <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
                     text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
                     color: #FFFFFF;"><!-- Title Slide #3 -->
