@@ -272,8 +272,8 @@
 						<li class='menu-item instagram-li'><a target='_blank' class='genericon genericon-instagram'  href='https://www.instagram.com/europeanmotorsservicecenter'></a></li>
 						<li class='menu-item google-plus-li'><a target='_blank' class='genericon genericon-googleplus'  href='https://plus.google.com/100002154887378139579/about'></a></li>
 						<li class='menu-item twitter-li'><a target='_blank' class='genericon genericon-twitter'  href='https://twitter.com/euromotoservcen'></a></li>
-						<li class='menu-item youtube-li'><a target='_blank' class='genericon genericon-youtube'  href='https://twitter.com/euromotoservcen'></a></li>
-						<li class='menu-item yelp-li'><a target='_blank' class='genericon genericon-yelp'  href='https://www.linkedin.com/company/european-motors-service-center'>Yelp</a></li>
+						<li class='menu-item youtube-li'><a target='_blank' class='genericon genericon-youtube'  href='https://youtube.com/euromotoservcen'></a></li>
+						<li class='menu-item yelp-li'><a target='_blank' class='genericon genericon-yelp'  href='http://www.yelp.com/biz/european-motors-service-center-lakewood-2'>Yelp</a></li>
 					</ul>
 				</div>
 				<div class='column-right content-column'>
@@ -283,7 +283,6 @@
 						<li class='menu-item'><a target='_blank' href='http://www.procarcarezone.com/topshop/web/web_template/temp5/makeappointment/default.asp?id=151886'>Schedule Today</a></li>
 					</ul>
 				</div>
-
 			</nav><!-- #content-navigation -->
 
 			<!-- Move header above page content on front page -->
