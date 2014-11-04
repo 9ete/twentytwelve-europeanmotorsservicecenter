@@ -69,7 +69,7 @@
 					    </a> 
 					<?php endif; ?>
 				<?php else :  ?>
-					<h2> -- <?php the_title(); ?> </h2>
+					<h1 class="entry-title"><?php the_title(); ?> <h1 class="entry-title">
 				<?php endif; // is_post_type_archive() ?>
 
 			<?php endif; // !is_single() ?>
