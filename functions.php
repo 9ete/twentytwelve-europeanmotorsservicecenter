@@ -333,7 +333,7 @@ function lm_custom_login_logo() {
     echo '<style type="text/css">
     h1 a 
     { 
-        background-image:url('.get_stylesheet_directory_uri().'/img/login.png) !important; 
+        background-image:url('.get_stylesheet_directory_uri().'/img/european-motors-menu-logo.png) !important; 
         background-size: 211px auto !important;
         height: 200px !important;
         width: 311px !important; 
