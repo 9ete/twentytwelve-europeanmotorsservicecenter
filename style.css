@@ -237,6 +237,8 @@
 
     .jssora21rdn { background-position: -303px -33px; }
 
+    .background-slider-holder img { top: -245px !important; }
+
 	@media only screen and (max-width : 1024px) {
 
 		.home .site-header { height:230px; }
@@ -255,8 +257,8 @@
 		.page .main-navigation,
 		.archive .main-navigation { height: 211px; }
 
-		body.template-front-page .site-content, 
-		body.attachment .site-content, 
+		body.template-front-page .site-content,
+		body.attachment .site-content,
 		body.full-width .site-content,
 		footer .wrapper {
 			width: 80%;
@@ -626,7 +628,10 @@
 		display:inline-block;
 		width:45%;
 		vertical-align: top;
+		float:left;
 	}
+
+	.content-right {float:right;}
 
 	.wpcf7-submit { width:350px; }
 
@@ -719,12 +724,35 @@
 
 /* -- Media Queries -- */
 
+	.content-img-holder {height:225px;}
+
 	@media only screen and (max-width : 1024px) {
 		.page .content-navigation {
-			height: 40px;
+			height: 80px;
 			width: 80%;
 			margin: 10px auto;
 		}
+
+		.em-button {
+			height:150px;
+			width:150px;
+			line-height:150px;
+		}
+
+		.entry-content { text-align: center; }
+
+		.content-navigation .content-column {
+			display: block;
+			vertical-align: top;
+			margin: 10px auto;
+		}
+
+		.content-column .social-menu { text-align: center; } 
+
+		.entry-header { margin-top:1.714285714rem; }
+		.home .entry-header { margin: 60px 0 5px 0; }
+
+		.content-img-holder { height:0; }
 	}
 
 	@media only screen and (max-width : 600px) {
