@@ -240,75 +240,6 @@
 
     .background-slider-holder img { top: -245px !important; }
 
-	@media only screen and (max-width : 1024px) {
-
-		.home .site-header { height:230px; }
-
-		.show-1024 { display:block; }
-
-		.hide-1024 { display:none; }
-
-		.top-navigation,
-		.menu-primary-menu-container { display:none; }
-
-		.main-navigation,
-		.sticky-wrapper,
-		.sticky-holder,
-		.site-header,
-		.page .main-navigation,
-		.archive .main-navigation { height: 211px; }
-
-		body.template-front-page .site-content,
-		body.attachment .site-content,
-		body.full-width .site-content,
-		footer .wrapper {
-			width: 80%;
-			margin: 1.714285714rem 10%;
-		}
-
-	}
-
-	@media only screen and (max-width : 600px) {
-
-		body { max-width:600px; }
-		
-		.home .site-header { height:550px; }
-
-		.mobile-column-left,
-		.mobile-column-right {display:none;}
-
-		.mobile-logo-wrap {width:100%;height:211px;}
-
-		.mini-mobile-menu-column {
-			display:block;
-			width:100%;
-		}
-
-		.mini-mobile-menu-column .menu .menu-item {
-			width: 100%;
-			height: 40px;
-			line-height: 40px;
-			border-radius: 0;
-			float:left;
-		}
-
-		.site-header {
-			height: 547px;
-		}
-
-		.site-header .auto-brands, 
-		.menu-auto-brands-menu-container { display:none; }
-
-		/*.sticky-holder { position:relative; }*/
-
-		.main { 
-			z-index: 200;
-			border-top:5px solid #FBC81E; 
-			position:relative;
-		}
-
-	}
-
 	.automotive-certifications { text-align: center; }
 
 	.automotive-certifications .auto-cert-item { display:block; }
@@ -317,19 +248,6 @@
 
 /* -- NAVIGATION -- */
 
-	@media screen and (min-width: 600px) {
-		.main-navigation ul.nav-menu, .main-navigation div.nav-menu > ul {
-			border:none;
-		}
-
-		.mini-mobile-menu-column {display:none;}
-	}
-
-	@media screen and (max-width: 600px) {
-		.mobile-hide {display:none;}
-
-		.pre-content-widget li a, .post-content-widget li a {font-size:9px;line-height:9px;}
-	}
 
 	.main-navigation {
 		margin-top:0;
@@ -404,11 +322,6 @@
 		color:transparent;
 		height: 150px;
 		width: 140px;
-	}
-
-	@media only screen and (max-width : 1024px) {
-		/* can we hide this will only php, do we do it anyway? */
-		.site-header .main-navigation .menu-item-12 { display: none; }
 	}
 
 	.top-navigation .social-menu { float:left; }
@@ -516,8 +429,8 @@
 
 	.content-column .customer-menu { text-align: right; }
 
-	.content-navigation { 
-		height:auto;
+	.site .main .content-navigation { 
+		height: 100px;
 		margin: 10px 0; 
 	}
 
@@ -547,7 +460,10 @@
 /* -- CONTENT -- */
 
 	.post-type-archive-testimonials .site-content article,
-	.post-type-archive-carcaretips .site-content article { margin-bottom:0; }
+	.post-type-archive-carcaretips .site-content article { 
+		padding: 0;
+		margin-bottom: 0; 
+	}
 
 	.wrapper .site-content { margin-top:0; }
 	
@@ -626,22 +542,15 @@
 
 	.content-left,
 	.content-right {
-		display:inline-block;
-		width:45%;
+		display: inline-block;
+		width: 45%;
 		vertical-align: top;
-		float:left;
+		float: left;
 	}
 
-	.content-right {float:right;}
+	.content-right { float: right; }
 
-	.wpcf7-submit { width:350px; }
-
-	@media only screen and (max-width : 1024px) {
-		.content-left, .content-right {
-			margin:auto;
-			display:block;
-		}
-	}
+	.wpcf7-submit { width: 350px; }
 
 	.post-type-archive-testimonials { text-align: center; }
 
@@ -682,6 +591,23 @@
 		content: "\f502";
 		vertical-align: bottom;
 		vertical-align: -webkit-baseline-middle;
+	}
+
+	.post-type-archive-carcaretips .entry-content {
+		width: 60%;
+		margin:0 auto;
+	}
+
+	.entry-content .testimonial-link { text-decoration: none; }
+
+	.entry-content blockquote { margin: 0; }
+
+	blockquote p { text-decoration: none; }
+
+	blockquote p::before,
+	blockquote p::after {
+		content: '\"';
+		font-size: 24px;
 	}
 
 /* -- FOOTER -- */
@@ -725,7 +651,7 @@
 
 /* -- Media Queries -- */
 
-	@media only screen and (min-width : 1024px) {
+@media only screen and (min-width : 1024px) {
 
 		.content-img-holder { 
 			height: 225px; 
@@ -736,48 +662,127 @@
 			margin: 0 5px;
 			display: inline-block;
 		}
-		
-	}
-
-	@media only screen and (max-width : 1024px) {
-
-		.page .content-navigation {
-			height: 80px;
-			width: 80%;
-			margin: 10px auto;
-		}
-
-		.em-button {
-			height:150px;
-			width:150px;
-			line-height:150px;
-		}
-
-		.entry-content { text-align: center; }
-
-		.content-navigation .content-column {
-			display: block;
-			vertical-align: top;
-			margin: 10px auto;
-		}
-
-		.content-column .social-menu { text-align: center; } 
-
-		.entry-header { margin-top:1.714285714rem; }
-
-		.home .entry-header { margin: 60px 0 5px 0; }
 
 	}
 
-	@media only screen and (max-width : 600px) {
+@media only screen and (max-width : 1024px) {
 
-		.menu-auto-services-menu-container .menu { width:100%; }
+	.home .site-header { height:230px; }
 
-		.menu-auto-services-menu-container li {
-			width: 120px;
-			height: 120px;
-			margin: 10px 10px;
-		}
+	.show-1024 { display:block; }
+
+	.hide-1024 { display:none; }
+
+	.top-navigation,
+	.menu-primary-menu-container { display:none; }
+
+	.main-navigation,
+	.sticky-wrapper,
+	.sticky-holder,
+	.site-header,
+	.page .main-navigation,
+	.archive .main-navigation { height: 211px; }
+
+	body.template-front-page .site-content,
+	body.attachment .site-content,
+	body.full-width .site-content,
+	footer .wrapper {
+		width: 80%;
+		margin: 1.714285714rem 10%;
+	}
+
+	.site-header .main-navigation .menu-item-12 { display: none; }
+
+	.content-left,
+	.content-right {
+		margin:auto;
+		display:block;
+	}
+
+	.page .content-navigation {
+		height: 80px;
+		width: 80%;
+		margin: 10px auto;
+	}
+
+	.em-button {
+		height:150px;
+		width:150px;
+		line-height:150px;
+	}
+
+	.entry-content { text-align: center; }
+
+	.content-navigation .content-column {
+		display: block;
+		vertical-align: top;
+		margin: 10px auto;
+	}
+
+	.content-column .social-menu { text-align: center; } 
+
+	.entry-header { margin-top:1.714285714rem; }
+
+	.post-type-archive-testimonials .entry-header { margin:0 auto; }
+
+	.post-type-archive-testimonials .archive-header {
+		margin:0;
+		padding:0;
+	}
+
+	.home .entry-header { margin: 60px 0 5px 0; }
+
+}
+
+@media screen and (min-width: 600px) {
+	.main-navigation ul.nav-menu, 
+	.main-navigation div.nav-menu > ul { border:none; }
+
+	.mini-mobile-menu-column { display:none; }
+}
+
+@media only screen and (max-width : 600px) {
+
+	body { max-width:600px; }
+	
+	.home .site-header { height:550px; }
+
+	.mobile-column-left,
+	.mobile-column-right {display:none;}
+
+	.mobile-logo-wrap {width:100%;height:211px;}
+
+	.mini-mobile-menu-column {
+		display:block;
+		width:100%;
+	}
+
+	.mini-mobile-menu-column .menu .menu-item {
+		width: 100%;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 0;
+		float:left;
+	}
+
+	.site-header {
+		height: 547px;
+	}
+
+	.site-header .auto-brands, 
+	.menu-auto-brands-menu-container { display:none; }
+
+	.main { 
+		z-index: 200;
+		border-top:5px solid #FBC81E; 
+		position:relative;
+	}
+
+	.mobile-hide {display:none;}
+
+	.pre-content-widget li a, .post-content-widget li a {font-size:9px;line-height:9px;}
+
+	.menu-auto-services-menu-container .menu { width:100%; }
 
 		hgroup { width:90%; }
 
@@ -841,7 +846,9 @@
 
 		.footer-column .customer-menu .menu-item a { white-space: normal; }
 
-	}
+}
+
+
 
 /* -- FONT IMPORTS -- */
 
