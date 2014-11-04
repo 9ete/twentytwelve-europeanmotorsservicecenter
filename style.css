@@ -164,7 +164,10 @@
 
 	.mini-mobile-menu-column { display:none; }
 
-	.archive-title { text-align: center; }
+	.archive-title { 
+		font-size: 16px;
+		text-align: center; 
+	}
 
 	.show-1024 { display:none; }
 
@@ -739,16 +742,19 @@
 
 		.post-type-archive-testimonials .entry-header { margin:0 auto; }
 
+		.home .entry-header { margin: 60px 0 5px 0; }
+
+		.content-column .social-menu,
+		.content-column .customer-menu { text-align: center; }
+
+	}
+
+	@media screen and (min-width: 600px) {
 		.post-type-archive-testimonials .archive-header {
 			margin:0;
 			padding:0;
 		}
 
-		.home .entry-header { margin: 60px 0 5px 0; }
-
-	}
-
-	@media screen and (min-width: 600px) {
 		.main-navigation ul.nav-menu, 
 		.main-navigation div.nav-menu > ul { border:none; }
 
@@ -816,9 +822,6 @@
 				vertical-align: top;
 				margin: auto;
 			}
-
-			.content-column .social-menu,
-			.content-column .customer-menu { text-align: center; }
 
 			.content-column .social-menu .menu-item { 
 				display:inline-block; 
