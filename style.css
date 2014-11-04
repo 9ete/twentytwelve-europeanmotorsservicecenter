@@ -431,7 +431,7 @@
 
 	.site .main .content-navigation { 
 		height: 100px;
-		margin: 10px 0; 
+		margin: 10px auto; 
 	}
 
 	.menu-primary-menu-container { margin-top:5px; }
