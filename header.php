@@ -246,20 +246,6 @@
         <!-- Jssor Slider End -->
     </div>
 	<?php endif; ?>
-	<?php if (wp_is_mobile()) : ?>
-		<?php if (is_front_page()) : ?>
-			<!-- <div id='background-slider-holder' class='background-slider-holder'>
-				<div id="mobile-backgroundimage" class='mobile-bkimage-div'></div>
-			</div> -->
-		<?php endif; ?>
-	<?php else : ?>
-		<?php if (is_front_page()) : ?>
-			<!-- <div id='background-slider-holder' class='background-slider-holder'>
-				<div id="backgroundimage" class='bkimage-div'></div>
-				<div id="nextimg" class='nxt-bkimage-div'></div>
-			</div> -->
-		<?php endif; ?>
-	<?php endif; ?>
 
 	<div id="main" class="main">
 		<div id="main-inner" class="main-inner wrapper">
