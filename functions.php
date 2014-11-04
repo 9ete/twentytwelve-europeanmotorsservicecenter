@@ -147,7 +147,6 @@ function randMenu ($menuName, $numItemsReturnedPlusOne) {
 
     //randomize and output 5 menu items
     //ADD MENU TO VAR, DISABLE ECHO AS TO NOT ECHO THE MENU IMMEDIATLY
-    // $autoBrandsMenu = wp_nav_menu( array( 'theme_location' => $menuName, 'echo' => false, 'before' => '--' ) );
     //put each menu li into an array
     $menuArray = explode ("--", $autoBrandsMenu);
     $newMenuArray = array();
