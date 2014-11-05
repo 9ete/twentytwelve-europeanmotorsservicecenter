@@ -317,11 +317,10 @@
 		border-radius: 50px;
 		background-position: center center;
 		background-image: url('img/european-motors-menu-logo.png');
-		background-size: 184px;
+		background-repeat: no-repeat;
 		border: none;
 		height: 164px;
 		width: 154px;		
-		/*width: 150px;*/
 	}
 
 	.site-header .main-navigation .menu-item-12 a,
