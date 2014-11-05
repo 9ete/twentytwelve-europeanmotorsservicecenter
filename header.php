@@ -247,8 +247,10 @@
 				<div class='column-right content-column'>
 					<ul id='customer-menu' class='customer-menu'>
 						<li class='menu-item'><a href='/testimonials/'>Testimonials</a></li>
-						<li class='menu-item'><a target='_blank' href='http://www.procarcarezone.com/topshop/web/web_template/temp5/carcare/default.asp?id=151886'>Customer Login</a></li>
-						<li class='menu-item'><a target='_blank' href='http://www.procarcarezone.com/topshop/web/web_template/temp5/makeappointment/default.asp?id=151886'>Schedule Today</a></li>
+						<li class='menu-item'><a target='_blank' href='http://european-motors.com'>Customer Login</a></li>
+						<li class='menu-item'><a target='_blank' href='http://european-motors.com'>Schedule Today</a></li>
+						<!-- <li class='menu-item'><a target='_blank' href='http://www.procarcarezone.com/topshop/web/web_template/temp5/carcare/default.asp?id=151886'>Customer Login</a></li> -->
+						<!-- <li class='menu-item'><a target='_blank' href='http://www.procarcarezone.com/topshop/web/web_template/temp5/makeappointment/default.asp?id=151886'>Schedule Today</a></li> -->
 					</ul>
 				</div>
 			</nav><!-- #content-navigation -->
