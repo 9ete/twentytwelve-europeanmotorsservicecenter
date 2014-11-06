@@ -778,6 +778,8 @@
 
 		.entry-content { text-align: center; }
 
+		.site .main .content-navigation { height: 105px; }
+
 		.content-navigation .content-column {
 			display: block;
 			vertical-align: top;
@@ -861,8 +863,6 @@
 		{
 			display:none;
 		}
-
-		.site .main .content-navigation { height: 105px; }
 
 		.cert-button {margin: 10px auto;}
 
