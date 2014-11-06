@@ -248,9 +248,9 @@
 
     /*.background-slider-holder img { top: -245px !important; }*/
 
-	.automotive-certifications { text-align: center; }
+	.automotive-certifications { text-align: center; margin-top:20px;}
 
-	.automotive-certifications .auto-cert-item { display:block; }
+	.automotive-certifications .auto-cert-item { display:inline-block; margin: 0 10px; }
 
 	.automotive-certifications .auto-cert-item img { height:50px; }
 
