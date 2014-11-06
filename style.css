@@ -82,12 +82,7 @@
 
 	.site-header .auto-brands {
 		z-index: 198;
-		border-top: 1px solid #FBC81E;
-	}
-
-	.site-header .menu-auto-brands-menu-container {
-		width:100%;
-		border-top: 1px solid #FBC81E;
+		border-top: 2px solid #FBC81E;
 	}
 
 	.site-header .menu-auto-brands-menu-container .menu {
@@ -391,6 +386,7 @@
 	}
 
 	.site-header .main-navigation li a,
+	.site-header .menu-auto-brands-menu-container,
 	.pre-content-widget li a,
 	.customer-menu .menu-item a,
 	.menu-auto-services-menu-container li a,
@@ -421,6 +417,7 @@
 		/* IE6-9 */
 	}
 
+	.site-header .menu-auto-brands-menu-container { border:none; border-radius: 0;}
 	
 	.em-button a:active,
 	.pre-content-widget li a:active,
