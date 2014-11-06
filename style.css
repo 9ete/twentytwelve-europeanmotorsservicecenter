@@ -680,6 +680,8 @@
 
 	.post-type-archive .featured-img-wrap img { width: 300px; }
 
+	.post-type-archive .archive-header { margin-bottom:0; }
+
 /* -- FOOTER -- */
 
 	body .colophon-footer {
