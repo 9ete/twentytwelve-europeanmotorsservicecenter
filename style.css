@@ -792,6 +792,11 @@
 
 		.entry-content { text-align: center; }
 
+		.post-type-archive-staff .entry-content { text-align: left; }
+
+		.post-type-archive-staff .staff .featured-img-wrap,
+		.post-type-archive-staff .staff .staff-content-wrap { max-width:40%; }
+
 		.site .main .content-navigation { height: 105px; }
 
 		.content-navigation .content-column {
@@ -879,6 +884,11 @@
 		}
 
 		.cert-button {margin: 10px auto;}
+
+		.post-type-archive-staff .staff .featured-img-wrap,
+		.post-type-archive-staff .staff .staff-content-wrap { max-width:80%; }
+
+		.content-navigation .customer-menu .menu-item a { width:100px; }
 
 		.content-column {
 			width: 100%;
