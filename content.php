@@ -68,6 +68,13 @@
 					<?php if ( get_post_meta( get_the_ID(), '_my_meta_value_key', true ) ) : ?>
 					    </a> 
 					<?php endif; ?>
+				<?php elseif (is_post_type_archive( "staff" ) ) : ?>
+					<div class='staff-content-wrap'>
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<div class="entry-content">
+							<h2><?php echo get_post_meta( get_the_ID(), '_my_meta_value_key', true ); ?></h2>
+							<p><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?></p></div>
+					</div>
 				<?php else :  ?>
 					<h1 class="entry-title"><?php the_title(); ?> <h1 class="entry-title">
 				<?php endif; // is_post_type_archive() ?>
