@@ -668,6 +668,18 @@
 		vertical-align: top;
 	}
 
+	.post-type-archive-staff .staff .featured-img-wrap,
+	.post-type-archive-staff .staff .staff-content-wrap {
+		display: inline-block;
+		vertical-align: top;
+		max-width: 60%;
+		margin:0 10px;
+	}
+
+	.post-type-archive-staff .staff .entry-title { text-align:left; }
+
+	.post-type-archive .featured-img-wrap img { width: 300px; }
+
 /* -- FOOTER -- */
 
 	body .colophon-footer {
