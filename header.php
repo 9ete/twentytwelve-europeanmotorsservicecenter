@@ -144,9 +144,11 @@
 	            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
 	            height: 400px; overflow: hidden;">
 	                    <div>
-	                    <img 
+	                    <img  
+	                    	height='400'
+	                    	width='1000'
 	                    	u="image" 
-	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x375_greencar.jpg" 
+	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/bkimg1-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
 	                    	/>
 	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
 	                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
@@ -160,9 +162,11 @@
 	                </div>
 
 	                <div>
-	                    <img 
+	                    <img  
+	                    	height='400'
+	                    	width='1000'
 	                    	u="image" 
-	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x375_outside.jpg" 
+	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/bkimg2-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
 	                    />
 	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
 	                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
@@ -177,8 +181,10 @@
 
 	                <div>
 	                    <img 
+	                    	height='400'
+	                    	width='1000'
 	                    	u="image" 
-	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/1000x400_team.jpg" 
+	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/bkimg3-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
 	                    />
 	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
 	                    text-align: left; line-height: 60px; text-transform: uppercase; font-size: 50px;
