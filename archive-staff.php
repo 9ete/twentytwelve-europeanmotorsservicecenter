@@ -36,6 +36,11 @@ get_header(); ?>
 					endif;
 				?></h1>
 			</header><!-- .archive-header -->
+			
+			<div class="entry-content">
+				<p><a href="/wp-content/uploads/2014/10/european-motors-service-center-automotive-professionals-washington-state-tacoma-lakewood-seattle.jpg"><img class="aligncenter wp-image-625 size-full" src="/wp-content/uploads/2014/10/european-motors-service-center-automotive-professionals-washington-state-tacoma-lakewood-seattle.jpg" alt="european-motors-service-center-automotive-professionals-washington-state-tacoma-lakewood-seattle" width="1000" height="667"></a></p>
+				<p>Our staff is comprised of highly educated and trained individuals that are not just technicians but also enthusiasts. Knowing the vehicles they work on but also enjoying the challenges of the latest technology.</p>
+			</div>
 
 			<?php
 			/* Start the Loop */
