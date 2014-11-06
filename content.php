@@ -50,11 +50,11 @@
 
 				<?php if (is_post_type_archive( "testimonials" ) ) : ?>
 					<?php if ( get_post_meta( get_the_ID(), 'l_m_meta_value_key', true ) ) : ?>
-					    <a class='testimonial-link' target='_blank' href="<?php echo get_post_meta( get_the_ID(), '_my_meta_value_key', true ); ?>" rel="bookmark"> 
+					    <a class='testimonial-link' target='_blank' href="<?php echo get_post_meta( get_the_ID(), '_lm_meta_value_key', true ); ?>" rel="bookmark"> 
 					<?php endif; ?>
 						<div class="entry-content">
 							<?php if ( get_post_meta( get_the_ID(), '_lm_meta_value_key', true ) ) : ?>
-							    <a class='testimonial-link' target='_blank' href="<?php echo get_post_meta( get_the_ID(), '_my_meta_value_key', true ); ?>" rel="bookmark"> 
+							    <a class='testimonial-link' target='_blank' href="<?php echo get_post_meta( get_the_ID(), '_lm_meta_value_key', true ); ?>" rel="bookmark"> 
 							<?php endif; ?>
 								<blockquote>
 								<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?>
@@ -72,7 +72,7 @@
 					<div class='staff-content-wrap'>
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 						<div class="entry-content">
-							<h2><?php echo get_post_meta( get_the_ID(), '_my_meta_value_key', true ); ?></h2>
+							<h2><?php echo get_post_meta( get_the_ID(), '_lm_meta_value_key', true ); ?></h2>
 							<p><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?></p></div>
 					</div>
 				<?php else :  ?>
