@@ -548,12 +548,21 @@
 	}
 
 	.em-button {
-		height: 300px;
-		width: 300px;
 		text-align: center;
 		display:inline-block;
+	}
+
+	.cert-button {
 		margin:0 9%;
 		line-height: 300px;
+		height: 300px;
+		width: 300px;
+	}
+
+	.cert-button a {
+		height: 300px;
+		width: 300px;
+		display:block;
 	}
 
 	.em-button a { text-decoration: none; }
