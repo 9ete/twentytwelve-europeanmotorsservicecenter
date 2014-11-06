@@ -31,10 +31,10 @@
 		</div><!--  -->
 		<div class="footer-column footer-column-four">
 			<?php dynamic_sidebar( 'footer_column_four' ); ?>
-			<p>
-				<center><a href="https://www.google.com/maps/preview?q=5911+STEILACOOM+BLVD+SW,+LAKEWOOD,+WA,+98499,+(European+Motors+Service+Center)" target="_blank">5911 STEILACOOM BLVD SW - LAKEWOOD, WA - 98499</a></center>
-				<center>&copy;<?php echo date('Y');?> European Motors Service Center</center>
-				<center><?php echo do_shortcode( '[phonenumber]' ); ?></center>
+			<p style='text-align:center;'>
+				<a href="https://www.google.com/maps/preview?q=5911+STEILACOOM+BLVD+SW,+LAKEWOOD,+WA,+98499,+(European+Motors+Service+Center)" target="_blank">5911 STEILACOOM BLVD SW - LAKEWOOD, WA - 98499</a><br />
+				&copy;<?php echo date('Y');?> European Motors Service Center<br />
+				<?php echo do_shortcode( '[phonenumber]' ); ?>
 			</p>
 		</div><!--  -->
 	</div><!--  -->
