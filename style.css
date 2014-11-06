@@ -390,7 +390,7 @@
 
 	.site-header .main-navigation li,
 	.pre-content-widget li,
-	.customer-menu .menu-item,
+	.customer-menu .menu-item a,
 	.menu-auto-services-menu-container li,
 	.menu-toggle,
 	.em-button a,
@@ -419,15 +419,19 @@
 		/* IE6-9 */
 	}
 
-	.em-button a:active {
+	.em-button a:active,
+	.customer-menu .menu-item a:active {
 		background: linear-gradient(to bottom,#c9c9c9 37%,#f9f9f9 100%);
 	}
 
 	.customer-menu .menu-item a {
-		line-height: 2;
-		color:#043789;
+		line-height: 3;
+		color: #043789;
 		text-decoration: none;
+		
 	}
+
+	.content-navigation .customer-menu .menu-item a { width: 120px; }
 
 	.mobile-column .customer-menu .menu-item a { line-height: 3.5; }
 
