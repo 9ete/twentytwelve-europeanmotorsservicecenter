@@ -339,10 +339,11 @@
 	.mobile-column .customer-menu .menu-item {padding:0;}
 
 	.mobile-logo-wrap img {
-		height: 100%;
+		/*height: 100%;
 		width: auto;
 		max-width: 211px;
-		max-height: 211px;
+		max-height: 211px;*/
+		margin-top:20px;
 	}
 
 	.main-navigation .social-menu,
@@ -816,10 +817,10 @@
 
 		.mini-mobile-menu-column .menu .menu-item {
 			width: 100%;
-			height: 40px;
+			/*height: 40px;*/
 			line-height: 40px;
 			border-radius: 0;
-			float:left;
+			/*float:left;*/
 		}
 
 		.site-header {
@@ -876,7 +877,7 @@
 			padding:0 2.5%;
 		}
 
-		.home .sticky-holder { position: relative; }
+		.home .sticky-holder { position: relative; left: -7.5px; }
 
 		.is-sticky .sticky-holder { left: 0; }
 
