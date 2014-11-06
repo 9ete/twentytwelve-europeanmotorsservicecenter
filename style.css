@@ -546,6 +546,15 @@
 
 	.em-button a { text-decoration: none; }
 
+	.home .entry-content .em-button {
+		text-align: center;
+		width: 200px;
+		height: 100px;
+		line-height: 100px;
+		margin: 20px auto;
+		display: block;
+	}
+
 	.content-left,
 	.content-right {
 		display: inline-block;
