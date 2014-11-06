@@ -504,6 +504,16 @@
 		margin:10px auto; 
 	}
 
+	.post-content-widget .menu-auto-brands-menu-container { text-align: center; }
+
+	.post-content-widget .menu-auto-brands-menu-container li {
+		width: 20%;
+		margin: 10px;
+		display: inline-block;
+	}
+
+	.post-content-widget .menu-auto-brands-menu-container li { color:#043789; ; }
+
 	.pre-content-widget .menu-auto-services-menu-container li {
 		height:50px;
 		line-height:50px;
