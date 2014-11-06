@@ -269,8 +269,8 @@
 			width: 8rem;
 			text-align: center;
 			padding: 0 .5rem;
-			background-color:#262466;
-			font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+			/*background-color:#262466;*/
+			/*font-family: Futura, "Trebuchet MS", Arial, sans-serif;*/
 		}
 
 	.main-navigation li a { width:100%; }
@@ -388,7 +388,7 @@
 		width: 131px;
 	}
 
-	.main-navigation li,
+	.site-header .main-navigation li,
 	.pre-content-widget li,
 	.customer-menu .menu-item,
 	.menu-auto-services-menu-container li,
