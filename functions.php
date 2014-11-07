@@ -283,7 +283,7 @@ add_filter('wp_mail_from_name', 'new_mail_from_name');
 function lm_custom_admin_styles() {
    echo '<style type="text/css">
        /* Styles here! */
-        body {font-family: futura;}
+        body {font-family: Futura, "Trebuchet MS", Arial, sans-serif;}
 
        /*change sidebar icon for testimonials, staff, tips, videos */
         #menu-posts-testimonials .dashicons-admin-post:before,
