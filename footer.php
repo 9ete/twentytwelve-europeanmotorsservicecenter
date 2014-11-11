@@ -31,11 +31,7 @@
 		</div><!--  -->
 		<div class="footer-column footer-column-four">
 			<?php dynamic_sidebar( 'footer_column_four' ); ?>
-			<p style='text-align:center; color: whitesmoke; text-shadow: 1px 1px 1px black;'>
-				<a style='color: whitesmoke; text-shadow: 1px 1px 1px black;' href="https://www.google.com/maps/preview?q=5911+STEILACOOM+BLVD+SW,+LAKEWOOD,+WA,+98499,+(European+Motors+Service+Center)" target="_blank">5911 STEILACOOM BLVD SW - LAKEWOOD, WA - 98499</a><br />
-				&copy;<?php echo date('Y');?> European Motors Service Center<br />
-				<?php echo do_shortcode( '[phonenumber]' ); ?>
-			</p>
+			<p style='text-align:center; color: whitesmoke; text-shadow: 1px 1px 1px black;'><a style='color: whitesmoke; text-shadow: 1px 1px 1px black;' href="https://www.google.com/maps/preview?q=5911+STEILACOOM+BLVD+SW,+LAKEWOOD,+WA,+98499,+(European+Motors+Service+Center)" target="_blank">5911 STEILACOOM BLVD SW - LAKEWOOD, WA - 98499</a><br />&copy;<?php echo date('Y');?> European Motors Service Center<br /><?php echo do_shortcode( '[phonenumber]' ); ?></p>
 		</div><!--  -->
 	</div><!--  -->
 </footer><!-- #colophon -->
