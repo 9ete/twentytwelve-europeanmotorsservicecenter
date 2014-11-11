@@ -482,6 +482,14 @@
 
 /* -- CONTENT -- */
 
+	.entry-content .front-phone-wrap a { 
+		width:200px;
+		height:100px;
+		line-height:100px;
+		display:block;
+		border:none;
+	}
+
 	.post-type-archive-testimonials .site-content article,
 	.post-type-archive-carcaretips .site-content article { 
 		padding: 0;
