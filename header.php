@@ -147,7 +147,7 @@
 	                    <img  
 	                    	height='400'
 	                    	width='1000'
-	                    	u="image" 
+	                    	data-u="image" 
 	                    	alt="Front Page Image Slider Image 1"
 	                    	description="Front Page Image Slider Image 1"
 	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/bkimg1-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
@@ -167,7 +167,7 @@
 	                    <img  
 	                    	height='400'
 	                    	width='1000'
-	                    	u="image" 
+	                    	data-u="image" 
 	                    	alt="Front Page Image Slider Image 2"
 	                    	description="Front Page Image Slider Image 2"
 	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/bkimg2-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
@@ -187,7 +187,7 @@
 	                    <img 
 	                    	height='400'
 	                    	width='1000'
-	                    	u="image" 
+	                    	data-u="image" 
 	                    	alt="Front Page Image Slider Image 3"
 	                    	description="Front Page Image Slider Image 13"
 	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/bkimg3-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
