@@ -205,18 +205,18 @@
 	            </div>
 
 	            <!-- bullet navigator container -->
-	            <div u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
+	            <div data-u="navigator" class="jssorb21" style="position: absolute; bottom: 26px; left: 6px;">
 	                <!-- bullet navigator item prototype -->
-	                <div u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
+	                <div data-u="prototype" style="POSITION: absolute; WIDTH: 19px; HEIGHT: 19px; text-align:center; line-height:19px; color:White; font-size:12px;"></div>
 	            </div>
 	            <!-- Bullet Navigator Skin End -->
 
 	            <!-- Arrow Navigator Skin Begin -->
 	            <!-- Arrow Left -->
-	            <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
+	            <span data-u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
 	            </span>
 	            <!-- Arrow Right -->
-	            <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px">
+	            <span data-u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px">
 	            </span>
 	            <!-- Arrow Navigator Skin End -->
 	            <a style="display: none" href="http://www.jssor.com">javascript</a>
@@ -257,7 +257,7 @@
 					</ul>
 				</div>
 				<div class='column-right content-column'>
-					<ul id='customer-menu' class='customer-menu'>
+					<ul id='content-customer-menu' class='customer-menu'>
 						<li class='menu-item'><a href='/testimonials/'>Testimonials</a></li>
 						<li class='menu-item'><a target='_blank' href='http://european-motors.com'>Customer Login</a></li>
 						<li class='menu-item'><a target='_blank' href='http://european-motors.com'>Schedule Today</a></li>
