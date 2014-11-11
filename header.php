@@ -63,11 +63,11 @@
 					<div class='mobile-logo-wrap mobile-column-center mobile-column'>
 						<?php if ( get_header_image() ) : ?>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" />
+								<img src="<?php header_image(); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php echo get_bloginfo(); ?> Website Logo" />
 							</a>
 						<?php else : ?>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<img src='/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/european-motors-menu-logo.png' />
+								<img src='/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/european-motors-menu-logo.png' alt="<?php echo get_bloginfo(); ?> Website Logo" />
 							</a>
 						<?php endif; ?>
 					</div>
@@ -115,9 +115,9 @@
 
 			<?php 
 				if(!is_archive()) {  ?>
-					<section id='auto-brands' class='auto-brands'>
+					<div id='auto-brands' class='auto-brands'>
 					<?php randMenu('auto-brands-menu', 7); ?>
-					</section>
+					</div>
 				<?php } else {
 					  $backup = $wp_query;
 					  $wp_query = NULL;
@@ -148,6 +148,8 @@
 	                    	height='400'
 	                    	width='1000'
 	                    	u="image" 
+	                    	alt="Front Page Image Slider Image 1"
+	                    	description="Front Page Image Slider Image 1"
 	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/bkimg1-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
 	                    	/>
 	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
@@ -166,6 +168,8 @@
 	                    	height='400'
 	                    	width='1000'
 	                    	u="image" 
+	                    	alt="Front Page Image Slider Image 2"
+	                    	description="Front Page Image Slider Image 2"
 	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/bkimg2-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
 	                    />
 	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
@@ -184,6 +188,8 @@
 	                    	height='400'
 	                    	width='1000'
 	                    	u="image" 
+	                    	alt="Front Page Image Slider Image 3"
+	                    	description="Front Page Image Slider Image 13"
 	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/bkimg3-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
 	                    />
 	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
