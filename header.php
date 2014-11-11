@@ -117,7 +117,7 @@
 				if(!is_archive()) {  ?>
 					<div id='auto-brands' class='auto-brands'>
 					<?php randMenu('auto-brands-menu', 7); ?>
-					</div>
+					</li></div>
 				<?php } else {
 					  $backup = $wp_query;
 					  $wp_query = NULL;
@@ -141,7 +141,7 @@
 	        top: 0px; left: 0px; width: 1300px; height: 400px; overflow: hidden;">
 
 	            <!-- Slides Container -->
-	            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
+	            <div data-u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1300px;
 	            height: 400px; overflow: hidden;">
 	                    <div>
 	                    <img  
@@ -149,7 +149,6 @@
 	                    	width='1000'
 	                    	data-u="image" 
 	                    	alt="Front Page Image Slider Image 1"
-	                    	description="Front Page Image Slider Image 1"
 	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/bkimg1-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
 	                    	/>
 	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
@@ -169,7 +168,6 @@
 	                    	width='1000'
 	                    	data-u="image" 
 	                    	alt="Front Page Image Slider Image 2"
-	                    	description="Front Page Image Slider Image 2"
 	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/bkimg2-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
 	                    />
 	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
@@ -189,7 +187,6 @@
 	                    	width='1000'
 	                    	data-u="image" 
 	                    	alt="Front Page Image Slider Image 3"
-	                    	description="Front Page Image Slider Image 13"
 	                    	src="/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/slider-img/bkimg3-bmw-jaguar-porsche-volkswagen-audi-motor-vehicle-repair-fix-my-land-rover-seattle-tacoma-lakewood-washington.jpg" 
 	                    />
 	                    <div style="position: absolute; width: 480px; height: 120px; top: 30px; left: 30px; padding: 5px;
