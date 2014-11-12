@@ -67,7 +67,7 @@
 							</a>
 						<?php else : ?>
 							<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-								<img src='/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/european-motors-menu-logo.png' alt="<?php echo get_bloginfo(); ?> Website Logo" />
+								<img src='/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/european-motors-menu-logo.png' alt="<?php echo get_bloginfo(); ?> Website Logo" height='164' width='164'/>
 							</a>
 						<?php endif; ?>
 					</div>
