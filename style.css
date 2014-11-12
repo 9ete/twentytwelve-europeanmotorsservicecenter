@@ -21,7 +21,7 @@
 		GUNMETAL GREY = #5B5B5E
 	*/
 
-	a { color:#043789; }
+	a { color:#043789; text-decoration: none; }
 
 	a:hover { color:#5B5B5E; }
 
@@ -259,7 +259,7 @@
 	}
 
 	.main-navigation li {
-			margin: 0 .5px;
+			margin: 0 auto;
 			position: relative;
 			width: 9rem;
 			text-align: center;
@@ -733,19 +733,29 @@
 
 	@media only screen and (min-width : 1024px) {
 
-			.content-img-holder { 
-				height: 225px; 
-				text-align: center; 
-			}
-
-			.content-img-holder .wp-caption {
-				margin: auto 5px;
-				display: inline-block;
-			}
-
+		.main-navigation li {
+			margin: 0 .5px;
 		}
 
+		.content-img-holder { 
+			height: 225px; 
+			text-align: center; 
+		}
+
+		.content-img-holder .wp-caption {
+			margin: auto 5px;
+			display: inline-block;
+		}
+
+	}
+
 	@media only screen and (max-width : 1024px) {
+
+		.main {
+			z-index: 200;
+			position: relative;
+			border-top: 2px solid #FBC81E;
+		}
 
 		.content-img-holder { height: 525px; }
 
@@ -811,6 +821,7 @@
 			display: block;
 			vertical-align: top;
 			margin: 10px auto;
+			width: 100%
 		}
 
 		.content-column .social-menu { text-align: center; } 
@@ -863,17 +874,17 @@
 		}
 
 		.site-header {
-			height: 547px;
+			height: 515px;
 		}
 
 		.site-header .auto-brands, 
 		.menu-auto-brands-menu-container { display:none; }
 
-		.main { 
+		/*.main { 
 			z-index: 200;
 			border-top:5px solid #FBC81E; 
 			position:relative;
-		}
+		}*/
 
 		.mobile-hide {display:none;}
 
@@ -912,6 +923,13 @@
 
 		.content-column .customer-menu .menu-item  { width: 6rem; }
 
+		.content-column .customer-menu { margin-left: -15px;}
+
+		.social-menu .menu-item a {
+			font-size: 320%;
+			vertical-align: middle;
+		}
+
 		.footer-column {
 			min-height: 0;
 			display: block;
@@ -930,15 +948,20 @@
 
 		.site-header { margin-bottom: 0; }
 
-		.mini-mobile-menu-column .menu .menu-item a { display:block; }
+		.mini-mobile-menu-column .menu .menu-item a { display:block; border-left: none; border-right: none; border-radius: 0; }
 
 		.footer-column .customer-menu .menu-item {
-			width: 20%;
-			height: 70px;
+			width: 100%;
 			vertical-align: top;
+			display: block;
 		}
 
 		.footer-column .customer-menu .menu-item a { white-space: normal; }
+
+		.automotive-certifications .auto-cert-item img {
+			height: 40px;
+			width: auto;
+		}
 
 	}
 
