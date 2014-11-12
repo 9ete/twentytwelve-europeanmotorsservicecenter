@@ -76,7 +76,7 @@
 							<p><?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentytwelve' ) ); ?></p></div>
 					</div>
 				<?php else :  ?>
-					<h1 class="entry-title"><?php the_title(); ?> <h1 class="entry-title">
+					<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 				<?php endif; // is_post_type_archive() ?>
 
 			<?php endif; // !is_single() ?>
