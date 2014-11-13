@@ -983,7 +983,7 @@
 	}
 
 	/*KubusThin*/
-	@font-face {
+	/*@font-face {
 	    font-family: 'KubusThin';
 	    src: url('fonts/KubusThin/kubus-thin.eot');
 	    src: url('fonts/KubusThin/kubus-thin.eot') format('embedded-opentype'),
@@ -991,7 +991,7 @@
 	         url('fonts/KubusThin/kubus-thin.woff') format('woff'),
 	         url('fonts/KubusThin/kubus-thin.ttf') format('truetype'),
 	         url('fonts/KubusThin/kubus-thin.svg#KubusThin') format('svg');
-	}
+	}*/
 
 	/*PorschaRegular*/
 	@font-face {
@@ -1005,7 +1005,7 @@
 	}
 
 	/*PorschaBoldBold*/
-	@font-face {
+	/*@font-face {
 	    font-family: 'PorschaBold';
 	    src: url('fonts/PorschaBold/911v2b.eot');
 	    src: url('fonts/PorschaBold/911v2b.eot') format('embedded-opentype'),
@@ -1013,10 +1013,10 @@
 	         url('fonts/PorschaBold/911v2b.woff') format('woff'),
 	         url('fonts/PorschaBold/911v2b.ttf') format('truetype'),
 	         url('fonts/PorschaBold/911v2b.svg#PorschaBold') format('svg');
-	}
+	}*/
 
 	/*PorschaCondensed*/
-	@font-face {
+	/*@font-face {
 	    font-family: 'PorschaCondensed';
 	    src: url('fonts/PorschaCondensed/911v2c.eot');
 	    src: url('fonts/PorschaCondensed/911v2c.eot') format('embedded-opentype'),
@@ -1024,7 +1024,7 @@
 	         url('fonts/PorschaCondensed/911v2c.woff') format('woff'),
 	         url('fonts/PorschaCondensed/911v2c.ttf') format('truetype'),
 	         url('fonts/PorschaCondensed/911v2c.svg#911PorschaCondensedCondensed') format('svg');
-	}
+	}*/
 
 	/*PorschaItalic*/
 	@font-face {
@@ -1038,7 +1038,7 @@
 	}
 
 	/*PorschaLeftalic*/
-	@font-face {
+	/*@font-face {
 	    font-family: 'PorschaLeftalic';
 	    src: url('fonts/PorschaLeftalic/911v2l.eot');
 	    src: url('fonts/PorschaLeftalic/911v2l.eot') format('embedded-opentype'),
@@ -1046,7 +1046,7 @@
 	         url('fonts/PorschaLeftalic/911v2l.woff') format('woff'),
 	         url('fonts/PorschaLeftalic/911v2l.ttf') format('truetype'),
 	         url('fonts/PorschaLeftalic/911v2l.svg#PorschaLeftalic') format('svg');
-	}
+	}*/
 
 	/*LaserItalic*/
 	@font-face {
@@ -1060,7 +1060,7 @@
 	}
 
 	/*LunasolSequenceRegular*/
-	@font-face {
+	/*@font-face {
 	    font-family: 'LunasolSequenceRegular';
 	    src: url('fonts/LunasolSequence/lunasolsequence.eot');
 	    src: url('fonts/LunasolSequence/lunasolsequence.eot') format('embedded-opentype'),
@@ -1068,7 +1068,7 @@
 	         url('fonts/LunasolSequence/lunasolsequence.woff') format('woff'),
 	         url('fonts/LunasolSequence/lunasolsequence.ttf') format('truetype'),
 	         url('fonts/LunasolSequence/lunasolsequence.svg#LunasolSequenceRegular') format('svg');
-	}
+	}*/
 
 /* -- Genericons -- */
 
@@ -1127,6 +1127,15 @@
  * Individual icons
  */
 
+.genericon-downarrow:before { content: "\f502"; }
+.genericon-uparrow:before { content: "\f500"; }
+.genericon-facebook:before { content: "\f203"; }
+.genericon-instagram:before { content: "\f215"; }
+.genericon-googleplus:before { content: "\f206"; }
+.genericon-twitter:before { content: "\f202"; }
+.genericon-youtube:before { content: "\f213"; }
+
+/*
 .genericon-404:before { content: "\f423"; }
 .genericon-activity:before { content: "\f508"; }
 .genericon-anchor:before { content: "\f509"; }
@@ -1154,7 +1163,6 @@
 .genericon-digg:before { content: "\f221"; }
 .genericon-document:before { content: "\f443"; }
 .genericon-dot:before { content: "\f428"; }
-.genericon-downarrow:before { content: "\f502"; }
 .genericon-download:before { content: "\f50b"; }
 .genericon-draggable:before { content: "\f436"; }
 .genericon-dribbble:before { content: "\f201"; }
@@ -1165,7 +1173,6 @@
 .genericon-ellipsis:before { content: "\f476"; }
 .genericon-expand:before { content: "\f431"; }
 .genericon-external:before { content: "\f442"; }
-.genericon-facebook:before { content: "\f203"; }
 .genericon-facebook-alt:before { content: "\f204"; }
 .genericon-fastforward:before { content: "\f458"; }
 .genericon-feed:before { content: "\f413"; }
@@ -1175,7 +1182,6 @@
 .genericon-fullscreen:before { content: "\f474"; }
 .genericon-gallery:before { content: "\f103"; }
 .genericon-github:before { content: "\f200"; }
-.genericon-googleplus:before { content: "\f206"; }
 .genericon-googleplus-alt:before { content: "\f218"; }
 .genericon-handset:before { content: "\f50c"; }
 .genericon-heart:before { content: "\f461"; }
@@ -1185,7 +1191,6 @@
 .genericon-home:before { content: "\f409"; }
 .genericon-image:before { content: "\f102"; }
 .genericon-info:before { content: "\f455"; }
-.genericon-instagram:before { content: "\f215"; }
 .genericon-italic:before { content: "\f472"; }
 .genericon-key:before { content: "\f427"; }
 .genericon-leftarrow:before { content: "\f503"; }
@@ -1258,11 +1263,9 @@
 .genericon-trash:before { content: "\f407"; }
 .genericon-tumblr:before { content: "\f214"; }
 .genericon-twitch:before { content: "\f516"; }
-.genericon-twitter:before { content: "\f202"; }
 .genericon-unapprove:before { content: "\f446"; }
 .genericon-unsubscribe:before { content: "\f464"; }
 .genericon-unzoom:before { content: "\f401"; }
-.genericon-uparrow:before { content: "\f500"; }
 .genericon-user:before { content: "\f304"; }
 .genericon-video:before { content: "\f104"; }
 .genericon-videocamera:before { content: "\f517"; }
@@ -1272,6 +1275,5 @@
 .genericon-week:before { content: "\f306"; }
 .genericon-wordpress:before { content: "\f205"; }
 .genericon-xpost:before { content: "\f504"; }
-.genericon-youtube:before { content: "\f213"; }
 .genericon-zoom:before { content: "\f402"; }
-
+*/
