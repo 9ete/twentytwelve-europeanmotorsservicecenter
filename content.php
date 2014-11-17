@@ -19,35 +19,21 @@
 		<header class="entry-header">
 			
 			<?php if ( is_single() ) : ?>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+				<h1 class="entry-title"><?php the_title(); ?></h1>
 			<?php endif; // is_single() ?>
 
 			<?php if ( ! post_password_required() && ! is_attachment() ) : ?>
-				
-                <?php if (wp_get_attachment_image_src ( get_post_thumbnail_id ( $post->ID ), 'single-post-thumbnail' )) { ?>
+                <?php if (wp_get_attachment_image_src ( get_post_thumbnail_id ( $post->ID ), 'single-post-thumbnail' )) : ?>
                 	<?php $featured_img = wp_get_attachment_image_src ( get_post_thumbnail_id ( $post->ID ), 'single-post-thumbnail' );  ?>
-                    <div class="lightbox-img featured-img-wrap">
-                    	<a href="<?php echo $featured_img[0]; ?>" rel="lightbox">
-                    		<img src="<?php echo $featured_img[0]; ?>" />
-                    	</a>
-                    </div>
-                <?php } ?>
-                <?php if (!wp_get_attachment_image_src ( get_post_thumbnail_id ( $post->ID ), 'single-post-thumbnail' )) { ?>
-                    <div class="lightbox-img featured-img-wrap">
-                    	<a href="" rel="lightbox">
-                    		<img src="" />
-                    	</a>
-                    </div>
-                <?php } ?>
+	                    <div class="lightbox-img featured-img-wrap">
+	                    	<a href="<?php echo $featured_img[0]; ?>" rel="lightbox">
+	                    		<img src="<?php echo $featured_img[0]; ?>" />
+	                    	</a>
+	                    </div>
+                <?php endif; ?>
             <?php endif; ?>
-			<?php 
-			//if ( ! post_password_required() && ! is_attachment() ) :
-			//	the_post_thumbnail();
-			//endif; 
-			?>
 
 			<?php if ( !is_single() ) : ?>
-
 				<?php if (is_post_type_archive( "testimonials" ) ) : ?>
 					<?php if ( get_post_meta( get_the_ID(), 'l_m_meta_value_key', true ) ) : ?>
 					    <a class='testimonial-link' target='_blank' href="<?php echo get_post_meta( get_the_ID(), '_lm_meta_value_key', true ); ?>" rel="bookmark"> 
@@ -78,7 +64,6 @@
 				<?php else :  ?>
 					<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 				<?php endif; // is_post_type_archive() ?>
-
 			<?php endif; // !is_single() ?>
 
 			<?php if ( comments_open() ) : ?>
