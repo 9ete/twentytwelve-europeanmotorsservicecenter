@@ -24,7 +24,7 @@
 		<div class="footer-column footer-column-three">
 			<?php dynamic_sidebar( 'footer_column_three' ); ?>
 			<ul class='automotive-certifications'>
-				<li class='auto-cert-item'><a href='https://www.ase.com/' ><img height='50' width='51' alt='ASE Certified Automotive Shop Tacoma Lakewood Seattle Washington'  src='/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/automotive-certifications/ase-automotive-service-excellence-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
+				<li class='auto-cert-item'><a href='https://www.ase.com/' ><img height='50' width='50' alt='ASE Certified Automotive Shop Tacoma Lakewood Seattle Washington'  src='/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/automotive-certifications/ase-automotive-service-excellence-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
 				<li class='auto-cert-item'><a href='http://www.iatn.net/' ><img height='50' width='100' alt='iATN Certified Automotive Shop Tacoma Lakewood Seattle Washington' src='/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/automotive-certifications/iatn-international-automotive-technicians-network-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
 				<li class='auto-cert-item'><a href='http://asashop.org/' ><img height='50' width='125' alt='ASA Certified Automotive Shop Tacoma Lakewood Seattle Washington' src='/wp-content/themes/twentytwelve-europeanmotorsservicecenter/img/automotive-certifications/asa-automotive-service-association-certified-european-motors-washington-lakewood-tacoma-fix-my-land-rover.png' /></a></li>
 			</ul>
