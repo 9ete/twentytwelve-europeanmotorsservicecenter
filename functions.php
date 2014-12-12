@@ -698,7 +698,7 @@ function lowermedia_phpmailer_init( PHPMailer $phpmailer ) {
     $phpmailer->IsSMTP(); // telling the class to use SMTP
     $phpmailer->Host = "ssl://smtp.gmail.com"; // SMTP server
     $phpmailer->Username = "lowermedianotifications@gmail.com";
-    $phpmailer->Password = "{Y_M@uw{&q,52x\y2fzJ";
+    $phpmailer->Password = "";
     $phpmailer->Port = 465;
     $phpmailer->SMTPAuth = true; // if required
     // $phpmailer->SMTPSecure = 'ssl'; // enable if required, 'tls' is another possible value
