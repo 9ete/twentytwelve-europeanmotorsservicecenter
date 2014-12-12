@@ -635,3 +635,73 @@ class lowermedia_phonenumber_settings
 }
 
 if( is_admin() ) {$lowermedia_phonenumber_settings = new lowermedia_phonenumber_settings();}
+
+
+/**
+ * Load custom DB error or display WordPress DB error.
+ *
+ * If a file exists in the wp-content directory named db-error.php, then it will
+ * be loaded instead of displaying the WordPress DB error. If it is not found,
+ * then the WordPress DB error will be displayed instead.
+ *
+ * The WordPress DB error sets the HTTP status header to 500 to try to prevent
+ * search engines from caching the message. Custom DB messages should do the
+ * same.
+ *
+ * This function was backported to WordPress 2.3.2, but originally was added
+ * in WordPress 2.5.0.
+ *
+ * @since 2.3.2
+ *
+ * @global wpdb $wpdb WordPress database access abstraction object.
+ */
+add_filter('dead_db', 'custom_dead_db');
+function custom_dead_db() {
+    global $wpdb;
+
+    wp_load_translations_early();
+
+    // Load custom DB error template, if present.
+    if ( file_exists( WP_CONTENT_DIR . '/db-error.php' ) ) {
+        require_once( WP_CONTENT_DIR . '/db-error.php' );
+        die();
+    }
+
+    // If installing or in the admin, provide the verbose message.
+    if ( defined('WP_INSTALLING') || defined('WP_ADMIN') )
+        wp_die($wpdb->error);
+
+    // Otherwise, be terse.
+    status_header( 500 );
+    nocache_headers();
+    header( 'Content-Type: text/html; charset=utf-8' );
+?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"<?php if ( is_rtl() ) echo ' dir="rtl"'; ?>>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><?php _e( 'Database Error' ); ?></title>
+
+</head>
+<body>
+    <h1><?php _e( 'Pete:Error establishing a database connection' ); ?></h1>
+</body>
+</html>
+<?php
+    die();
+}
+
+add_action( 'phpmailer_init', 'lowermedia_phpmailer_init' );
+function lowermedia_phpmailer_init( PHPMailer $phpmailer ) {
+
+    $phpmailer->SMTPAuth = true;
+    $phpmailer->IsSMTP(); // telling the class to use SMTP
+    $phpmailer->Host = "ssl://smtp.gmail.com"; // SMTP server
+    $phpmailer->Username = "lowermedianotifications@gmail.com";
+    $phpmailer->Password = "{Y_M@uw{&q,52x\y2fzJ";
+    $phpmailer->Port = 465;
+    $phpmailer->SMTPAuth = true; // if required
+    // $phpmailer->SMTPSecure = 'ssl'; // enable if required, 'tls' is another possible value
+
+    $phpmailer->IsSMTP();
+}
