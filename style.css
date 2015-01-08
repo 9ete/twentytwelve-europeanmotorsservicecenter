@@ -30,6 +30,12 @@
 
 	.site-title a:visited { color:#043789; }
 
+	strong {
+		font-size: 110%;
+		font-weight: 600;
+		text-shadow: 0 1px #FBC81E;
+	}
+
 	hgroup {
 		text-shadow: .5px .5px .5px #FBC81E;
 		font-family: 'PorschaRegular', sans-serif;
