@@ -690,18 +690,3 @@ function custom_dead_db() {
 <?php
     die();
 }
-
-add_action( 'phpmailer_init', 'lowermedia_phpmailer_init' );
-function lowermedia_phpmailer_init( PHPMailer $phpmailer ) {
-
-    $phpmailer->SMTPAuth = true;
-    $phpmailer->IsSMTP(); // telling the class to use SMTP
-    $phpmailer->Host = "ssl://smtp.gmail.com"; // SMTP server
-    $phpmailer->Username = "lowermedianotifications@gmail.com";
-    $phpmailer->Password = "";
-    $phpmailer->Port = 465;
-    $phpmailer->SMTPAuth = true; // if required
-    // $phpmailer->SMTPSecure = 'ssl'; // enable if required, 'tls' is another possible value
-
-    $phpmailer->IsSMTP();
-}
